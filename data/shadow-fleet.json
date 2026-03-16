@@ -1,0 +1,66 @@
+[
+  {
+    "imo": "9293614",
+    "name": "PABLO",
+    "formerNames": ["ARCTIC VOYAGER"],
+    "flagHistory": ["Marshall Islands", "Palau"],
+    "notes": "Identified in KSE Shadow Fleet Tracker. Transported Russian Urals crude.",
+    "source": "KSE 2024"
+  },
+  {
+    "imo": "9144195",
+    "name": "ANDROMEDA STAR",
+    "formerNames": ["LADY M"],
+    "flagHistory": ["Panama", "Gabon"],
+    "notes": "Identified transporting Iranian crude. OFAC designated.",
+    "source": "OFAC 2023"
+  },
+  {
+    "imo": "9255545",
+    "name": "LANA",
+    "formerNames": ["MUSTANG"],
+    "flagHistory": ["Panama", "Cook Islands"],
+    "notes": "Seized by Iran in April 2023. Used for Iranian crude transfers.",
+    "source": "UN Panel of Experts 2023"
+  },
+  {
+    "imo": "9340704",
+    "name": "NEPTUNE",
+    "formerNames": ["SILVER LEGACY"],
+    "flagHistory": ["Liberia", "Gabon", "Palau"],
+    "notes": "KSE shadow fleet. Multiple Russian port calls 2023-2024.",
+    "source": "KSE 2024"
+  },
+  {
+    "imo": "9167849",
+    "name": "OCEAN PRIDE",
+    "formerNames": ["ARZAMAS"],
+    "flagHistory": ["Russia", "Cameroon"],
+    "notes": "Russian-owned, re-flagged to evade sanctions.",
+    "source": "Reuters Shadow Fleet Investigation 2023"
+  },
+  {
+    "imo": "9069545",
+    "name": "TURBA",
+    "formerNames": ["TURBA", "HELEN"],
+    "flagHistory": ["Iran", "Tanzania"],
+    "notes": "Iranian crude carrier. Multiple AIS dark events in Gulf of Oman.",
+    "source": "OFAC 2022"
+  },
+  {
+    "imo": "9290470",
+    "name": "RIDGEBURY JOHN B",
+    "formerNames": ["RIDGEBURY JOHN B"],
+    "flagHistory": ["Marshall Islands", "Cook Islands"],
+    "notes": "KSE tracker. Loaded at Novorossiysk multiple times post-sanctions.",
+    "source": "KSE 2024"
+  },
+  {
+    "imo": "9183906",
+    "name": "NEW GLORY",
+    "formerNames": ["DONG FANG OCEAN", "BEIHAI"],
+    "flagHistory": ["China", "Cook Islands"],
+    "notes": "Chinese-operated, Cook Islands flag. Iranian crude to Chinese refineries.",
+    "source": "Bloomberg Shadow Fleet 2024"
+  }
+]

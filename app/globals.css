@@ -1,0 +1,64 @@
+@import "leaflet/dist/leaflet.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Sanctioned vessel — continuous red pulse */
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(204, 41, 41, 0.7); }
+  50%       { box-shadow: 0 0 0 10px rgba(204, 41, 41, 0); }
+}
+
+/* STS vessel — yellow pulse */
+@keyframes pulse-yellow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.7); }
+  50%       { box-shadow: 0 0 0 10px rgba(234, 179, 8, 0); }
+}
+
+/* Shadow fleet — purple single pulse */
+@keyframes pulse-purple {
+  0%   { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(139, 92, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+}
+
+.ring-sanctioned {
+  animation: pulse-red 1.4s infinite;
+}
+.ring-sts {
+  animation: pulse-yellow 1.4s infinite;
+}
+.ring-shadow {
+  animation: pulse-purple 2.5s infinite;
+}
+
+/* Leaflet popup — minimal override */
+.leaflet-popup-content-wrapper {
+  background: #1a1a2e;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.leaflet-popup-tip {
+  background: #1a1a2e;
+}
+
+/* Map annotation labels */
+.map-annotation {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  white-space: nowrap;
+}
