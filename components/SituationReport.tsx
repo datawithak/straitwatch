@@ -74,6 +74,9 @@ export default function SituationReportBar({ report, isDemo, isLoading }: Props)
           </div>
         )}
       </div>
+      <p className="text-xs text-slate-600 mt-1">
+        AIS coverage via aisstream.io — partial coverage vs commercial feeds. Sanctioned &amp; shadow fleet data: OFAC / KSE-3 list.
+      </p>
     </div>
   );
 }
