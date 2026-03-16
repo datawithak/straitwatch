@@ -6,6 +6,18 @@ import { getVesselTypeLabel, getNavStatusSimple } from "@/constants/vessel-types
 import { formatDarkDuration } from "@/lib/going-dark";
 import { getTerminalInfo } from "@/lib/departure-terminal";
 
+const CHINA_PORTS = ["NINGBO","ZHOUSHAN","QINGDAO","TIANJIN","DALIAN","SHANGHAI","GUANGZHOU","SHENZHEN","YANGSHAN","HONG KONG","HUIZHOU","RIZHAO"];
+const INDIA_PORTS = ["MUNDRA","SIKKA","PARADIP","HALDIA","CHENNAI","COCHIN","VADINAR","JAMNAGAR","VIZAG","KANDLA","MANGALORE"];
+
+function getDestinationInsight(destination: string): { label: string; text: string } | null {
+  const d = destination.toUpperCase();
+  if (CHINA_PORTS.some((p) => d.includes(p)))
+    return { label: "→ Bound for China", text: "China is the world's largest buyer of Gulf crude, including sanctioned Iranian and Russian oil purchased at steep discounts. This vessel's destination suggests it is part of that supply chain." };
+  if (INDIA_PORTS.some((p) => d.includes(p)))
+    return { label: "→ Bound for India", text: "India has dramatically increased its purchases of discounted Russian and Iranian crude since 2022 sanctions. If this vessel is carrying sanctioned cargo, India is a primary destination." };
+  return null;
+}
+
 interface Props {
   vessel: Vessel;
   onClose: () => void;
@@ -117,6 +129,18 @@ export default function VesselDetail({ vessel, onClose }: Props) {
             )}
           </div>
         )}
+
+        {/* Destination insight */}
+        {vessel.destination && (() => {
+          const insight = getDestinationInsight(vessel.destination);
+          if (!insight) return null;
+          return (
+            <div className="bg-white/5 rounded-lg p-3 mt-2">
+              <p className="text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">{insight.label}</p>
+              <p className="text-xs text-slate-200 leading-relaxed">{insight.text}</p>
+            </div>
+          );
+        })()}
 
         {/* Country context */}
         <div>

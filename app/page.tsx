@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { Vessel, RegionKey, StoryCard, StoryHighlight } from "@/types/index";
 import { IntelFeedResult } from "@/types/intel";
 import { REGIONS } from "@/constants/regions";
+import { STORY_CARDS } from "@/constants/stories";
 import { detectSTSPairs } from "@/lib/sts-detection";
 import { generateSituationReport, SituationReport } from "@/lib/situation-report";
 import SituationReportBar from "@/components/SituationReport";
@@ -159,6 +160,20 @@ export default function Home() {
       setSituationReport(generateSituationReport(vessels, intelResult.items));
     }
   }, [intelResult, vessels]);
+
+  // ── Auto-select most relevant story on first data load ────────────────────
+  const autoSelectedRef = useRef(false);
+  useEffect(() => {
+    if (vessels.length === 0 || autoSelectedRef.current) return;
+    autoSelectedRef.current = true;
+    // Pick the most dramatic story based on what's actually visible
+    const hasSanctioned = vessels.some((v) => v.isSanctioned);
+    const hasSTS = vessels.some((v) => v.isPossibleSTS);
+    const hasShadow = vessels.some((v) => v.isShadowFleet || v.country === "shadow-flag");
+    const storyId = hasSTS ? "iran-sts" : hasSanctioned ? "iran-sts" : hasShadow ? "shadow-fleet" : "who-buying";
+    const card = STORY_CARDS.find((c) => c.id === storyId);
+    if (card) handleStorySelect(card);
+  }, [vessels]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Story card handlers ───────────────────────────────────────────────────
   const handleStorySelect = (card: StoryCard) => {

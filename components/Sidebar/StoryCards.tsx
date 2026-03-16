@@ -57,7 +57,7 @@ export default function StoryCards({ activeStory, onSelect, onClear }: Props) {
                   </>
                 )}
                 {!isActive && (
-                  <p className="text-xs text-slate-500 mt-1">Click to highlight on map →</p>
+                  <p className="text-xs text-slate-500 mt-1">Click to highlight vessels on map →</p>
                 )}
               </div>
             </div>
