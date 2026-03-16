@@ -65,8 +65,8 @@ export async function getSanctionedVessels(): Promise<
     const timer = setTimeout(() => controller.abort(), 15000);
     const res = await fetch(OFAC_URL, {
       signal: controller.signal,
-      headers: { "User-Agent": "StraitWatch/1.0 (public OSINT)" },
-      next: { revalidate: 86400 }, // 24h Next.js cache
+      headers: { "User-Agent": "StraitWatch/1.0 (public OSINT)", "Cache-Control": "no-store" },
+      cache: "no-store", // skip Next.js fetch cache — file is 37MB, over the 2MB limit
     });
     clearTimeout(timer);
 
