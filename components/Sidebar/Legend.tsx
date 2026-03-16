@@ -3,7 +3,12 @@
 import { COUNTRY_COLORS, COUNTRY_LABELS, COUNTRY_DESCRIPTIONS } from "@/constants/countries";
 import { CountryKey } from "@/types/index";
 
-const COUNTRIES: CountryKey[] = ["russia", "china", "iran", "india", "uae", "usa", "shadow-flag", "other"];
+const COUNTRIES: CountryKey[] = [
+  "russia", "china", "iran", "india",
+  "uae", "usa", "greece",
+  "norway", "japan", "uk", "south-korea", "singapore",
+  "flag-convenience", "shadow-flag", "other",
+];
 
 const RINGS = [
   { color: "#ef4444", label: "Pulsing red ring", desc: "OFAC or EU sanctioned vessel. Western companies cannot legally provide any services to this ship." },

@@ -8,6 +8,12 @@ export type CountryKey =
   | "uae"
   | "usa"
   | "greece"
+  | "norway"
+  | "japan"
+  | "uk"
+  | "south-korea"
+  | "singapore"
+  | "flag-convenience"
   | "shadow-flag"
   | "other";
 
