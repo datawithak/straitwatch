@@ -151,6 +151,20 @@ export default function VesselDetail({ vessel, onClose }: Props) {
           <p className="text-xs text-slate-400 leading-relaxed mt-1">
             {COUNTRY_DESCRIPTIONS[vessel.country]}
           </p>
+          {vessel.destination && (() => {
+            const dot = vessel.destination.toUpperCase();
+            const toChina = ["NINGBO","ZHOUSHAN","QINGDAO","TIANJIN","DALIAN","SHANGHAI","GUANGZHOU","SHENZHEN","YANGSHAN","HONG KONG","HUIZHOU","RIZHAO"].some((p) => dot.includes(p));
+            const toIndia = ["MUNDRA","SIKKA","PARADIP","HALDIA","CHENNAI","COCHIN","VADINAR","JAMNAGAR","VIZAG","KANDLA","MANGALORE"].some((p) => dot.includes(p));
+            if (!toChina && !toIndia) return null;
+            return (
+              <div className="mt-2 flex items-center gap-2">
+                <div className="shrink-0 w-3 h-3 rounded-full border border-white/40" style={{ background: toChina ? "#FF4444" : "#FF9933" }} />
+                <p className="text-xs text-slate-400">
+                  The <span className="font-semibold text-white">{toChina ? "red" : "orange"} dot</span> on the bottom-left of this vessel&apos;s map marker shows it&apos;s heading to {toChina ? "China" : "India"}.
+                </p>
+              </div>
+            );
+          })()}
         </div>
 
         {/* Vessel data in plain English */}

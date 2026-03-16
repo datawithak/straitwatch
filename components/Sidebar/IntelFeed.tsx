@@ -5,6 +5,7 @@ import { IntelFeedResult } from "@/types/intel";
 interface Props {
   result: IntelFeedResult | null;
   loading: boolean;
+  onViewOnMap?: (lat: number, lng: number) => void;
 }
 
 const SEVERITY_COLORS = {
@@ -22,7 +23,7 @@ function timeAgo(ms: number): string {
   return `${Math.floor(hours / 24)}d ago`;
 }
 
-export default function IntelFeed({ result, loading }: Props) {
+export default function IntelFeed({ result, loading, onViewOnMap }: Props) {
   if (loading && !result) {
     return (
       <div className="text-xs text-slate-500 py-4 text-center">Loading advisories...</div>
@@ -46,6 +47,7 @@ export default function IntelFeed({ result, loading }: Props) {
       {result.items.map((item) => {
         const sev = item.severity ?? "low";
         const colors = SEVERITY_COLORS[sev];
+        const hasCoords = item.lat != null && item.lng != null;
         return (
           <div
             key={item.id}
@@ -64,16 +66,26 @@ export default function IntelFeed({ result, loading }: Props) {
             {item.summary && (
               <p className="text-xs text-slate-400 mt-1 leading-relaxed">{item.summary}</p>
             )}
-            {item.link && (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-slate-500 hover:text-white mt-1.5 inline-block"
-              >
-                Full advisory ↗
-              </a>
-            )}
+            <div className="flex items-center gap-3 mt-1.5">
+              {hasCoords && onViewOnMap && (
+                <button
+                  onClick={() => onViewOnMap(item.lat!, item.lng!)}
+                  className="text-xs text-sky-400 hover:text-sky-300 font-medium transition-colors"
+                >
+                  View on map →
+                </button>
+              )}
+              {item.link && (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-slate-500 hover:text-white transition-colors"
+                >
+                  Full advisory ↗
+                </a>
+              )}
+            </div>
           </div>
         );
       })}

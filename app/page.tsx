@@ -1,18 +1,22 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import dynamic from "next/dynamic";
 import { Vessel, RegionKey, StoryCard, StoryHighlight } from "@/types/index";
 import { IntelFeedResult } from "@/types/intel";
 import { REGIONS } from "@/constants/regions";
 import { STORY_CARDS } from "@/constants/stories";
 import { detectSTSPairs } from "@/lib/sts-detection";
+import { isVesselGoingDark, getDarkDurationMs } from "@/lib/going-dark";
+import { getDepartedTerminal } from "@/lib/departure-terminal";
+import { saveVesselCache, loadVesselCache } from "@/lib/vessel-cache";
 import { generateSituationReport, SituationReport } from "@/lib/situation-report";
 import SituationReportBar from "@/components/SituationReport";
 import StoryCards from "@/components/Sidebar/StoryCards";
 import VesselDetail from "@/components/Sidebar/VesselDetail";
 import IntelFeed from "@/components/Sidebar/IntelFeed";
 import Legend from "@/components/Sidebar/Legend";
+import FiltersPanel, { FilterState, DEFAULT_FILTERS } from "@/components/Sidebar/FiltersPanel";
 
 const StraitMap = dynamic(() => import("@/components/Map/StraitMap"), {
   ssr: false,
@@ -25,7 +29,21 @@ const StraitMap = dynamic(() => import("@/components/Map/StraitMap"), {
 
 const INTEL_REFRESH_MS = 300_000;
 
-type SidebarTab = "stories" | "intel" | "legend";
+type SidebarTab = "stories" | "intel" | "filters" | "legend";
+
+function applyFilters(vessels: Vessel[], filters: FilterState): Vessel[] {
+  return vessels.filter((v) => {
+    if (filters.typeFilter === "tankers" && !(v.shipType >= 80 && v.shipType <= 89)) return false;
+    if (filters.typeFilter === "cargo" && !(v.shipType >= 70 && v.shipType <= 79)) return false;
+    if (filters.typeFilter === "military" && !(v.shipType >= 35 && v.shipType <= 36)) return false;
+    if (filters.countryFilter !== "all" && v.country !== filters.countryFilter) return false;
+    if (!filters.showSanctioned && v.isSanctioned) return false;
+    if (!filters.showShadowFleet && v.isShadowFleet) return false;
+    if (!filters.showSTS && v.isPossibleSTS) return false;
+    if (!filters.showGoingDark && v.isGoingDark) return false;
+    return true;
+  });
+}
 
 export default function Home() {
   const [vessels, setVessels] = useState<Vessel[]>([]);
@@ -43,6 +61,8 @@ export default function Home() {
   const [highlight, setHighlight] = useState<StoryHighlight | null>(null);
   const [sidebarTab, setSidebarTab] = useState<SidebarTab>("stories");
   const [situationReport, setSituationReport] = useState<SituationReport | null>(null);
+  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
+  const [flyToTarget, setFlyToTarget] = useState<{ lat: number; lng: number } | null>(null);
 
   // Mobile state
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -50,10 +70,35 @@ export default function Home() {
 
   const intelIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const stsIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const lastCacheSaveRef = useRef(0);
 
-  // ── Apply STS detection and update state from vessel map ─────────────────
+  // ── Seed vessel map from localStorage on first mount ─────────────────────
+  // This makes vessels that went dark before you opened the tab visible immediately.
+  useEffect(() => {
+    const cached = loadVesselCache();
+    for (const v of cached) {
+      // Only seed vessels not already in the live store
+      if (!vesselMapRef.current.has(v.mmsi)) {
+        vesselMapRef.current.set(v.mmsi, v);
+      }
+    }
+    // Save freshest snapshot on page close
+    const onUnload = () => saveVesselCache(Array.from(vesselMapRef.current.values()) as Vessel[]);
+    window.addEventListener("beforeunload", onUnload);
+    return () => window.removeEventListener("beforeunload", onUnload);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Filtered vessels for the map (situation report always uses full vessel list)
+  const displayedVessels = useMemo(
+    () => applyFilters(vessels, filters),
+    [vessels, filters]
+  );
+
+  // ── Apply STS + going-dark + terminal detection; save to localStorage ────
   const flushVessels = useCallback(() => {
     const all = Array.from(vesselMapRef.current.values());
+
+    // STS detection
     const stsPairs = detectSTSPairs(all);
     const stsMMSIs = new Set<string>();
     const stsPartners = new Map<string, { mmsi: string; name: string }>();
@@ -63,14 +108,32 @@ export default function Home() {
       stsPartners.set(pair.vesselA.mmsi, { mmsi: pair.vesselB.mmsi, name: pair.vesselB.name });
       stsPartners.set(pair.vesselB.mmsi, { mmsi: pair.vesselA.mmsi, name: pair.vesselA.name });
     }
-    const enriched = all.map((v) => ({
-      ...v,
-      isPossibleSTS: stsMMSIs.has(v.mmsi),
-      stsPartnerMMSI: stsPartners.get(v.mmsi)?.mmsi ?? v.stsPartnerMMSI,
-      stsPartnerName: stsPartners.get(v.mmsi)?.name ?? v.stsPartnerName,
-    }));
+
+    const enriched = all.map((v) => {
+      const goingDark = isVesselGoingDark(v);
+      return {
+        ...v,
+        isPossibleSTS: stsMMSIs.has(v.mmsi),
+        stsPartnerMMSI: stsPartners.get(v.mmsi)?.mmsi ?? v.stsPartnerMMSI,
+        stsPartnerName: stsPartners.get(v.mmsi)?.name ?? v.stsPartnerName,
+        // Going dark: use live detection; fall back to cached value for vessels
+        // that were already dark when the page loaded
+        isGoingDark: goingDark || v.isGoingDark,
+        darkSinceMs: goingDark ? getDarkDurationMs(v) : (v.isGoingDark ? v.darkSinceMs : 0),
+        // Departed terminal: re-check live trail; keep cached value if trail is empty
+        departedTerminal: getDepartedTerminal(v.trail) || v.departedTerminal,
+      };
+    });
+
     setVessels(enriched);
     setSituationReport(generateSituationReport(enriched, intelResult?.items ?? []));
+
+    // Persist to localStorage at most once every 30s (sync write, don't thrash)
+    const now = Date.now();
+    if (now - lastCacheSaveRef.current > 30_000) {
+      saveVesselCache(enriched);
+      lastCacheSaveRef.current = now;
+    }
   }, [intelResult]);
 
   // ── Live SSE connection ────────────────────────────────────────────────────
@@ -198,8 +261,24 @@ export default function Home() {
     setSelectedVessel(null);
   };
 
+  // ── Intel "View on map" ───────────────────────────────────────────────────
+  const handleViewOnMap = (lat: number, lng: number) => {
+    setFlyToTarget({ lat, lng });
+    // Reset flyToTarget after a moment so it can be re-triggered for the same coords
+    setTimeout(() => setFlyToTarget(null), 2000);
+    // On mobile, close the sidebar so the map is visible
+    setMobileOpen(false);
+  };
+
   // ── Region labels ─────────────────────────────────────────────────────────
   const regionKeys: RegionKey[] = ["global", "hormuz", "gulf-oman", "bab", "red-sea"];
+
+  const TABS: { id: SidebarTab; label: string }[] = [
+    { id: "stories", label: "Stories" },
+    { id: "intel", label: "Alerts" },
+    { id: "filters", label: "Filter" },
+    { id: "legend", label: "Guide" },
+  ];
 
   return (
     <div className="flex flex-col h-screen bg-slate-950 text-white overflow-hidden">
@@ -258,17 +337,17 @@ export default function Home() {
         <aside className="hidden md:flex flex-col w-80 bg-slate-950 border-r border-white/10 shrink-0 overflow-hidden">
           {/* Sidebar tabs */}
           <div className="flex border-b border-white/10 shrink-0">
-            {(["stories", "intel", "legend"] as SidebarTab[]).map((tab) => (
+            {TABS.map(({ id, label }) => (
               <button
-                key={tab}
-                onClick={() => setSidebarTab(tab)}
-                className={`flex-1 text-xs py-2 capitalize transition-colors ${
-                  sidebarTab === tab
+                key={id}
+                onClick={() => setSidebarTab(id)}
+                className={`flex-1 text-xs py-2 transition-colors ${
+                  sidebarTab === id
                     ? "text-white border-b-2 border-white font-semibold"
                     : "text-slate-500 hover:text-white"
                 }`}
               >
-                {tab === "stories" ? "Stories" : tab === "intel" ? "Advisories" : "Guide"}
+                {label}
               </button>
             ))}
           </div>
@@ -284,7 +363,18 @@ export default function Home() {
                 onClear={handleStoryClear}
               />
             ) : sidebarTab === "intel" ? (
-              <IntelFeed result={intelResult} loading={intelLoading} />
+              <IntelFeed
+                result={intelResult}
+                loading={intelLoading}
+                onViewOnMap={handleViewOnMap}
+              />
+            ) : sidebarTab === "filters" ? (
+              <FiltersPanel
+                filters={filters}
+                onChange={setFilters}
+                totalCount={vessels.length}
+                filteredCount={displayedVessels.length}
+              />
             ) : (
               <Legend />
             )}
@@ -294,11 +384,12 @@ export default function Home() {
         {/* Map */}
         <main className="flex-1 relative">
           <StraitMap
-            vessels={vessels}
+            vessels={displayedVessels}
             selectedMMSI={selectedVessel?.mmsi ?? null}
             region={region}
             highlight={highlight}
             intelItems={intelResult?.items ?? []}
+            flyToTarget={flyToTarget}
             onSelectVessel={handleSelectVessel}
           />
         </main>
@@ -306,26 +397,22 @@ export default function Home() {
 
       {/* Mobile bottom nav */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900 border-t border-white/10 flex">
-        {(["stories", "intel", "legend"] as SidebarTab[]).map((tab) => {
-          const emoji = tab === "stories" ? "📡" : tab === "intel" ? "⚠️" : "❓";
-          const label = tab === "stories" ? "Stories" : tab === "intel" ? "Alerts" : "Guide";
-          return (
-            <button
-              key={tab}
-              onClick={() => {
-                setMobileSidebarTab(tab);
-                setSelectedVessel(null);
-                setMobileOpen((prev) => !(prev && mobileSidebarTab === tab));
-              }}
-              className={`flex-1 flex flex-col items-center py-2.5 gap-0.5 text-xs ${
-                mobileOpen && mobileSidebarTab === tab ? "text-white" : "text-slate-500"
-              }`}
-            >
-              <span>{emoji}</span>
-              <span>{label}</span>
-            </button>
-          );
-        })}
+        {([ ["stories", "📡", "Stories"], ["intel", "⚠️", "Alerts"], ["filters", "🔍", "Filter"], ["legend", "❓", "Guide"] ] as [SidebarTab, string, string][]).map(([tab, emoji, label]) => (
+          <button
+            key={tab}
+            onClick={() => {
+              setMobileSidebarTab(tab);
+              setSelectedVessel(null);
+              setMobileOpen((prev) => !(prev && mobileSidebarTab === tab));
+            }}
+            className={`flex-1 flex flex-col items-center py-2.5 gap-0.5 text-xs ${
+              mobileOpen && mobileSidebarTab === tab ? "text-white" : "text-slate-500"
+            }`}
+          >
+            <span>{emoji}</span>
+            <span>{label}</span>
+          </button>
+        ))}
       </nav>
 
       {/* Mobile bottom sheet */}
@@ -340,7 +427,14 @@ export default function Home() {
               ) : mobileSidebarTab === "stories" ? (
                 <StoryCards activeStory={activeStory} onSelect={(c) => { handleStorySelect(c); setMobileOpen(false); }} onClear={handleStoryClear} />
               ) : mobileSidebarTab === "intel" ? (
-                <IntelFeed result={intelResult} loading={intelLoading} />
+                <IntelFeed result={intelResult} loading={intelLoading} onViewOnMap={handleViewOnMap} />
+              ) : mobileSidebarTab === "filters" ? (
+                <FiltersPanel
+                  filters={filters}
+                  onChange={setFilters}
+                  totalCount={vessels.length}
+                  filteredCount={displayedVessels.length}
+                />
               ) : (
                 <Legend />
               )}

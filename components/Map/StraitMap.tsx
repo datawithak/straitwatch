@@ -6,6 +6,7 @@ import {
   TileLayer,
   Marker,
   Polyline,
+  Polygon,
   Tooltip,
   useMap,
 } from "react-leaflet";
@@ -36,6 +37,62 @@ function RegionController({ region }: { region: RegionKey }) {
     );
   }, [region, map]);
   return null;
+}
+
+// ─── FlyTo controller (for intel "View on map") ───────────────────────────────
+
+function FlyToController({ target }: { target: { lat: number; lng: number } | null }) {
+  const map = useMap();
+  const prevTarget = useRef<{ lat: number; lng: number } | null>(null);
+  useEffect(() => {
+    if (!target) return;
+    // Only fly if target actually changed (avoid re-flying on unrelated re-renders)
+    if (prevTarget.current?.lat === target.lat && prevTarget.current?.lng === target.lng) return;
+    prevTarget.current = target;
+    map.flyTo([target.lat, target.lng], 8, { duration: 1.2 });
+  }, [target, map]);
+  return null;
+}
+
+// ─── Chokepoint highlight polygons ────────────────────────────────────────────
+
+const CHOKEPOINT_POLYGONS: { name: string; positions: [number, number][] }[] = [
+  {
+    name: "Strait of Hormuz",
+    positions: [
+      [26.2, 55.7], [27.1, 55.7], [27.2, 56.4],
+      [27.0, 57.3], [26.5, 57.5], [26.0, 57.0], [26.1, 56.2],
+    ],
+  },
+  {
+    name: "Bab al-Mandab",
+    positions: [
+      [12.9, 42.9], [13.0, 43.5], [12.7, 44.0],
+      [12.0, 43.9], [11.8, 43.3], [12.3, 42.9],
+    ],
+  },
+];
+
+function ChokepointPolygons() {
+  return (
+    <>
+      {CHOKEPOINT_POLYGONS.map(({ name, positions }) => (
+        <Polygon
+          key={name}
+          positions={positions}
+          pathOptions={{
+            color: "#ef4444",
+            fillColor: "#ef4444",
+            fillOpacity: 0.06,
+            weight: 1,
+            opacity: 0.25,
+            dashArray: "5 5",
+          }}
+          interactive={false}
+        />
+      ))}
+    </>
+  );
 }
 
 // ─── Map annotation labels ────────────────────────────────────────────────────
@@ -120,6 +177,46 @@ function MapAnnotations() {
   return null;
 }
 
+// ─── Incident markers (intel items with coordinates) ─────────────────────────
+
+function IncidentMarkers({ items }: { items: IntelItem[] }) {
+  const withCoords = items.filter((i) => i.lat != null && i.lng != null);
+  if (withCoords.length === 0) return null;
+
+  return (
+    <>
+      {withCoords.map((item) => {
+        const color =
+          item.severity === "high" ? "#ef4444" :
+          item.severity === "medium" ? "#eab308" : "#6b7280";
+        const icon = L.divIcon({
+          className: "",
+          html: `<div style="width:20px;height:20px;background:${color}22;border:2px solid ${color};border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:${color};line-height:1;">!</div>`,
+          iconSize: [20, 20],
+          iconAnchor: [10, 10],
+        });
+        return (
+          <Marker
+            key={item.id}
+            position={[item.lat!, item.lng!]}
+            icon={icon}
+            zIndexOffset={-500}
+          >
+            <Tooltip direction="top" offset={[0, -10]} opacity={0.95}>
+              <div style={{ fontSize: 12, lineHeight: 1.4 }}>
+                <div style={{ fontWeight: 700, color, marginBottom: 2 }}>
+                  {item.sourceShort} ADVISORY
+                </div>
+                <div style={{ maxWidth: 220 }}>{item.title}</div>
+              </div>
+            </Tooltip>
+          </Marker>
+        );
+      })}
+    </>
+  );
+}
+
 // ─── Vessel marker ────────────────────────────────────────────────────────────
 
 const CHINA_PORTS = ["NINGBO","ZHOUSHAN","QINGDAO","TIANJIN","DALIAN","SHANGHAI","GUANGZHOU","SHENZHEN","YANGSHAN","HONG KONG","HUIZHOU","RIZHAO"];
@@ -137,7 +234,6 @@ function makeVesselIcon(vessel: Vessel): L.DivIcon {
   const size = vessel.draught > 12 ? 14 : vessel.draught > 8 ? 12 : 10;
   const rotation = vessel.heading || vessel.cog || 0;
 
-  let ringClass = "";
   let ringStyle = "";
   if (vessel.isSanctioned) {
     ringStyle = `animation:pulse-red 1.4s infinite;box-shadow:0 0 0 0 rgba(204,41,41,0.7);`;
@@ -184,6 +280,7 @@ interface Props {
   region: RegionKey;
   highlight: StoryHighlight | null;
   intelItems: IntelItem[];
+  flyToTarget: { lat: number; lng: number } | null;
   onSelectVessel: (v: Vessel) => void;
 }
 
@@ -215,7 +312,7 @@ function shouldHighlight(v: Vessel, highlight: StoryHighlight | null): boolean {
 }
 
 export default function StraitMap({
-  vessels, selectedMMSI, region, highlight, onSelectVessel,
+  vessels, selectedMMSI, region, highlight, intelItems, flyToTarget, onSelectVessel,
 }: Props) {
   const initialRegion = REGIONS.global;
 
@@ -235,7 +332,10 @@ export default function StraitMap({
       />
 
       <RegionController region={region} />
+      <FlyToController target={flyToTarget} />
       <MapAnnotations />
+      <ChokepointPolygons />
+      <IncidentMarkers items={intelItems} />
 
       <MarkerClusterGroup
         chunkedLoading

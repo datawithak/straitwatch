@@ -15,7 +15,9 @@ const RINGS = [
   { color: "#eab308", label: "Pulsing yellow ring", desc: "Possible ship-to-ship transfer in progress. Two tankers stopped close together offshore — this is how sanctioned cargo changes hands without a port record." },
   { color: "#8b5cf6", label: "Purple ring", desc: "Known shadow fleet vessel. Identified by UN Panel of Experts, US Treasury, or investigative journalists." },
   { color: "#9ca3af", label: "Faded / dashed marker", desc: "Vessel went dark — stopped broadcasting its AIS location. Ships do this to hide their position during sanctions-evading transfers." },
-  { color: "#f97316", label: "Orange dot", desc: "Recently departed a sanctioned export terminal (Kharg Island, Bandar Abbas, Novorossiysk). Likely carrying sanctioned crude oil." },
+  { color: "#f97316", label: "Orange dot (top-right)", desc: "Recently departed a sanctioned export terminal (Kharg Island, Bandar Abbas, Novorossiysk). Likely carrying sanctioned crude oil." },
+  { color: "#FF4444", label: "Red dot (bottom-left)", desc: "Vessel is heading to a Chinese port. China is the world's largest buyer of Gulf crude, including sanctioned Iranian and Russian oil." },
+  { color: "#FF9933", label: "Orange dot (bottom-left)", desc: "Vessel is heading to an Indian port. India dramatically increased purchases of discounted Russian and Iranian crude after 2022 sanctions." },
 ];
 
 export default function Legend() {
