@@ -106,6 +106,7 @@ export interface StoryCard {
   title: string;
   subtitle: string;
   body: string;
+  note?: string;
   answersQuestion: number;
   highlight: StoryHighlight;
   snapToRegion: RegionKey | null;

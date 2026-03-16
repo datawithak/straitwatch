@@ -40,7 +40,9 @@ export const STORY_CARDS: StoryCard[] = [
     title: "Who's Still Buying?",
     subtitle: "Chinese and Indian tankers in the Gulf",
     body:
-      "Despite Western sanctions on Iran and Russia, China and India continue to buy their oil at steep discounts. Chinese and Indian-flagged vessels transiting Hormuz are the primary customers for sanctioned crude. Look at where their reported destinations point.",
+      "Despite Western sanctions on Iran and Russia, China and India continue to buy their oil at steep discounts. They are the primary customers for sanctioned crude — look at where vessels' reported destinations point (Ningbo, Zhoushan, Mundra, Sikka).",
+    note:
+      "Most Chinese and Indian tankers don't fly their own flag. They register under Panama, Marshall Islands, or Liberia to avoid scrutiny. On this map, look for destinations ending in China or India — that reveals the buyer, not the flag.",
     answersQuestion: 1,
     highlight: { countries: ["china", "india"] },
     snapToRegion: "hormuz",

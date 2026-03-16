@@ -44,7 +44,17 @@ export default function StoryCards({ activeStory, onSelect, onClear }: Props) {
                 <p className="text-xs font-bold text-white">{card.title}</p>
                 <p className="text-xs text-slate-400 mt-0.5">{card.subtitle}</p>
                 {isActive && (
-                  <p className="text-xs text-slate-300 mt-2 leading-relaxed">{card.body}</p>
+                  <>
+                    <p className="text-xs text-slate-300 mt-2 leading-relaxed">{card.body}</p>
+                    {card.note && (
+                      <div className="mt-2 p-2 rounded bg-amber-900/30 border border-amber-500/30">
+                        <p className="text-xs text-amber-300 leading-relaxed">
+                          <span className="font-bold">⚠ Why you might not see them: </span>
+                          {card.note}
+                        </p>
+                      </div>
+                    )}
+                  </>
                 )}
                 {!isActive && (
                   <p className="text-xs text-slate-500 mt-1">Click to highlight on map →</p>
