@@ -9,6 +9,7 @@ import {
   Tooltip,
   useMap,
 } from "react-leaflet";
+import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
 import { Vessel, RegionKey, StoryHighlight } from "@/types/index";
 import { REGIONS } from "@/constants/regions";
@@ -235,59 +236,65 @@ export default function StraitMap({
       <RegionController region={region} />
       <MapAnnotations />
 
-      {vessels.map((v) => {
-        const dimmed = highlight !== null && !shouldHighlight(v, highlight);
-        const icon = makeVesselIcon(v);
+      <MarkerClusterGroup
+        chunkedLoading
+        maxClusterRadius={40}
+        disableClusteringAtZoom={11}
+      >
+        {vessels.map((v) => {
+          const dimmed = highlight !== null && !shouldHighlight(v, highlight);
+          const icon = makeVesselIcon(v);
 
-        return (
-          <Marker
-            key={v.mmsi}
-            position={[v.lat, v.lng]}
-            icon={icon}
-            opacity={dimmed ? 0.15 : 1}
-            eventHandlers={{ click: () => onSelectVessel(v) }}
-            zIndexOffset={v.isSanctioned ? 500 : v.isPossibleSTS ? 400 : v.isShadowFleet ? 300 : 0}
-          >
-            {/* Trail polyline */}
-            {v.trail.length > 1 && !dimmed && (
-              <Polyline
-                positions={v.trail.map((p) => [p.lat, p.lng] as [number, number])}
-                color={COUNTRY_COLORS[v.country]}
-                weight={1.5}
-                opacity={0.4}
-              />
-            )}
-            <Tooltip direction="top" offset={[0, -8]} opacity={0.95}>
-              <div style={{ fontSize: 12, lineHeight: 1.4 }}>
-                <div style={{ fontWeight: 700 }}>{v.name || v.mmsi}</div>
-                {v.isSanctioned && (
-                  <div style={{ color: "#f87171", fontSize: 10 }}>⚠ OFAC SANCTIONED</div>
-                )}
-                {v.isPossibleSTS && (
-                  <div style={{ color: "#fbbf24", fontSize: 10 }}>⚡ POSSIBLE STS TRANSFER</div>
-                )}
-                {v.isShadowFleet && (
-                  <div style={{ color: "#a78bfa", fontSize: 10 }}>🟣 SHADOW FLEET</div>
-                )}
-                {v.isGoingDark && (
-                  <div style={{ color: "#9ca3af", fontSize: 10 }}>◯ GOING DARK</div>
-                )}
-                {v.departedTerminal && (
-                  <div style={{ color: "#fb923c", fontSize: 10 }}>📍 Departed: {v.departedTerminal}</div>
-                )}
-                {v.destination && getDestinationDot(v.destination) && (
-                  <div style={{ color: getDestinationDot(v.destination)!.color, fontSize: 10 }}>
-                    ● Dest: {v.destination}
+          return (
+            <Marker
+              key={v.mmsi}
+              position={[v.lat, v.lng]}
+              icon={icon}
+              opacity={dimmed ? 0.15 : 1}
+              eventHandlers={{ click: () => onSelectVessel(v) }}
+              zIndexOffset={v.isSanctioned ? 500 : v.isPossibleSTS ? 400 : v.isShadowFleet ? 300 : 0}
+            >
+              {/* Trail polyline */}
+              {v.trail.length > 1 && !dimmed && (
+                <Polyline
+                  positions={v.trail.map((p) => [p.lat, p.lng] as [number, number])}
+                  color={COUNTRY_COLORS[v.country]}
+                  weight={1.5}
+                  opacity={0.4}
+                />
+              )}
+              <Tooltip direction="top" offset={[0, -8]} opacity={0.95}>
+                <div style={{ fontSize: 12, lineHeight: 1.4 }}>
+                  <div style={{ fontWeight: 700 }}>{v.name || v.mmsi}</div>
+                  {v.isSanctioned && (
+                    <div style={{ color: "#f87171", fontSize: 10 }}>⚠ OFAC SANCTIONED</div>
+                  )}
+                  {v.isPossibleSTS && (
+                    <div style={{ color: "#fbbf24", fontSize: 10 }}>⚡ POSSIBLE STS TRANSFER</div>
+                  )}
+                  {v.isShadowFleet && (
+                    <div style={{ color: "#a78bfa", fontSize: 10 }}>🟣 SHADOW FLEET</div>
+                  )}
+                  {v.isGoingDark && (
+                    <div style={{ color: "#9ca3af", fontSize: 10 }}>◯ GOING DARK</div>
+                  )}
+                  {v.departedTerminal && (
+                    <div style={{ color: "#fb923c", fontSize: 10 }}>📍 Departed: {v.departedTerminal}</div>
+                  )}
+                  {v.destination && getDestinationDot(v.destination) && (
+                    <div style={{ color: getDestinationDot(v.destination)!.color, fontSize: 10 }}>
+                      ● Dest: {v.destination}
+                    </div>
+                  )}
+                  <div style={{ color: "#9ca3af", fontSize: 10, marginTop: 2 }}>
+                    {v.sog.toFixed(1)} kn · Click for details
                   </div>
-                )}
-                <div style={{ color: "#9ca3af", fontSize: 10, marginTop: 2 }}>
-                  {v.sog.toFixed(1)} kn · Click for details
                 </div>
-              </div>
-            </Tooltip>
-          </Marker>
-        );
-      })}
+              </Tooltip>
+            </Marker>
+          );
+        })}
+      </MarkerClusterGroup>
     </MapContainer>
   );
 }
