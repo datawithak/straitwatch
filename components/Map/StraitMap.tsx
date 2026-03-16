@@ -121,6 +121,16 @@ function MapAnnotations() {
 
 // ─── Vessel marker ────────────────────────────────────────────────────────────
 
+const CHINA_PORTS = ["NINGBO","ZHOUSHAN","QINGDAO","TIANJIN","DALIAN","SHANGHAI","GUANGZHOU","SHENZHEN","YANGSHAN","HONG KONG","HUIZHOU","RIZHAO"];
+const INDIA_PORTS = ["MUNDRA","SIKKA","PARADIP","HALDIA","CHENNAI","COCHIN","VADINAR","JAMNAGAR","VIZAG","KANDLA","MANGALORE"];
+
+function getDestinationDot(destination: string): { color: string; title: string } | null {
+  const d = destination.toUpperCase();
+  if (CHINA_PORTS.some((p) => d.includes(p))) return { color: "#FF4444", title: "→ China" };
+  if (INDIA_PORTS.some((p) => d.includes(p))) return { color: "#FF9933", title: "→ India" };
+  return null;
+}
+
 function makeVesselIcon(vessel: Vessel): L.DivIcon {
   const color = COUNTRY_COLORS[vessel.country];
   const size = vessel.draught > 12 ? 14 : vessel.draught > 8 ? 12 : 10;
@@ -139,6 +149,8 @@ function makeVesselIcon(vessel: Vessel): L.DivIcon {
   const opacity = vessel.isGoingDark ? "0.45" : "1";
   const border = vessel.isGoingDark ? "2px dashed #9ca3af" : `2px solid ${color}`;
 
+  const destDot = vessel.destination ? getDestinationDot(vessel.destination) : null;
+
   const html = `
     <div style="
       width:${size}px;height:${size}px;
@@ -151,6 +163,7 @@ function makeVesselIcon(vessel: Vessel): L.DivIcon {
       position:relative;
     ">
       ${vessel.departedTerminal ? `<div style="position:absolute;top:-4px;right:-4px;width:6px;height:6px;background:#f97316;border-radius:50%;border:1px solid white;"></div>` : ""}
+      ${destDot ? `<div style="position:absolute;bottom:-4px;left:-4px;width:6px;height:6px;background:${destDot.color};border-radius:50%;border:1px solid white;"></div>` : ""}
     </div>
   `;
 
@@ -260,6 +273,11 @@ export default function StraitMap({
                 )}
                 {v.departedTerminal && (
                   <div style={{ color: "#fb923c", fontSize: 10 }}>📍 Departed: {v.departedTerminal}</div>
+                )}
+                {v.destination && getDestinationDot(v.destination) && (
+                  <div style={{ color: getDestinationDot(v.destination)!.color, fontSize: 10 }}>
+                    ● Dest: {v.destination}
+                  </div>
                 )}
                 <div style={{ color: "#9ca3af", fontSize: 10, marginTop: 2 }}>
                   {v.sog.toFixed(1)} kn · Click for details
