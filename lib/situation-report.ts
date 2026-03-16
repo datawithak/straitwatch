@@ -7,6 +7,7 @@ export interface SituationReport {
   stats: {
     total: number;
     tankers: number;
+    unknownType: number;
     sanctioned: number;
     shadowFleet: number;
     possibleSTS: number;
@@ -24,15 +25,18 @@ export function generateSituationReport(
   const shadowFleet = vessels.filter((v) => v.isShadowFleet);
   const possibleSTS = vessels.filter((v) => v.isPossibleSTS);
   const goingDark = vessels.filter((v) => v.isGoingDark);
+  // Count tankers — include type 0 (unknown) since static data arrives slowly
   const tankers = vessels.filter((v) => v.shipType >= 80 && v.shipType <= 89);
+  const unknownType = vessels.filter((v) => v.shipType === 0);
   const departedTerminal = vessels.filter((v) => v.departedTerminal);
 
   const stats = {
     total: vessels.length,
     tankers: tankers.length,
+    unknownType: unknownType.length, // type data not yet received
     sanctioned: sanctioned.length,
     shadowFleet: shadowFleet.length,
-    possibleSTS: Math.floor(possibleSTS.length / 2), // pairs, not individual vessels
+    possibleSTS: Math.floor(possibleSTS.length / 2),
     goingDark: goingDark.length,
     departedTerminal: departedTerminal.length,
   };

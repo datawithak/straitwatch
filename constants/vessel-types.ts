@@ -24,8 +24,20 @@ export function getVesselTypeLabel(shipType: number): string {
   return `Vessel (type ${shipType})`;
 }
 
-export function isTanker(shipType: number): boolean {
-  return shipType >= 80 && shipType <= 89;
+export function isTanker(shipType: number, name?: string): boolean {
+  if (shipType >= 80 && shipType <= 89) return true;
+  // Heuristic for vessels with unknown type (0): infer from name
+  if (shipType === 0 && name) {
+    const n = name.toUpperCase();
+    return (
+      n.includes("TANKER") || n.includes("CRUDE") ||
+      n.includes("VLCC") || n.includes("ULCC") ||
+      n.includes(" LNG") || n.includes(" LPG") ||
+      n.includes("SUEZMAX") || n.includes("AFRAMAX") ||
+      n.includes("PETRO") || n.endsWith(" T.")
+    );
+  }
+  return false;
 }
 
 export function isCargo(shipType: number): boolean {

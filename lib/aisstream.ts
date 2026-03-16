@@ -6,6 +6,7 @@ import { AIS_BOUNDING_BOX } from "@/constants/regions";
 
 const AISSTREAM_URL = "wss://stream.aisstream.io/v0/stream";
 const MAX_TRAIL = 20;
+const STALE_MS = 15 * 60 * 1000; // prune vessels not seen in 15 min
 
 // ─── AIS message types ────────────────────────────────────────────────────────
 
@@ -48,10 +49,20 @@ interface AISMessage {
   } & AnyMessage;
 }
 
-// ─── In-memory vessel store ───────────────────────────────────────────────────
+// ─── Persistent vessel store ──────────────────────────────────────────────────
+// Never cleared between API calls — static data (name, type, IMO) accumulates
+// across multiple calls. Stale vessels pruned after 15 minutes.
 
 type PartialVessel = Partial<Omit<Vessel, "trail">> & { trail?: TrailPoint[] };
+
 const vesselStore = new Map<string, PartialVessel>();
+
+function pruneStale() {
+  const cutoff = Date.now() - STALE_MS;
+  for (const [mmsi, v] of Array.from(vesselStore.entries())) {
+    if ((v.lastUpdated ?? 0) < cutoff) vesselStore.delete(mmsi);
+  }
+}
 
 function applyPosition(mmsi: string, meta: AISMeta, pos: PositionReport) {
   const existing = vesselStore.get(mmsi) ?? {};
@@ -71,10 +82,10 @@ function applyPosition(mmsi: string, meta: AISMeta, pos: PositionReport) {
     name: meta.ShipName?.trim() || existing.name || mmsi,
     lat,
     lng,
-    sog: pos.Sog ?? 0,
-    cog: pos.Cog ?? 0,
-    heading: pos.TrueHeading !== 511 ? pos.TrueHeading : (pos.Cog ?? 0),
-    navStatus: pos.NavigationalStatus ?? 15,
+    sog: pos.Sog ?? existing.sog ?? 0,
+    cog: pos.Cog ?? existing.cog ?? 0,
+    heading: pos.TrueHeading !== 511 ? pos.TrueHeading : (pos.Cog ?? existing.heading ?? 0),
+    navStatus: pos.NavigationalStatus ?? existing.navStatus ?? 15,
     lastUpdated: now,
     trail,
   });
@@ -86,12 +97,13 @@ function applyStatic(mmsi: string, meta: AISMeta, s: ShipStaticData) {
     ...existing,
     mmsi,
     name: s.Name?.trim() || meta.ShipName?.trim() || existing.name || mmsi,
-    callsign: s.CallSign?.trim() || "",
+    callsign: s.CallSign?.trim() || existing.callsign || "",
     imo: s.ImoNumber ? String(s.ImoNumber) : (existing.imo ?? ""),
-    shipType: s.Type ?? existing.shipType ?? 0,
+    // Only overwrite shipType if we actually got a non-zero value
+    shipType: (s.Type && s.Type !== 0) ? s.Type : (existing.shipType ?? 0),
     destination: s.Destination?.trim() || existing.destination || "",
     draught: s.Draught ?? existing.draught ?? 0,
-    lastUpdated: Date.now(),
+    lastUpdated: existing.lastUpdated ?? Date.now(),
   });
 }
 
@@ -99,7 +111,7 @@ function processMessage(msg: AISMessage) {
   const mmsi = String(msg.MetaData?.MMSI ?? "");
   if (!mmsi) return;
 
-  // Baseline from MetaData
+  // Baseline from MetaData — position always available here
   const metaLat = msg.MetaData?.latitude;
   const metaLng = msg.MetaData?.longitude;
   if (metaLat != null && metaLng != null) {
@@ -126,7 +138,7 @@ function processMessage(msg: AISMessage) {
   if (s) applyStatic(mmsi, msg.MetaData, s);
 }
 
-function finalizeVessels(): Vessel[] {
+function buildVessels(): Vessel[] {
   const results: Vessel[] = [];
 
   for (const [mmsi, partial] of Array.from(vesselStore.entries())) {
@@ -153,7 +165,6 @@ function finalizeVessels(): Vessel[] {
       lastUpdated: partial.lastUpdated ?? Date.now(),
       trail: partial.trail ?? [],
 
-      // Enriched — sanctions/shadow fleet filled by API route after fetching sanctions list
       country,
       isSanctioned: false,
       sanctionPrograms: [],
@@ -173,20 +184,20 @@ function finalizeVessels(): Vessel[] {
   return results;
 }
 
-// ─── One-shot WebSocket fetch ─────────────────────────────────────────────────
+// ─── One-shot WebSocket fetch — merges into persistent store ──────────────────
 
 export async function fetchVesselsViaAIS(
   apiKey: string,
-  collectMs = 20_000
+  collectMs = 30_000
 ): Promise<Vessel[]> {
-  vesselStore.clear();
+  pruneStale(); // remove vessels not seen in 15 min, keep the rest
 
   return new Promise((resolve) => {
     let ws: WS;
     try {
       ws = new WS(AISSTREAM_URL);
     } catch {
-      resolve([]);
+      resolve(buildVessels()); // return what we have
       return;
     }
 
@@ -195,8 +206,8 @@ export async function fetchVesselsViaAIS(
       if (resolved) return;
       resolved = true;
       clearTimeout(timer);
-      const vessels = finalizeVessels();
-      console.log(`[AIS] done — ${vesselStore.size} raw, ${vessels.length} finalized`);
+      const vessels = buildVessels();
+      console.log(`[AIS] done — store: ${vesselStore.size} vessels, ${vessels.filter(v => v.shipType >= 80 && v.shipType <= 89).length} tankers`);
       try { ws.close(); } catch {}
       resolve(vessels);
     };
@@ -221,3 +232,6 @@ export async function fetchVesselsViaAIS(
     ws.on("close", done);
   });
 }
+
+// Export store size for debugging
+export function getStoreSize() { return vesselStore.size; }

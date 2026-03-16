@@ -50,7 +50,12 @@ export default function SituationReportBar({ report, isDemo, isLoading }: Props)
         {report && (
           <div className="hidden md:flex items-center gap-2 shrink-0 text-xs">
             <Chip value={report.stats.total} label="vessels" color="text-slate-300" />
-            <Chip value={report.stats.tankers} label="tankers" color="text-blue-300" />
+            {report.stats.tankers > 0
+              ? <Chip value={report.stats.tankers} label="tankers" color="text-blue-300" />
+              : report.stats.unknownType > 0
+              ? <span className="text-slate-500">{report.stats.unknownType} type&nbsp;pending</span>
+              : null
+            }
             {report.stats.sanctioned > 0 && (
               <Chip value={report.stats.sanctioned} label="sanctioned" color="text-red-400" />
             )}
