@@ -223,7 +223,7 @@ export default function StraitMap({
     <MapContainer
       center={[initialRegion.center[0], initialRegion.center[1]]}
       zoom={initialRegion.zoom}
-      maxZoom={12}
+      maxZoom={10}
       style={{ width: "100%", height: "100%" }}
       zoomControl={true}
     >
@@ -231,7 +231,7 @@ export default function StraitMap({
       <TileLayer
         url="https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}"
         attribution="Tiles &copy; Esri | AIS: aisstream.io | OFAC: US Treasury"
-        maxZoom={12}
+        maxZoom={10}
       />
 
       <RegionController region={region} />
@@ -240,7 +240,7 @@ export default function StraitMap({
       <MarkerClusterGroup
         chunkedLoading
         maxClusterRadius={50}
-        disableClusteringAtZoom={9}
+        disableClusteringAtZoom={8}
         spiderfyOnMaxZoom={true}
         showCoverageOnHover={false}
       >
