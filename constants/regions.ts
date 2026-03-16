@@ -40,9 +40,9 @@ export const REGIONS: Record<RegionKey, Region> = {
   bab: {
     label: "Bab al-Mandab",
     description: "Houthi attack zone — Red Sea entry",
-    bounds: { lat_min: 11, lon_min: 41, lat_max: 15, lon_max: 47 },
-    center: [12.5, 43.5],
-    zoom: 7,
+    bounds: { lat_min: 8, lon_min: 40, lat_max: 16, lon_max: 52 },
+    center: [12.0, 46.0],
+    zoom: 6,
   },
   "red-sea": {
     label: "Red Sea",

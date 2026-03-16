@@ -29,7 +29,9 @@ export const STORY_CARDS: StoryCard[] = [
     title: "The Houthi Effect",
     subtitle: "Why ships avoid Bab al-Mandab",
     body:
-      "Since late 2023, Houthi forces in Yemen have attacked over 100 merchant vessels in the Red Sea. Insurance costs tripled. Most shipping now routes around Africa instead — adding 10–14 days and ~$1M in extra fuel per voyage. Watch how few ships transit Bab al-Mandab.",
+      "Since late 2023, Houthi forces in Yemen have attacked over 100 merchant vessels in the Red Sea. Insurance costs tripled. Most shipping now routes around Africa instead — adding 10–14 days and ~$1M in extra fuel per voyage.",
+    note:
+      "The near-empty water around Bab al-Mandab IS the story. Before 2023, dozens of ships transited here daily. What you're not seeing — the absence of traffic — represents billions in rerouting costs and a complete reshape of global shipping routes.",
     answersQuestion: 2,
     highlight: {},
     snapToRegion: "bab",
