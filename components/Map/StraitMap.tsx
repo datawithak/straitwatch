@@ -39,6 +39,7 @@ function RegionController({ region }: { region: RegionKey }) {
 
 // ─── Map annotation labels ────────────────────────────────────────────────────
 
+// Chokepoint + zone annotations (bold, with subtitle)
 const MAP_ANNOTATIONS = [
   {
     lat: 26.5, lng: 56.5,
@@ -58,10 +59,31 @@ const MAP_ANNOTATIONS = [
   },
 ];
 
+// Country labels — orient the non-expert user
+const COUNTRY_LABELS_MAP = [
+  // Persian Gulf countries
+  { lat: 28.5,  lng: 54.0,  name: "IRAN",         color: "#E8650A" },
+  { lat: 26.0,  lng: 55.8,  name: "UAE",           color: "#D4AF37" },
+  { lat: 22.5,  lng: 58.5,  name: "OMAN",          color: "#94a3b8" },
+  { lat: 24.5,  lng: 50.5,  name: "SAUDI ARABIA",  color: "#94a3b8" },
+  { lat: 29.0,  lng: 47.8,  name: "KUWAIT",        color: "#94a3b8" },
+  { lat: 25.3,  lng: 51.2,  name: "QATAR",         color: "#94a3b8" },
+  { lat: 31.0,  lng: 47.5,  name: "IRAQ",          color: "#94a3b8" },
+  // Red Sea / Bab al-Mandab
+  { lat: 15.5,  lng: 44.5,  name: "YEMEN",         color: "#ef4444" },
+  { lat: 11.8,  lng: 42.8,  name: "DJIBOUTI",      color: "#94a3b8" },
+  { lat: 20.0,  lng: 37.5,  name: "SAUDI ARABIA",  color: "#94a3b8" },
+  { lat: 25.5,  lng: 34.0,  name: "EGYPT",         color: "#94a3b8" },
+  // note under Yemen
+  { lat: 14.2,  lng: 44.5,  name: "↑ Houthi-controlled", color: "#fca5a5" },
+];
+
 function MapAnnotations() {
   const map = useMap();
   useEffect(() => {
-    const labels: L.Marker[] = [];
+    const markers: L.Marker[] = [];
+
+    // Chokepoint annotations — bold with subtitle
     for (const ann of MAP_ANNOTATIONS) {
       const icon = L.divIcon({
         className: "map-annotation",
@@ -75,11 +97,25 @@ function MapAnnotations() {
         iconAnchor: [60, 10],
         iconSize: [120, 30],
       });
-      const marker = L.marker([ann.lat, ann.lng], { icon, interactive: false, zIndexOffset: -1000 });
-      marker.addTo(map);
-      labels.push(marker);
+      const m = L.marker([ann.lat, ann.lng], { icon, interactive: false, zIndexOffset: -1000 });
+      m.addTo(map);
+      markers.push(m);
     }
-    return () => { labels.forEach((l) => l.removeFrom(map)); };
+
+    // Country labels — smaller, colored by geopolitical importance
+    for (const cl of COUNTRY_LABELS_MAP) {
+      const icon = L.divIcon({
+        className: "",
+        html: `<div style="font-size:9px;font-weight:700;color:${cl.color};text-shadow:0 1px 3px rgba(0,0,0,0.95);letter-spacing:0.1em;white-space:nowrap;pointer-events:none;">${cl.name}</div>`,
+        iconAnchor: [30, 6],
+        iconSize: [80, 12],
+      });
+      const m = L.marker([cl.lat, cl.lng], { icon, interactive: false, zIndexOffset: -2000 });
+      m.addTo(map);
+      markers.push(m);
+    }
+
+    return () => { markers.forEach((m) => m.removeFrom(map)); };
   }, [map]);
   return null;
 }

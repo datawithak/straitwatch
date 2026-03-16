@@ -22,7 +22,6 @@ const StraitMap = dynamic(() => import("@/components/Map/StraitMap"), {
   ),
 });
 
-const VESSEL_REFRESH_MS = 60_000;
 const INTEL_REFRESH_MS = 300_000;
 
 type SidebarTab = "stories" | "intel" | "legend";
@@ -30,7 +29,9 @@ type SidebarTab = "stories" | "intel" | "legend";
 export default function Home() {
   const [vessels, setVessels] = useState<Vessel[]>([]);
   const [isDemo, setIsDemo] = useState(true);
-  const [vesselLoading, setVesselLoading] = useState(false);
+  const [vesselLoading, setVesselLoading] = useState(true);
+  const [liveConnected, setLiveConnected] = useState(false);
+  const vesselMapRef = useRef(new Map<string, Vessel>());
 
   const [intelResult, setIntelResult] = useState<IntelFeedResult | null>(null);
   const [intelLoading, setIntelLoading] = useState(false);
@@ -46,47 +47,91 @@ export default function Home() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSidebarTab, setMobileSidebarTab] = useState<SidebarTab>("stories");
 
-  const vesselIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const intelIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const stsIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // ── Fetch vessels ─────────────────────────────────────────────────────────
+  // ── Apply STS detection and update state from vessel map ─────────────────
+  const flushVessels = useCallback(() => {
+    const all = Array.from(vesselMapRef.current.values());
+    const stsPairs = detectSTSPairs(all);
+    const stsMMSIs = new Set<string>();
+    const stsPartners = new Map<string, { mmsi: string; name: string }>();
+    for (const pair of stsPairs) {
+      stsMMSIs.add(pair.vesselA.mmsi);
+      stsMMSIs.add(pair.vesselB.mmsi);
+      stsPartners.set(pair.vesselA.mmsi, { mmsi: pair.vesselB.mmsi, name: pair.vesselB.name });
+      stsPartners.set(pair.vesselB.mmsi, { mmsi: pair.vesselA.mmsi, name: pair.vesselA.name });
+    }
+    const enriched = all.map((v) => ({
+      ...v,
+      isPossibleSTS: stsMMSIs.has(v.mmsi),
+      stsPartnerMMSI: stsPartners.get(v.mmsi)?.mmsi ?? v.stsPartnerMMSI,
+      stsPartnerName: stsPartners.get(v.mmsi)?.name ?? v.stsPartnerName,
+    }));
+    setVessels(enriched);
+    setSituationReport(generateSituationReport(enriched, intelResult?.items ?? []));
+  }, [intelResult]);
+
+  // ── Live SSE connection ────────────────────────────────────────────────────
+  useEffect(() => {
+    let es: EventSource;
+    let reconnectTimer: ReturnType<typeof setTimeout>;
+
+    const connect = () => {
+      es = new EventSource("/api/vessels/live");
+      setVesselLoading(true);
+
+      es.onopen = () => {
+        setLiveConnected(true);
+        setIsDemo(false);
+        setVesselLoading(false);
+      };
+
+      es.onmessage = (e) => {
+        try {
+          const v = JSON.parse(e.data) as Vessel;
+          if (!v.mmsi) return;
+          const existing = vesselMapRef.current.get(v.mmsi);
+          vesselMapRef.current.set(v.mmsi, { ...existing, ...v } as Vessel);
+        } catch {}
+      };
+
+      es.onerror = () => {
+        setLiveConnected(false);
+        es.close();
+        // Reconnect after 5s
+        reconnectTimer = setTimeout(connect, 5000);
+      };
+    };
+
+    connect();
+
+    // Flush vessel map to React state every 2 seconds (smooth updates, not per-message re-render)
+    stsIntervalRef.current = setInterval(flushVessels, 2000);
+
+    return () => {
+      es?.close();
+      clearTimeout(reconnectTimer);
+      if (stsIntervalRef.current) clearInterval(stsIntervalRef.current);
+    };
+  }, [flushVessels]);
+
+  // Fallback: manual refresh still calls /api/vessels for a fresh batch
   const fetchVessels = useCallback(async () => {
     setVesselLoading(true);
     try {
       const res = await fetch("/api/vessels");
       const data = await res.json();
-      const rawVessels: Vessel[] = data.vessels ?? [];
-
-      // Apply STS detection client-side
-      const stsPairs = detectSTSPairs(rawVessels);
-      const stsMMSIs = new Set<string>();
-      const stsPartners = new Map<string, { mmsi: string; name: string }>();
-      for (const pair of stsPairs) {
-        stsMMSIs.add(pair.vesselA.mmsi);
-        stsMMSIs.add(pair.vesselB.mmsi);
-        stsPartners.set(pair.vesselA.mmsi, { mmsi: pair.vesselB.mmsi, name: pair.vesselB.name });
-        stsPartners.set(pair.vesselB.mmsi, { mmsi: pair.vesselA.mmsi, name: pair.vesselA.name });
+      if (data.vessels) {
+        for (const v of data.vessels as Vessel[]) {
+          vesselMapRef.current.set(v.mmsi, v);
+        }
+        setIsDemo(data.isDemo ?? false);
+        flushVessels();
       }
-
-      const enriched = rawVessels.map((v) => ({
-        ...v,
-        isPossibleSTS: stsMMSIs.has(v.mmsi),
-        stsPartnerMMSI: stsPartners.get(v.mmsi)?.mmsi ?? v.stsPartnerMMSI,
-        stsPartnerName: stsPartners.get(v.mmsi)?.name ?? v.stsPartnerName,
-      }));
-
-      setVessels(enriched);
-      setIsDemo(data.isDemo ?? true);
-
-      // Generate situation report
-      const report = generateSituationReport(enriched, intelResult?.items ?? []);
-      setSituationReport(report);
-    } catch {
-      // Keep existing vessels on error
-    } finally {
-      setVesselLoading(false);
-    }
-  }, [intelResult]);
+    } catch {}
+    finally { setVesselLoading(false); }
+  }, [flushVessels]);
 
   // ── Fetch intel ───────────────────────────────────────────────────────────
   const fetchIntel = useCallback(async () => {
@@ -99,12 +144,8 @@ export default function Home() {
     finally { setIntelLoading(false); }
   }, []);
 
-  // ── Auto-refresh ──────────────────────────────────────────────────────────
-  useEffect(() => {
-    fetchVessels();
-    vesselIntervalRef.current = setInterval(fetchVessels, VESSEL_REFRESH_MS);
-    return () => { if (vesselIntervalRef.current) clearInterval(vesselIntervalRef.current); };
-  }, [fetchVessels]);
+  // Kick off an initial batch fetch to pre-warm the vessel map
+  useEffect(() => { fetchVessels(); }, [fetchVessels]);
 
   useEffect(() => {
     fetchIntel();
@@ -172,14 +213,20 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Refresh button */}
-        <button
-          onClick={fetchVessels}
-          disabled={vesselLoading}
-          className="ml-auto text-xs bg-white/10 hover:bg-white/15 disabled:opacity-40 px-3 py-1 rounded transition-colors shrink-0"
-        >
-          {vesselLoading ? "Updating..." : "↺ Refresh"}
-        </button>
+        {/* Live status + refresh */}
+        <div className="ml-auto flex items-center gap-2 shrink-0">
+          <span className={`text-xs flex items-center gap-1 ${liveConnected ? "text-emerald-400" : "text-slate-500"}`}>
+            <span className={`inline-block w-1.5 h-1.5 rounded-full ${liveConnected ? "bg-emerald-400 animate-pulse" : "bg-slate-600"}`} />
+            {liveConnected ? "LIVE" : "CONNECTING..."}
+          </span>
+          <button
+            onClick={fetchVessels}
+            disabled={vesselLoading}
+            className="text-xs bg-white/10 hover:bg-white/15 disabled:opacity-40 px-3 py-1 rounded transition-colors"
+          >
+            {vesselLoading ? "Updating..." : "↺ Refresh"}
+          </button>
+        </div>
       </header>
 
       {/* Situation Report */}
