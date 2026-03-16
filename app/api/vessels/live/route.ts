@@ -10,6 +10,11 @@ const AISSTREAM_URL = "wss://stream.aisstream.io/v0/stream";
 const MAX_TRAIL = 20;
 const STALE_MS = 15 * 60 * 1000;
 
+// Pre-warm sanctions in the background so it's ready before anyone connects
+// (avoids blocking the SSE stream open on a ~50MB download)
+let sanctionedCache: Map<string, { programs: string[]; name: string }> = new Map();
+getSanctionedVessels().then((s) => { sanctionedCache = s; }).catch(() => {});
+
 // ─── Module-level persistent store (shared across SSE connections) ────────────
 
 interface StoredVessel {
@@ -98,8 +103,8 @@ export async function GET() {
   const encoder = new TextEncoder();
   pruneStale();
 
-  // Pre-load sanctions list (cached at module level in sanctions.ts)
-  const sanctioned = await getSanctionedVessels();
+  // Use whatever sanctions data is already in cache — don't block SSE on OFAC download
+  const sanctioned = sanctionedCache;
 
   let ws: InstanceType<typeof WS> | null = null;
 
