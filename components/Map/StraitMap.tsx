@@ -238,8 +238,10 @@ export default function StraitMap({
 
       <MarkerClusterGroup
         chunkedLoading
-        maxClusterRadius={40}
-        disableClusteringAtZoom={11}
+        maxClusterRadius={50}
+        disableClusteringAtZoom={9}
+        spiderfyOnMaxZoom={true}
+        showCoverageOnHover={false}
       >
         {vessels.map((v) => {
           const dimmed = highlight !== null && !shouldHighlight(v, highlight);
