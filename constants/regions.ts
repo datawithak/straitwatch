@@ -53,5 +53,5 @@ export const REGIONS: Record<RegionKey, Region> = {
   },
 };
 
-// AIS subscription bounding box — covers the full corridor
-export const AIS_BOUNDING_BOX = [[8.0, 40.0], [32.0, 67.0]];
+// AIS subscription bounding box — full corridor: Red Sea (lon 30E) to Arabian Sea (lon 75E)
+export const AIS_BOUNDING_BOX = [[8.0, 30.0], [32.0, 75.0]];
