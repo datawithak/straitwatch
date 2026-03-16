@@ -207,7 +207,8 @@ function shouldHighlight(v: Vessel, highlight: StoryHighlight | null): boolean {
   }
 
   if (highlight.isSanctioned && !v.isSanctioned) return false;
-  if (highlight.isShadowFleet && !v.isShadowFleet) return false;
+  // Shadow fleet: match if in DB OR flies a known shadow flag (Palau/Gabon/Cook Islands etc.)
+  if (highlight.isShadowFleet && !v.isShadowFleet && v.country !== "shadow-flag") return false;
   if (highlight.isPossibleSTS && !v.isPossibleSTS) return false;
   if (highlight.departedTerminal && !v.departedTerminal) return false;
   return true;
