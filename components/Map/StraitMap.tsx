@@ -221,6 +221,7 @@ export default function StraitMap({
     <MapContainer
       center={[initialRegion.center[0], initialRegion.center[1]]}
       zoom={initialRegion.zoom}
+      maxZoom={12}
       style={{ width: "100%", height: "100%" }}
       zoomControl={true}
     >
