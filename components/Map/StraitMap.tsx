@@ -176,7 +176,22 @@ interface Props {
 function shouldHighlight(v: Vessel, highlight: StoryHighlight | null): boolean {
   if (!highlight) return true;
   if (Object.keys(highlight).length === 0) return true;
-  if (highlight.countries && !highlight.countries.includes(v.country)) return false;
+
+  // Destination-keyword check — a vessel passes if its destination matches any keyword
+  const destMatch = highlight.destinationKeywords?.length
+    ? highlight.destinationKeywords.some((kw) =>
+        v.destination?.toUpperCase().includes(kw)
+      )
+    : false;
+
+  // Country check — passes if flag country matches OR destination matches
+  if (highlight.countries) {
+    const countryMatch = highlight.countries.includes(v.country);
+    if (!countryMatch && !destMatch) return false;
+  } else if (highlight.destinationKeywords?.length && !destMatch) {
+    return false;
+  }
+
   if (highlight.isSanctioned && !v.isSanctioned) return false;
   if (highlight.isShadowFleet && !v.isShadowFleet) return false;
   if (highlight.isPossibleSTS && !v.isPossibleSTS) return false;

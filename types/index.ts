@@ -99,6 +99,7 @@ export interface StoryHighlight {
   isShadowFleet?: boolean;
   isPossibleSTS?: boolean;
   departedTerminal?: boolean;
+  destinationKeywords?: string[]; // highlight vessels whose destination contains any of these
 }
 
 export interface StoryCard {

@@ -4,10 +4,11 @@ import { CountryKey } from "@/types/index";
 export const MID_TO_COUNTRY: Record<string, CountryKey> = {
   // Russia
   "273": "russia",
-  // China
+  // China (incl. Hong Kong — HK vessels are Chinese jurisdiction)
   "412": "china",
   "413": "china",
   "414": "china",
+  "477": "china", // Hong Kong
   // Iran
   "422": "iran",
   // India

@@ -46,7 +46,17 @@ export const STORY_CARDS: StoryCard[] = [
     note:
       "Most Chinese and Indian tankers don't fly their own flag. They register under Panama, Marshall Islands, or Liberia to avoid scrutiny. On this map, look for destinations ending in China or India — that reveals the buyer, not the flag.",
     answersQuestion: 1,
-    highlight: { countries: ["china", "india"] },
+    highlight: {
+      countries: ["china", "india"],
+      destinationKeywords: [
+        // Chinese ports
+        "NINGBO", "ZHOUSHAN", "QINGDAO", "TIANJIN", "DALIAN", "SHANGHAI",
+        "GUANGZHOU", "SHENZHEN", "YANGSHAN", "HONG KONG", "HUIZHOU", "RIZHAO",
+        // Indian ports
+        "MUNDRA", "SIKKA", "PARADIP", "HALDIA", "CHENNAI", "COCHIN",
+        "VADINAR", "JAMNAGAR", "VIZAG", "KANDLA", "MANGALORE",
+      ],
+    },
     snapToRegion: "hormuz",
   },
   {
