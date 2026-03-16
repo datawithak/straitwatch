@@ -26,9 +26,9 @@ export const REGIONS: Record<RegionKey, Region> = {
   hormuz: {
     label: "Strait of Hormuz",
     description: "21% of world's oil passes here",
-    bounds: { lat_min: 22, lon_min: 54, lat_max: 27, lon_max: 60 },
-    center: [26.5, 56.5],
-    zoom: 7,
+    bounds: { lat_min: 22, lon_min: 48, lat_max: 30, lon_max: 60 },
+    center: [26.5, 54.0],
+    zoom: 6,
   },
   "gulf-oman": {
     label: "Gulf of Oman",
