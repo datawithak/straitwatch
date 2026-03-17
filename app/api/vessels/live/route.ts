@@ -5,13 +5,16 @@ import WS from "ws";
 import { getCountryFromMMSI } from "@/constants/countries";
 import sanctionedJson from "@/data/sanctioned-vessels.json";
 
-const SANCTIONED_MAP = new Map<string, { programs: string[]; name: string }>(
-  Object.entries(sanctionedJson as Record<string, { programs: string[]; name: string }>)
+const SANCTIONED_MAP = new Map<string, { programs: string[]; name: string; aliases?: string[] }>(
+  Object.entries(sanctionedJson as Record<string, { programs: string[]; name: string; aliases?: string[] }>)
 );
-// Name-based fallback: matches even before static AIS data (IMO) arrives
+// Name-based fallback: primary name + all aliases for broader AIS matching
 const SANCTIONED_BY_NAME = new Map<string, { programs: string[] }>();
 for (const data of SANCTIONED_MAP.values()) {
   if (data.name) SANCTIONED_BY_NAME.set(data.name.toUpperCase().trim(), { programs: data.programs });
+  for (const alias of (data.aliases ?? [])) {
+    SANCTIONED_BY_NAME.set(alias.toUpperCase().trim(), { programs: data.programs });
+  }
 }
 
 import shadowJson from "@/data/shadow-fleet.json";

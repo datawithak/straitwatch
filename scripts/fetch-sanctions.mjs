@@ -1,5 +1,5 @@
 // Run once locally: node scripts/fetch-sanctions.mjs
-// Fetches OFAC SDN XML and saves sanctioned vessel IMOs to data/sanctioned-vessels.json
+// Fetches OFAC SDN XML and saves sanctioned vessel IMOs + names/aliases to data/sanctioned-vessels.json
 
 import { writeFileSync } from "fs";
 import { resolve, dirname } from "path";
@@ -27,7 +27,15 @@ for (const entry of entries) {
 
   const nameM = entry.match(/<lastName>([^<]+)<\/lastName>/i) ||
                 entry.match(/<firstName>([^<]+)<\/firstName>/i);
-  const name = nameM ? nameM[1].trim() : "";
+  const primaryName = nameM ? nameM[1].trim() : "";
+
+  // Also capture aka (alias) names — vessels often broadcast an alias on AIS
+  const akaNames = [];
+  const akaRe = /<aka>[\s\S]*?<lastName>([^<]+)<\/lastName>[\s\S]*?<\/aka>/gi;
+  let am;
+  while ((am = akaRe.exec(entry)) !== null) {
+    akaNames.push(am[1].trim());
+  }
 
   const programRe = /<program>([^<]+)<\/program>/gi;
   const programs = [];
@@ -39,7 +47,7 @@ for (const entry of entries) {
   let im;
   while ((im = imoRe.exec(entry)) !== null) {
     const imo = im[1].trim();
-    if (imo) result[imo] = { name, programs };
+    if (imo) result[imo] = { name: primaryName, aliases: akaNames, programs };
   }
 }
 

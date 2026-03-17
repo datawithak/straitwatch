@@ -1,36 +1,42 @@
 {
   "1006960": {
     "name": "OLYMPIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "1010648": {
     "name": "SEA RHAPSODY",
+    "aliases": [],
     "programs": [
       "UKRAINE-EO13661"
     ]
   },
   "1010703": {
     "name": "TANGO",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "1011159": {
     "name": "ANATTA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "1011202": {
     "name": "NIRVANA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "1011331": {
     "name": "MADAME GU",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13661"
@@ -38,150 +44,184 @@
   },
   "1011551": {
     "name": "GRACEFUL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "1021570": {
     "name": "OCEAN 28",
+    "aliases": [
+      "YA QING HAI YANG"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "4743313": {
     "name": "IRIS DENA",
+    "aliases": [
+      "DENA"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "6401828": {
     "name": "YANG GAK DO",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "6421660": {
     "name": "THEODOROS",
+    "aliases": [],
     "programs": [
       "LIBYA3"
     ]
   },
   "6703769": {
     "name": "ALIREZA 1",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "6908096": {
     "name": "KANG SONG 1",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "7206512": {
     "name": "TIFON",
+    "aliases": [],
     "programs": [
       "CUBA"
     ]
   },
   "7236141": {
     "name": "TRITON",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "7303803": {
     "name": "AN SAN 1",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "7389704": {
     "name": "RYE SONG GANG 1",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "7406784": {
     "name": "EBANO",
+    "aliases": [
+      "ANA I",
+      "SAND SWAN"
+    ],
     "programs": [
       "CUBA"
     ]
   },
   "7408873": {
     "name": "SAM JONG 2",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "7411260": {
     "name": "DOK CHON",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "7416349": {
     "name": "LONG XING 603",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "7423275": {
     "name": "IVAN KIREEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "7506118": {
     "name": "RAK RANG",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "7514517": {
     "name": "MARAYA",
+    "aliases": [
+      "MED PATRON"
+    ],
     "programs": [
       "LIBYA3"
     ]
   },
   "7612448": {
     "name": "BALTIYSKIY-111",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "7632955": {
     "name": "PHO THAE",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "7640378": {
     "name": "RYONG GANG 2",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "7738656": {
     "name": "TAE DONG GANG",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "7741108": {
     "name": "MANGAZEYA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "7815246": {
     "name": "FU YUAN YU 005",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "7904580": {
     "name": "HORMUZ 2",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -190,102 +230,123 @@
   },
   "7912111": {
     "name": "URDANETA",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "7937317": {
     "name": "CHONG CHON GANG",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "7944683": {
     "name": "BAEK MA KANG",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "7944695": {
     "name": "DAI HONG DAN",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8011055": {
     "name": "LONG XING 602",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8018900": {
     "name": "HYOK SIN 2",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8018912": {
     "name": "JON JIN 2",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8023670": {
     "name": "PROGRES",
+    "aliases": [
+      "OZEL 2"
+    ],
     "programs": [
       "LIBYA3"
     ]
   },
   "8106109": {
     "name": "MARINA VISION",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "8106496": {
     "name": "SAM MA 2",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8122347": {
     "name": "NAM SAN 8",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8126070": {
     "name": "SHANG YUAN BAO",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8132835": {
     "name": "AM NOK GANG",
+    "aliases": [
+      "AP ROK GANG"
+    ],
     "programs": [
       "DPRK"
     ]
   },
   "8133530": {
     "name": "JANG JA SAN CHONG NYON HO",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8151415": {
     "name": "TONG HUNG 5",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8201870": {
     "name": "GOO RYONG",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8203608": {
     "name": "SARINA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -294,18 +355,21 @@
   },
   "8203933": {
     "name": "JANG GYONG",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8212465": {
     "name": "YOUNES",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "8215742": {
     "name": "SABRINA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -314,30 +378,38 @@
   },
   "8217685": {
     "name": "HWA SONG",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8227238": {
     "name": "AKADEMIK ALEKSANDR KARPINSKIY",
+    "aliases": [
+      "AK. A. KARPINSKIY",
+      "AKADEMIC ALEXANDER KARPINSKY"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8305781": {
     "name": "BELOMORSKIY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8312227": {
     "name": "VICTORY 2",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "8314275": {
     "name": "IRAN HORMUZ 22",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -346,48 +418,56 @@
   },
   "8315499": {
     "name": "PAWELL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8316106": {
     "name": "YOUSEF",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "8316168": {
     "name": "YAGHOUB",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "8318130": {
     "name": "BALTIYSK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8318178": {
     "name": "TOLOU",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "8318740": {
     "name": "CAPTAIN YAKUBOVICH",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8318867": {
     "name": "CALM BRIDGE",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8319940": {
     "name": "IRAN SHALAK",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -396,6 +476,7 @@
   },
   "8319952": {
     "name": "IRAN YOUSHAT",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -404,6 +485,7 @@
   },
   "8322064": {
     "name": "IRAN PARAK",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -412,6 +494,7 @@
   },
   "8322076": {
     "name": "IRAN CHARAK",
+    "aliases": [],
     "programs": [
       "NPWMD",
       "IRAN",
@@ -420,126 +503,149 @@
   },
   "8328197": {
     "name": "MU DU BONG",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8330516": {
     "name": "SAKHALIN 8",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8330815": {
     "name": "O UN CHONG NYON HO",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8400103": {
     "name": "VALFAJR2",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "8400854": {
     "name": "YU SONG 7",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8400945": {
     "name": "HARMONY",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "8403698": {
     "name": "FU YUAN YU 008",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8404991": {
     "name": "NEPTUN",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8405270": {
     "name": "HWANG GUM SAN 2",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8405311": {
     "name": "SAM JONG 1",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8405402": {
     "name": "GOLD STAR 3",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8406573": {
     "name": "BAVENIT",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8407345": {
     "name": "BADR",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "8407802": {
     "name": "TIAN XIANG 7",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8408595": {
     "name": "WOORY STAR",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8408985": {
     "name": "AKADEMIK LAZEREV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8409032": {
     "name": "AKADEMIK NEMCHINOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8412467": {
     "name": "SOUTH HILL 2",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8413306": {
     "name": "OCEAN PRINCESS 1",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "8414295": {
     "name": "FU YUAN YU F91",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8422072": {
     "name": "IRAN HORMUZ 25",
+    "aliases": [
+      "HAYAN"
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -548,150 +654,177 @@
   },
   "8422670": {
     "name": "VAFA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8422682": {
     "name": "VAFA-1",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8430562": {
     "name": "TIAN XIANG 8",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8502080": {
     "name": "INZHENER TRUBIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8502107": {
     "name": "INZHENER VESHNYAKOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8503228": {
     "name": "JI SONG 8",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8504923": {
     "name": "PROFESSOR RYABINKIN",
+    "aliases": [
+      "PROFESSOR RJABINKIN"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8508462": {
     "name": "BANEH",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "8511823": {
     "name": "GRAND KARO",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8514409": {
     "name": "UN RYUL",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8517231": {
     "name": "SARDASHT",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "8517243": {
     "name": "MARIVAN",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "8517839": {
     "name": "MARIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8519966": {
     "name": "PARVATI",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "8523242": {
     "name": "PASSAT",
+    "aliases": [],
     "programs": [
       "UKRAINE-EO13685"
     ]
   },
   "8529428": {
     "name": "LONG XING 802",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8529442": {
     "name": "LONG XING 801",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8537097": {
     "name": "FU YUAN YU 7876",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8537102": {
     "name": "FU YUAN YU 7877",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8602531": {
     "name": "JH 86",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8603406": {
     "name": "IOHANN MAHMASTAL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8603690": {
     "name": "TIAN XIANG 18",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8604917": {
     "name": "YU JONG 2",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8605026": {
     "name": "YU PHYONG 5",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8605234": {
     "name": "DORITA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -700,108 +833,128 @@
   },
   "8606616": {
     "name": "KOMPOZITOR RAKHMANINOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8606628": {
     "name": "KOMPOZITOR GASANOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8613360": {
     "name": "SONG WON",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8618073": {
     "name": "KAPITAN RYNTSYN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8625545": {
     "name": "RA NAM 2",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "8628597": {
     "name": "HAO FAN 6",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8648145": {
     "name": "LONG XING 635",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8648157": {
     "name": "LONG XING 636",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8648169": {
     "name": "LONG XING 637",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8648171": {
     "name": "LONG XING 638",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8651283": {
     "name": "TIAN YU 7",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8651295": {
     "name": "TIAN YU 8",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8658267": {
     "name": "SO BAEK SAN",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8660313": {
     "name": "CHON MA SAN",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8661575": {
     "name": "TONG HUNG 1",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "8661719": {
     "name": "KUM SONG 5",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8661850": {
     "name": "KUM SONG 3",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8674156": {
     "name": "FIONA",
+    "aliases": [
+      "FORTUNA"
+    ],
     "programs": [
       "CAATSA - RUSSIA",
       "PEESA-EO14039",
@@ -810,150 +963,177 @@
   },
   "8682490": {
     "name": "LONG XING 605",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8682505": {
     "name": "LONG XING 606",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8682517": {
     "name": "LONG XING 607",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8682529": {
     "name": "LONG XING 608",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8687268": {
     "name": "LONG XING 629",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8687270": {
     "name": "LONG XING 630",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8688171": {
     "name": "MARIE DE LOURDES",
+    "aliases": [],
     "programs": [
       "LIBYA3"
     ]
   },
   "8688183": {
     "name": "MARIE DE LOURDES I",
+    "aliases": [],
     "programs": [
       "LIBYA3"
     ]
   },
   "8691702": {
     "name": "YU SON",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8700010": {
     "name": "SAPFIR",
+    "aliases": [
+      "ETIM EMIN"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8700046": {
     "name": "OLGA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8700060": {
     "name": "SONA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8703933": {
     "name": "PU HUNG 1",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8705539": {
     "name": "KUM UN SAN 3",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8710730": {
     "name": "CELEBES",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "8711289": {
     "name": "RZK CONSTANTA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8711306": {
     "name": "ANDREY OSIPOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8712362": {
     "name": "CHON MYONG 1",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8713421": {
     "name": "LONG XING 610",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8713457": {
     "name": "RUNG RA 1",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8713471": {
     "name": "MI RIM",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "8714657": {
     "name": "SELENGA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8714695": {
     "name": "ARKADIY CHERNYSHEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8720436": {
     "name": "KUM UN SAN",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8721351": {
     "name": "KASMA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -962,6 +1142,9 @@
   },
   "8724080": {
     "name": "KAPITAN BEKLEMISHEV",
+    "aliases": [
+      "CAPTAIN BEKLEMISHEV"
+    ],
     "programs": [
       "RUSSIA-EO14024",
       "PEESA-EO14039"
@@ -969,18 +1152,21 @@
   },
   "8724482": {
     "name": "YUZHMORGEOLOGIYA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8728543": {
     "name": "SAKHALIN 9",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8730077": {
     "name": "DOBRYNYA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -988,42 +1174,52 @@
   },
   "8730455": {
     "name": "CHIZHOVKA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8739396": {
     "name": "KUM SONG 7",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8744107": {
     "name": "YONG XIANG 29",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "8747604": {
     "name": "HAO FAN 2",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8767953": {
     "name": "GP-21",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "8767977": {
     "name": "GP-23",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "8770261": {
     "name": "AKADEMIK CHERSKIY",
+    "aliases": [
+      "AKADEMIK CHERSKY",
+      "AKADEMIK CZERSKY"
+    ],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -1031,66 +1227,85 @@
   },
   "8772049": {
     "name": "L-409",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "8799619": {
     "name": "ZEUS",
+    "aliases": [],
     "programs": [
       "LIBYA3"
     ]
   },
   "8807416": {
     "name": "AMBAL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8808264": {
     "name": "BELLA",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8814354": {
     "name": "PIZHMA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8817693": {
     "name": "ALPHA GAS",
+    "aliases": [
+      "YOOSHI DOODA",
+      "CAPTOON 2",
+      "GITTA GAS",
+      "JUNO GAS"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "8818219": {
     "name": "RAHA GAS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "8818843": {
     "name": "GAS ZEINA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "8819017": {
     "name": "RAK WON 2",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8820509": {
     "name": "FU YUAN YU 557",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8820925": {
     "name": "IRAN SHALAMCHEH",
+    "aliases": [
+      "IR.SHALAMCHE",
+      "SEPEHR SAM"
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1099,156 +1314,182 @@
   },
   "8821797": {
     "name": "TAIMYR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8821802": {
     "name": "TIKSY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8826230": {
     "name": "GELENDZHIK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8828329": {
     "name": "LONG XING 601",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8829555": {
     "name": "PO THONG GANG",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8829593": {
     "name": "PI RUY GANG",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8834691": {
     "name": "PROFESSOR LOGACHEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8848276": {
     "name": "PO CHON",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8857667": {
     "name": "SAKHALIN 10",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8858087": {
     "name": "SKIF-V",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8861058": {
     "name": "RASUL GAMZATOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8866591": {
     "name": "VALENTIN EMIROV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8889385": {
     "name": "OMSKIY-103",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8898738": {
     "name": "ZA RYOK 2",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8898740": {
     "name": "JI SONG 6",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8898831": {
     "name": "7-28",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8904367": {
     "name": "MEKHANIK YARTSEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8904379": {
     "name": "MEKHANIK MAKARIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8904408": {
     "name": "MEKHANIK BRILIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8904410": {
     "name": "MEKHANIK KOTTSOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8904422": {
     "name": "MEKHANIK PUSTOSHNYY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8904434": {
     "name": "MEKHANIK PYATLIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8904458": {
     "name": "MEKHANIK KRASKOVSKIY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8909329": {
     "name": "ALEKSEY MARYSHEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8909331": {
     "name": "GRIGORIY MIKHEYEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8909472": {
     "name": "MENA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1257,66 +1498,79 @@
   },
   "8909575": {
     "name": "CHONG BONG",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "8909769": {
     "name": "LONG XING 621",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8909915": {
     "name": "EVER GLORY",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8910976": {
     "name": "LONG XING 623",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8912546": {
     "name": "TUSITALA",
+    "aliases": [
+      "TOWER RISE"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "8912558": {
     "name": "TULIP",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "8914934": {
     "name": "EVER BRIGHT 88",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "8915158": {
     "name": "LONG XING 622",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8916293": {
     "name": "CHONG RIM 2",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "8916580": {
     "name": "ASIA BRIDGE 1",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8917467": {
     "name": "TABUK",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1325,66 +1579,77 @@
   },
   "8922486": {
     "name": "DVINSKIY ZALIV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8926913": {
     "name": "OMSKIY-119",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8928143": {
     "name": "LAPOMINKA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8931748": {
     "name": "TERIBERKA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8943155": {
     "name": "SUDAK",
+    "aliases": [],
     "programs": [
       "UKRAINE-EO13685"
     ]
   },
   "8947553": {
     "name": "TIAN XIANG 16",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "8951413": {
     "name": "ZAKAMSK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "8966535": {
     "name": "KUM GANG 3",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8982888": {
     "name": "GLOBAL EMERALD",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "8983404": {
     "name": "KU BONG RYONG",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8984484": {
     "name": "AAJ",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1393,78 +1658,95 @@
   },
   "8987333": {
     "name": "RYO MYONG",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "8989795": {
     "name": "RUNG RA DO",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "8994013": {
     "name": "MIN FUZHOU YU F009",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9000883": {
     "name": "SEA OPERA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9002491": {
     "name": "CAPE GAS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9003550": {
     "name": "PATRIOT",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9004449": {
     "name": "LONG XING 609",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9004700": {
     "name": "XIN GUANG HAI",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9005053": {
     "name": "SONA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9005065": {
     "name": "LADY LIBERTY",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9005338": {
     "name": "GLOBAL ASPHALT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9005493": {
     "name": "MARINA",
+    "aliases": [
+      "GEMGAZ"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9005596": {
     "name": "IRAN HORMUZ 12",
+    "aliases": [
+      "IRAN HORMOZ 12"
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1473,36 +1755,48 @@
   },
   "9007386": {
     "name": "FENGSHUN",
+    "aliases": [
+      "VENUS 7"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9008108": {
     "name": "ADA",
+    "aliases": [
+      "CAPTAIN NIKOLAS"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9008201": {
     "name": "DONG FENG 6",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9009085": {
     "name": "THAE PYONG SAN",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "9010022": {
     "name": "ASIA BRIDGE",
+    "aliases": [
+      "ASIA BRIDGE 2"
+    ],
     "programs": [
       "DPRK4"
     ]
   },
   "9010711": {
     "name": "VISTA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1511,6 +1805,7 @@
   },
   "9010723": {
     "name": "VIANA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1519,60 +1814,79 @@
   },
   "9012886": {
     "name": "ELKE",
+    "aliases": [
+      "FABINO GAS"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9013701": {
     "name": "NEPTA",
+    "aliases": [
+      "LPG VENUS"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9014420": {
     "name": "SARAH",
+    "aliases": [
+      "TULIP BZ"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9014456": {
     "name": "NEXO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9014872": {
     "name": "TAMBEY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9015278": {
     "name": "LUCKY STAR",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9016246": {
     "name": "LONG XING 628",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9016258": {
     "name": "LONG XING 627",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9016571": {
     "name": "FU YUAN YU 559",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9018464": {
     "name": "MIA",
+    "aliases": [
+      "MAGUS",
+      "FREEDOM"
+    ],
     "programs": [
       "VENEZUELA-EO13850",
       "SDGT"
@@ -1580,24 +1894,33 @@
   },
   "9020003": {
     "name": "HUA FU",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9020015": {
     "name": "STAR 18",
+    "aliases": [
+      "SAM 5",
+      "THINH CUONG"
+    ],
     "programs": [
       "DPRK4"
     ]
   },
   "9020534": {
     "name": "RUNG RA 2",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9020778": {
     "name": "IRAN HORMUZ 14",
+    "aliases": [
+      "IRAN HORMOZ 14"
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1606,36 +1929,42 @@
   },
   "9025778": {
     "name": "OT-2077",
+    "aliases": [],
     "programs": [
       "UKRAINE-EO13685"
     ]
   },
   "9030591": {
     "name": "YUK TUNG",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9031519": {
     "name": "SEA HERMES",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9031935": {
     "name": "LONG XING 626",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9031947": {
     "name": "FU YUAN YU 558",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9032666": {
     "name": "KHURAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1644,18 +1973,21 @@
   },
   "9034690": {
     "name": "LUMA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9034705": {
     "name": "AVON",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9036052": {
     "name": "HAMD",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1664,12 +1996,14 @@
   },
   "9036777": {
     "name": "LONG XING 625",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9036935": {
     "name": "SOBHAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1678,30 +2012,39 @@
   },
   "9037678": {
     "name": "LONG XING 611",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9038294": {
     "name": "LONG XING 612",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9038763": {
     "name": "KAISA I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9038842": {
     "name": "ICARO",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13884"
     ]
   },
   "9041057": {
     "name": "LIA",
+    "aliases": [
+      "GERD KNUTSEN",
+      "SERENITY",
+      "DOMANI"
+    ],
     "programs": [
       "VENEZUELA-EO13850",
       "SDGT"
@@ -1709,30 +2052,35 @@
   },
   "9041552": {
     "name": "HOE RYONG",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "9041655": {
     "name": "TRIS GAS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9045807": {
     "name": "BATELEUR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9046784": {
     "name": "NIBA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9051624": {
     "name": "ABBA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1741,6 +2089,7 @@
   },
   "9051636": {
     "name": "BEHDAD",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1749,6 +2098,7 @@
   },
   "9051648": {
     "name": "PARSHAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1757,36 +2107,42 @@
   },
   "9052331": {
     "name": "DOLPHIN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9053816": {
     "name": "AL DIAB II",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9066540": {
     "name": "HAP JANG GANG 6",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9066978": {
     "name": "PAEK MA",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9070072": {
     "name": "CAROL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9071519": {
     "name": "NEGEEN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1795,6 +2151,7 @@
   },
   "9076478": {
     "name": "PARIN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1803,126 +2160,167 @@
   },
   "9078191": {
     "name": "NYMEX STAR",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "9079066": {
     "name": "NAROON",
+    "aliases": [
+      "NOOR",
+      "MAHARLIKA",
+      "BELEMA LIGHT CRUDE"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9079078": {
     "name": "NAVARZ",
+    "aliases": [
+      "NOAH",
+      "ELITE",
+      "VOYAGER",
+      "NAPOLI"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9079107": {
     "name": "NASHA",
+    "aliases": [
+      "NESA",
+      "TRUTH",
+      "OCEANIC",
+      "NATIVE LAND"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9079169": {
     "name": "ENISEY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9080493": {
     "name": "BARON",
+    "aliases": [
+      "UPMAN",
+      "DARAN"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9081291": {
     "name": "TERIBERKA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9081332": {
     "name": "TURUKHAN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9081368": {
     "name": "TERSKIY BEREG",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9081370": {
     "name": "MIKHAIL BRITNEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9082142": {
     "name": "ASKAR-SARYDZHA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9083196": {
     "name": "GENRIKH GASANOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9083330": {
     "name": "GASRET ALIEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9085730": {
     "name": "BOGATYR",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9086253": {
     "name": "TAIBOLA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9088524": {
     "name": "AEOLUS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9088536": {
     "name": "SEA BIRD",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9096507": {
     "name": "FU YUAN YU F30",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9096791": {
     "name": "YU SONG 12",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9102198": {
     "name": "CLIPPER",
+    "aliases": [
+      "QUEEN LUCA",
+      "EAGLE PRIDE"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9102239": {
     "name": "WU XIAN",
+    "aliases": [],
     "programs": [
       "SDGT",
       "IFSR"
@@ -1930,18 +2328,21 @@
   },
   "9102241": {
     "name": "ARTEMIS III",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9102277": {
     "name": "ITAUGUA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9103099": {
     "name": "FIROUZEH",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -1950,132 +2351,162 @@
   },
   "9103817": {
     "name": "BORIS KUSTODIEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9105085": {
     "name": "JASMINE",
+    "aliases": [
+      "EMMA"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9105906": {
     "name": "BONITA QUEEN",
+    "aliases": [
+      "KAMILA"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9108099": {
     "name": "GAS MARYAM",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9109081": {
     "name": "KHOLMOGORY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9109550": {
     "name": "LIGHT MOON",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9110236": {
     "name": "DAWNLIGHT",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "9113020": {
     "name": "PARTIZAN",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9113094": {
     "name": "GLOBAL CREST",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9113379": {
     "name": "VICTORIA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9114555": {
     "name": "UL JI BONG 6",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9114581": {
     "name": "GAS LEADER",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9114608": {
     "name": "ROMINA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9115028": {
     "name": "ORIENTAL TREASURE",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9115303": {
     "name": "GAS VISION",
+    "aliases": [
+      "NEGH"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9116412": {
     "name": "ADRIAN DARYA 1",
+    "aliases": [
+      "GRACE 1"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9116632": {
     "name": "POLAR ROCK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9117478": {
     "name": "LUISA CACERES DE ARISMENDI",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13884"
     ]
   },
   "9117492": {
     "name": "MANUELA SAENZ",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13884"
     ]
   },
   "9117818": {
     "name": "RIVAL",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9118355": {
     "name": "ZEYA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9118551": {
     "name": "PARAND",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2084,12 +2515,14 @@
   },
   "9118745": {
     "name": "NADIYA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9120994": {
     "name": "DEVREZ",
+    "aliases": [],
     "programs": [
       "NPWMD",
       "IRAN",
@@ -2099,12 +2532,14 @@
   },
   "9122473": {
     "name": "DHANU",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9125126": {
     "name": "CASPIA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2113,6 +2548,7 @@
   },
   "9125138": {
     "name": "DELICE",
+    "aliases": [],
     "programs": [
       "NPWMD",
       "IRAN",
@@ -2122,54 +2558,63 @@
   },
   "9125712": {
     "name": "GLOBAL PEAK",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9125724": {
     "name": "GLOBAL EVEREST",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9127667": {
     "name": "TONDA SOURCE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9131101": {
     "name": "CALYPSO GAS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9133109": {
     "name": "RAYYAN GAS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9134165": {
     "name": "MAX STAR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9136113": {
     "name": "GLOBAL RANI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9136644": {
     "name": "SIMRAN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9137210": {
     "name": "PATRIS",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2178,6 +2623,7 @@
   },
   "9137246": {
     "name": "NARDIS",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2186,6 +2632,7 @@
   },
   "9137258": {
     "name": "KADOS",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2194,6 +2641,7 @@
   },
   "9138044": {
     "name": "ZOMOROUD",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2202,6 +2650,7 @@
   },
   "9138056": {
     "name": "BRELYAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2210,114 +2659,146 @@
   },
   "9138680": {
     "name": "SOUTH HILL 5",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "9140451": {
     "name": "SEA ROCK",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9141259": {
     "name": "NOVA",
+    "aliases": [
+      "QUEEN REEM"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9142150": {
     "name": "AKOYA GAS",
+    "aliases": [
+      "GAS ALLURE"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9142588": {
     "name": "KUNASHIR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9143506": {
     "name": "GLORY HARVEST",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9144782": {
     "name": "BODHI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9147394": {
     "name": "GAS FATE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9147447": {
     "name": "SIERRA",
+    "aliases": [
+      "SIENNA"
+    ],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9150365": {
     "name": "YORGOS",
+    "aliases": [
+      "OHAR",
+      "ARTURA"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9150377": {
     "name": "STAR 5",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9153525": {
     "name": "LYDYA N",
+    "aliases": [
+      "OMAN PRIDE"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9154000": {
     "name": "VIOLET 1",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9155341": {
     "name": "ALAA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9155626": {
     "name": "WHITE SHARK",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9155808": {
     "name": "SOLAN",
+    "aliases": [
+      "RISE GLORY"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9157478": {
     "name": "NEEL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9157765": {
     "name": "ABYSS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9157820": {
     "name": "SIVUCH",
+    "aliases": [],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -2325,72 +2806,84 @@
   },
   "9158161": {
     "name": "DANCY DYNAMIC",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9159787": {
     "name": "WON SAN 2",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9159921": {
     "name": "PATRIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9160475": {
     "name": "LPG OM",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9160994": {
     "name": "SPARTA II",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9161003": {
     "name": "LADY R",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9162928": {
     "name": "ASTRA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9163154": {
     "name": "JIN TAI",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "9163166": {
     "name": "JIN TENG",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "9163269": {
     "name": "PETERPAUL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9164500": {
     "name": "GLOBAL STAR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9165786": {
     "name": "AREZOO",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2399,6 +2892,7 @@
   },
   "9165798": {
     "name": "ALVAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2407,6 +2901,7 @@
   },
   "9165803": {
     "name": "AYSAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2415,6 +2910,7 @@
   },
   "9165815": {
     "name": "GOLSAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2423,6 +2919,7 @@
   },
   "9165827": {
     "name": "ELYANA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2431,6 +2928,7 @@
   },
   "9165839": {
     "name": "NEGAR",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2439,24 +2937,28 @@
   },
   "9166675": {
     "name": "FT ISLAND",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9167148": {
     "name": "TRIPLE SUCCESS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9167162": {
     "name": "FELICITA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9167253": {
     "name": "SAVIZ",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2465,6 +2967,7 @@
   },
   "9167265": {
     "name": "PARNIA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2474,6 +2977,7 @@
   },
   "9167277": {
     "name": "NESHAT",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2482,6 +2986,7 @@
   },
   "9167289": {
     "name": "BEHSHAD",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2490,6 +2995,7 @@
   },
   "9167291": {
     "name": "JAIRAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2498,6 +3004,7 @@
   },
   "9167930": {
     "name": "MURMANSK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -2505,48 +3012,65 @@
   },
   "9168946": {
     "name": "ZEVS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9169421": {
     "name": "MASAL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9171357": {
     "name": "DIVINE POWER",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9171448": {
     "name": "IMPALAS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9171450": {
     "name": "STARK I",
+    "aliases": [
+      "SEMNAN",
+      "CLOVE",
+      "SPARROW"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9171462": {
     "name": "SANAN",
+    "aliases": [
+      "SAVEH",
+      "CAMELLIA",
+      "SWALLOW",
+      "SOL"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9171498": {
     "name": "CHIL 1",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9171620": {
     "name": "UMKA",
+    "aliases": [],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -2554,6 +3078,7 @@
   },
   "9171876": {
     "name": "NARVAL",
+    "aliases": [],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -2561,6 +3086,11 @@
   },
   "9172038": {
     "name": "SINOPA",
+    "aliases": [
+      "SUSANGIRD",
+      "DAISY",
+      "SUPERIOR"
+    ],
     "programs": [
       "IRAN",
       "SDGT"
@@ -2568,60 +3098,90 @@
   },
   "9172040": {
     "name": "SABITI",
+    "aliases": [
+      "SANANDAJ",
+      "LANTANA",
+      "SPOTLESS"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9172052": {
     "name": "SILVIA I",
+    "aliases": [
+      "SARVESTAN",
+      "MAGNOLIA",
+      "SABRINA"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9173745": {
     "name": "CHLOE",
+    "aliases": [
+      "SAM 121"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9174220": {
     "name": "LUNA PRIME",
+    "aliases": [
+      "SELENE"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9174397": {
     "name": "ARES",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9174660": {
     "name": "LA PEARL",
+    "aliases": [
+      "ELITE"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9176656": {
     "name": "PURNA",
+    "aliases": [
+      "SAMPURNA RAJYA"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9176773": {
     "name": "BALITA",
+    "aliases": [
+      "ANGLIA"
+    ],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9176929": {
     "name": "KEEL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9177155": {
     "name": "DESTINY",
+    "aliases": [
+      "ULYSSES 1"
+    ],
     "programs": [
       "IRAN",
       "SDGT"
@@ -2629,102 +3189,126 @@
   },
   "9178044": {
     "name": "CONFIDENCE P",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9178068": {
     "name": "KATSUYA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9179347": {
     "name": "SHRIA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9179385": {
     "name": "SIMUSHIR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9179701": {
     "name": "NOLAN",
+    "aliases": [
+      "OSLO"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9179842": {
     "name": "ANGARA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9179854": {
     "name": "ADLER",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9179921": {
     "name": "MALILI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9180152": {
     "name": "SULLANA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9180281": {
     "name": "HUMANITY",
+    "aliases": [
+      "OCEAN NYMPH"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9181194": {
     "name": "ASTERIX",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9181649": {
     "name": "AURORA RILEY",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9182291": {
     "name": "AMOR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9182667": {
     "name": "DESPINA ANDRIANNA",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9183831": {
     "name": "NP DUDINKA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9183934": {
     "name": "FELICITY",
+    "aliases": [
+      "LEYCOTHEA",
+      "ORIENTAL"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9184691": {
     "name": "IRAN SHAHED",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2733,18 +3317,24 @@
   },
   "9185530": {
     "name": "DAWN II",
+    "aliases": [
+      "SPAR",
+      "AKIN I"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9186625": {
     "name": "STAR MM",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9187227": {
     "name": "MERU",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -2752,6 +3342,9 @@
   },
   "9187368": {
     "name": "HONESTAR",
+    "aliases": [
+      "SHUN KAI XING"
+    ],
     "programs": [
       "IFSR",
       "NPWMD"
@@ -2759,102 +3352,147 @@
   },
   "9187514": {
     "name": "AKADEMIK PRIMAKOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9187629": {
     "name": "ARTAVIL",
+    "aliases": [
+      "ABADAN",
+      "ALPHA",
+      "SHONA"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9187631": {
     "name": "APAMA",
+    "aliases": [
+      "ASTARA",
+      "JUPITER",
+      "ABELIA"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9187643": {
     "name": "ARNICA",
+    "aliases": [
+      "ASTANEH",
+      "NEPTUNE",
+      "SEAPRIDE",
+      "ALERT"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9187655": {
     "name": "ARK III",
+    "aliases": [
+      "ABADEH",
+      "CRYSTAL",
+      "SUNDIAL",
+      "ARK"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9187667": {
     "name": "ARGO I",
+    "aliases": [
+      "AMOL",
+      "CASTOR",
+      "CHRISTINA",
+      "ARGO 1",
+      "SILVER CLOUD"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9188752": {
     "name": "BOSCO GILAN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13876"
     ]
   },
   "9189146": {
     "name": "KYLO",
+    "aliases": [
+      "MEMPHIS"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9190078": {
     "name": "GLOBAL ACE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9190107": {
     "name": "POLA DUDINKA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9190274": {
     "name": "SHANTAR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9190286": {
     "name": "PARAMUSHIR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9191553": {
     "name": "YATEEKA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9191711": {
     "name": "MEHLE",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9192258": {
     "name": "BALIAR",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9192260": {
     "name": "OTARIA",
+    "aliases": [
+      "WINSOME"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9193185": {
     "name": "GOLSAR",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2863,6 +3501,7 @@
   },
   "9193197": {
     "name": "ANDIA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2871,6 +3510,7 @@
   },
   "9193202": {
     "name": "ARVIN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2879,6 +3519,7 @@
   },
   "9193214": {
     "name": "ARTAVAND",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -2887,30 +3528,38 @@
   },
   "9193721": {
     "name": "DANUTA I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9194127": {
     "name": "SAINT LIGHT",
+    "aliases": [
+      "STELLAR ORACLE",
+      "YOUNG YONG"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9194139": {
     "name": "MERAKI",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9196448": {
     "name": "BLACK ROCK",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9196620": {
     "name": "UMBA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -2918,66 +3567,77 @@
   },
   "9196632": {
     "name": "BIANCA JOYSEL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9196644": {
     "name": "ELVA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9197727": {
     "name": "AQUA SPIRIT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9197832": {
     "name": "SERENE I",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9197844": {
     "name": "HORNET",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9197909": {
     "name": "VIZURI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9198082": {
     "name": "GIOIOSA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9198094": {
     "name": "JOEL",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9198226": {
     "name": "ASCALON",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9198317": {
     "name": "PHONIX",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9198783": {
     "name": "BORAY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -2985,6 +3645,7 @@
   },
   "9199127": {
     "name": "BOREY G",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -2992,12 +3653,14 @@
   },
   "9200861": {
     "name": "TRUGEN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9201994": {
     "name": "BUK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3005,96 +3668,116 @@
   },
   "9202053": {
     "name": "SEVERNIY PROECT",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9203265": {
     "name": "VORAS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9203277": {
     "name": "LEXI",
+    "aliases": [
+      "LEXIE"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9203710": {
     "name": "SV KONSTANTIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9203772": {
     "name": "TIREX",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9203784": {
     "name": "LOTUS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9203928": {
     "name": "FOREVER RICH",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9203930": {
     "name": "YONG XIN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9204764": {
     "name": "SEATURBO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9204776": {
     "name": "SEAMULL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9204805": {
     "name": "SUMMER 5",
+    "aliases": [
+      "EVERRICH 5"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9207273": {
     "name": "SEA CITRINE VI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9208215": {
     "name": "DIMITRA II",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9208239": {
     "name": "PAMIR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9209300": {
     "name": "MOLECULE",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9209348": {
     "name": "SARVIN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -3103,6 +3786,7 @@
   },
   "9209350": {
     "name": "PERARIN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -3111,18 +3795,21 @@
   },
   "9210256": {
     "name": "VIKTOR ZABELIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9210359": {
     "name": "S. KUZNETSOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9211999": {
     "name": "SANAR 7",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3130,6 +3817,7 @@
   },
   "9212008": {
     "name": "SANAR 8",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3137,30 +3825,48 @@
   },
   "9212400": {
     "name": "CHAMTANG",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9212759": {
     "name": "OLYMPICS",
+    "aliases": [
+      "LADY SOFIA"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9212888": {
     "name": "HEDY",
+    "aliases": [
+      "HUWAYZEH"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9212890": {
     "name": "HALTI",
+    "aliases": [
+      "HORMOZ",
+      "SCORPIAN",
+      "HORIZON"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9212905": {
     "name": "HAPPINESS I",
+    "aliases": [
+      "HENGAM",
+      "LOYAL",
+      "TULAR",
+      "HAPPINESS"
+    ],
     "programs": [
       "IRAN",
       "SDGT"
@@ -3168,18 +3874,30 @@
   },
   "9212917": {
     "name": "HASNA",
+    "aliases": [
+      "HARSIN",
+      "VALOR",
+      "MARINA"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9212929": {
     "name": "HENNA",
+    "aliases": [
+      "HAMOON",
+      "LENA",
+      "TAMAR",
+      "HALISTIC"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9213387": {
     "name": "MAHNAM",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -3188,6 +3906,7 @@
   },
   "9213399": {
     "name": "TERMEH",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -3196,42 +3915,49 @@
   },
   "9215103": {
     "name": "WANJI",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9216298": {
     "name": "ASYA ENERGY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9216482": {
     "name": "MIKHAIL LOMONOSOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9216547": {
     "name": "S-TROTTER",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9216559": {
     "name": "BERENICE PRIDE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9216717": {
     "name": "ELIZABET",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9217979": {
     "name": "KOLA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3239,132 +3965,173 @@
   },
   "9218181": {
     "name": "ATLANTIS MZ",
+    "aliases": [
+      "TOMIE",
+      "CAILI STAR"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9218301": {
     "name": "GOLDEN BRIDGE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9218454": {
     "name": "DEVON",
+    "aliases": [
+      "DELVAR"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9218466": {
     "name": "DOVER",
+    "aliases": [
+      "DAYLAM"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9218478": {
     "name": "DIAMOND II",
+    "aliases": [
+      "DAMAVAND"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9218480": {
     "name": "DOWNY",
+    "aliases": [
+      "DENA"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9218492": {
     "name": "DEEP SEA",
+    "aliases": [
+      "DARAB"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9219056": {
     "name": "REX 1",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9220639": {
     "name": "BALTIC LEADER",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9220641": {
     "name": "LADY MARIIA",
+    "aliases": [
+      "STELLA-MARIA"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9220938": {
     "name": "MARBEL",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9220940": {
     "name": "TROPHY",
+    "aliases": [
+      "TRINITY"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9220952": {
     "name": "JANET",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9221267": {
     "name": "GLOBAL BEAUTY",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9221475": {
     "name": "LARA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9221657": {
     "name": "BLUEFINS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9221671": {
     "name": "ELZA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9221970": {
     "name": "SOBAR",
+    "aliases": [
+      "RISE DIGNITY"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9222443": {
     "name": "VOY",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9222649": {
     "name": "AL SAFA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9223344": {
     "name": "REMIZ",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9223540": {
     "name": "OWENS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3372,12 +4139,16 @@
   },
   "9224271": {
     "name": "SPIRIT OF CASPER",
+    "aliases": [
+      "MARIA GRACE"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9224283": {
     "name": "KAPAL CANTIK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3385,12 +4156,14 @@
   },
   "9224295": {
     "name": "OCTANS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9224465": {
     "name": "NEVE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3398,18 +4171,21 @@
   },
   "9224570": {
     "name": "SEA WISE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9224790": {
     "name": "GOLDEN PHOENIX",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9224805": {
     "name": "OXIS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "SDGT"
@@ -3417,12 +4193,14 @@
   },
   "9226011": {
     "name": "SINCERE 02",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9226944": {
     "name": "ARTARIA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -3431,6 +4209,7 @@
   },
   "9226956": {
     "name": "HAMGAM",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -3439,78 +4218,95 @@
   },
   "9226968": {
     "name": "SARAK",
+    "aliases": [
+      "RISE DESTINY"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9227479": {
     "name": "DELLA",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9228538": {
     "name": "ACE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9228784": {
     "name": "NOBEL M",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9228980": {
     "name": "ARCTICA 1",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9229362": {
     "name": "ROAD",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9229439": {
     "name": "CERES I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9230098": {
     "name": "JAMAICA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9230426": {
     "name": "WHITE WHALE",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9230880": {
     "name": "BELLA 1",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9230907": {
     "name": "MOONBAY",
+    "aliases": [
+      "ETERNAL FORTUNE"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9230971": {
     "name": "SKADI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9231212": {
     "name": "MERMAR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3518,66 +4314,81 @@
   },
   "9231224": {
     "name": "TIYARA",
+    "aliases": [
+      "EMERALD"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9231901": {
     "name": "URGANE I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9232448": {
     "name": "ETERNAL 8",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9232450": {
     "name": "RENEEZ",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9232620": {
     "name": "PIONEER SAM",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9232876": {
     "name": "BRAVA LAKE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9232955": {
     "name": "GLOBAL ELEGANCE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9233208": {
     "name": "RAIN DROP",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9233222": {
     "name": "RAMONA I",
+    "aliases": [
+      "SHADI"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9233234": {
     "name": "ELOISE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9233349": {
     "name": "VESNA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902",
       "RUSSIA-EO14024",
@@ -3586,12 +4397,14 @@
   },
   "9233739": {
     "name": "VETER",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9233741": {
     "name": "OLIVIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3599,12 +4412,14 @@
   },
   "9233753": {
     "name": "HECATE",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9233765": {
     "name": "AULIS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3612,48 +4427,56 @@
   },
   "9233973": {
     "name": "NEBULA DRIFT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9234472": {
     "name": "YONGHENG OCEAN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9234616": {
     "name": "K M A",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9234666": {
     "name": "ADELINE G",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9235127": {
     "name": "SEVASTOPOL",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9235244": {
     "name": "BALU",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9235464": {
     "name": "PK MARIT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9235713": {
     "name": "AMBER 6",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3661,72 +4484,92 @@
   },
   "9235737": {
     "name": "YURI",
+    "aliases": [
+      "SOMERSET"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9236248": {
     "name": "PHOENIX I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9236250": {
     "name": "VIRGO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9236640": {
     "name": "ONYX",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9236652": {
     "name": "ROB",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9236731": {
     "name": "KURDOS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9236755": {
     "name": "LIANA",
+    "aliases": [
+      "LINNET"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9237008": {
     "name": "ROBERTA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9237084": {
     "name": "TB ANPING",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9237228": {
     "name": "THANE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9237412": {
     "name": "SEASKY",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9237539": {
     "name": "LONGBOW LAKE",
+    "aliases": [
+      "GULF FALCON",
+      "GULF GLORY",
+      "NICHINORI"
+    ],
     "programs": [
       "SDGT",
       "IFSR"
@@ -3734,30 +4577,37 @@
   },
   "9237618": {
     "name": "MIROVA DYNAMIC",
+    "aliases": [
+      "GULF KNOT"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9237632": {
     "name": "STAR FOREST",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9237773": {
     "name": "H. CONSTANCE",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9237797": {
     "name": "SHANNON II",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9238052": {
     "name": "CLIO",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3765,72 +4615,86 @@
   },
   "9238868": {
     "name": "GIANT",
+    "aliases": [
+      "MACHO QUEEN"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9239458": {
     "name": "SIBERIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9239989": {
     "name": "THANASIS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9240512": {
     "name": "CARINA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9240550": {
     "name": "SMP ARKHANGELSK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9240885": {
     "name": "LONGEVITY 7",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9240914": {
     "name": "CHEM",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9241114": {
     "name": "VITA I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9241487": {
     "name": "BERTIE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9242118": {
     "name": "SHANAYE QUEEN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9242120": {
     "name": "NYANTARA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9242223": {
     "name": "SHUN TAI",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3838,42 +4702,49 @@
   },
   "9242443": {
     "name": "NOMIKI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9242986": {
     "name": "SASCO ANGARA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9243148": {
     "name": "EVEREST ENERGY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9243801": {
     "name": "ARCTICA 2",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9243825": {
     "name": "MYS SHMIDTA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9244635": {
     "name": "AMAK",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9245304": {
     "name": "TARADIS",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -3882,6 +4753,7 @@
   },
   "9245316": {
     "name": "PARMIS",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -3890,60 +4762,72 @@
   },
   "9245794": {
     "name": "LATTAFA",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9246140": {
     "name": "SASCO AVACHA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9246279": {
     "name": "AVITAL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9246281": {
     "name": "MS ANGIA",
+    "aliases": [
+      "GATHER VIEW"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9246322": {
     "name": "TEX",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9246487": {
     "name": "J M A",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9247388": {
     "name": "KUKKI",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9247390": {
     "name": "TYCHE I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9247778": {
     "name": "IRIS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9247780": {
     "name": "TURACO",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -3951,42 +4835,54 @@
   },
   "9247986": {
     "name": "AVA 10",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9248473": {
     "name": "FENG TAI",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9248485": {
     "name": "URANUS",
+    "aliases": [
+      "AZTEC",
+      "NECLEUS"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9248497": {
     "name": "BOREAS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9249087": {
     "name": "HS GLORY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9249128": {
     "name": "SAKHALIN ISLAND",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9249324": {
     "name": "IZUMO",
+    "aliases": [
+      "CATHAY PHOENIX"
+    ],
     "programs": [
       "SDGT",
       "IFSR"
@@ -3994,24 +4890,28 @@
   },
   "9249685": {
     "name": "LAUREN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9250385": {
     "name": "SIYANIE SEVERA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9250505": {
     "name": "GAS CATHAR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9250531": {
     "name": "PYTHON",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4019,12 +4919,14 @@
   },
   "9250907": {
     "name": "RANI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9251274": {
     "name": "CRIUS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4032,72 +4934,86 @@
   },
   "9251602": {
     "name": "CESARIA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9251640": {
     "name": "SEABASS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9251810": {
     "name": "CROSS OCEAN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9251822": {
     "name": "AQUARIS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9251884": {
     "name": "LOANNA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9251896": {
     "name": "TETHIS 7",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9251951": {
     "name": "MS ENOLA",
+    "aliases": [
+      "KOHO I"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9252072": {
     "name": "TRIMA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9252400": {
     "name": "ONYX",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9252943": {
     "name": "ALBARRAQ Z",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9252955": {
     "name": "BRIONT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9253325": {
     "name": "NURKEZ",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4105,156 +5021,188 @@
   },
   "9254082": {
     "name": "KOHANA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9254422": {
     "name": "MIRAGE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9254850": {
     "name": "CAMILLA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9254862": {
     "name": "ADENA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9254915": {
     "name": "VIOLA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9255270": {
     "name": "NP DIKSON",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9255402": {
     "name": "SASCO ANIVA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9255488": {
     "name": "SEAHAKER",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9255684": {
     "name": "GOLDEN EAGLE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9255880": {
     "name": "ZEPHYR I",
+    "aliases": [
+      "ZHEN I"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9255933": {
     "name": "OCEAN KOI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9255945": {
     "name": "DIANA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9256016": {
     "name": "B LUMINOSA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9256054": {
     "name": "NEVSKIY PROSPECT",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9256066": {
     "name": "LIGOVSKY PROSPECT",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9256078": {
     "name": "LITEYNY PROSPECT",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9256248": {
     "name": "DELFINA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9256468": {
     "name": "ELSA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9256602": {
     "name": "PIONEER",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9256858": {
     "name": "LINDA",
+    "aliases": [
+      "LADY D"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9256860": {
     "name": "PEGAS",
+    "aliases": [
+      "PERUN"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9256913": {
     "name": "RIO NAPO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9256975": {
     "name": "KONGM",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9256987": {
     "name": "STAR TWINKLE 6",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9257010": {
     "name": "FORTUNE GALAXY",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9257137": {
     "name": "MIN HANG",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902",
       "RUSSIA-EO14024",
@@ -4263,18 +5211,21 @@
   },
   "9257149": {
     "name": "NESO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9257503": {
     "name": "PARINE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9257993": {
     "name": "MISTRAL 1",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4282,12 +5233,14 @@
   },
   "9258002": {
     "name": "KAZAN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9258521": {
     "name": "LAUREN II",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4295,30 +5248,35 @@
   },
   "9258595": {
     "name": "FLORA DOLCE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9258674": {
     "name": "DEMETER",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9258870": {
     "name": "LELIA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9259185": {
     "name": "HEBE",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9259197": {
     "name": "THALIA III",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4326,96 +5284,116 @@
   },
   "9259367": {
     "name": "DAVINA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9259408": {
     "name": "CERUS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9259599": {
     "name": "HAI II",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9259692": {
     "name": "GIRALT",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9259745": {
     "name": "ETERNAL PEACE",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9259927": {
     "name": "BIANCA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9260055": {
     "name": "GRATIA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9260067": {
     "name": "JUVENIS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9262156": {
     "name": "VIGOR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9262168": {
     "name": "BERG 1",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9262754": {
     "name": "ATILA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9262766": {
     "name": "FIONA II",
+    "aliases": [
+      "SELENE TRADER"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9262912": {
     "name": "AUROURA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9263215": {
     "name": "BIG MAG",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9263382": {
     "name": "BALTIC HORIZON",
+    "aliases": [
+      "PETRA"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9263643": {
     "name": "FRUNZE",
+    "aliases": [],
     "programs": [
       "SDGT",
       "IFSR"
@@ -4423,36 +5401,44 @@
   },
   "9263954": {
     "name": "HEMERA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9264570": {
     "name": "THEMIS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9264881": {
     "name": "VANI",
+    "aliases": [
+      "NEREIDES"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9264893": {
     "name": "SCORPIUS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9265744": {
     "name": "RESTON",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9266853": {
     "name": "NEREUS SOPHIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4460,36 +5446,42 @@
   },
   "9267132": {
     "name": "BOCEANICA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9267297": {
     "name": "BERING",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9267948": {
     "name": "OCEAN GUARDIAN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9267950": {
     "name": "GAS ATHENA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9267962": {
     "name": "HOOT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9268112": {
     "name": "OLIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662",
@@ -4498,30 +5490,35 @@
   },
   "9268186": {
     "name": "SONDOS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9268710": {
     "name": "SPARTA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9269403": {
     "name": "M K A",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9270529": {
     "name": "KRYMSK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9270646": {
     "name": "SHIBA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "IFSR",
@@ -4530,6 +5527,7 @@
   },
   "9270658": {
     "name": "SHAMIM",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -4538,6 +5536,7 @@
   },
   "9270684": {
     "name": "SHAHR E KORD",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -4546,6 +5545,7 @@
   },
   "9270696": {
     "name": "KASHAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -4554,6 +5554,7 @@
   },
   "9271327": {
     "name": "CUP",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4561,12 +5562,14 @@
   },
   "9271406": {
     "name": "MENG XIN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9271585": {
     "name": "KRISHNA 1",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4574,12 +5577,14 @@
   },
   "9271896": {
     "name": "VOYAGER HAVEN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9272412": {
     "name": "FINVAL",
+    "aliases": [],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -4587,18 +5592,21 @@
   },
   "9272694": {
     "name": "POLARIS 1",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9273002": {
     "name": "S M A",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9273052": {
     "name": "ALISSA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4606,18 +5614,21 @@
   },
   "9273260": {
     "name": "ALEXANDRA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9273337": {
     "name": "TIFANI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9273387": {
     "name": "ASTRA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4625,6 +5636,7 @@
   },
   "9274434": {
     "name": "NANDA DEVI",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4632,18 +5644,21 @@
   },
   "9274446": {
     "name": "HS STAR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9274616": {
     "name": "LA PRIDE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9274941": {
     "name": "MIAMI PRIDE",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -4652,24 +5667,28 @@
   },
   "9275658": {
     "name": "PURDUE STELLAR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9275660": {
     "name": "ROC",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9275995": {
     "name": "OCEANIC II",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9276028": {
     "name": "PEGASUS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4677,66 +5696,81 @@
   },
   "9276573": {
     "name": "CORONA FUN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9276585": {
     "name": "CH BILLION",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9277371": {
     "name": "AETHER SAIL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9277412": {
     "name": "FESCO MONERON",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9277735": {
     "name": "ROSALIND",
+    "aliases": [
+      "LUNAR TIDE"
+    ],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9278600": {
     "name": "BARENTS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9279422": {
     "name": "KAPITAN KOKOVIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9279434": {
     "name": "KAPITAN SAKHAROV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9280366": {
     "name": "CASINOVA",
+    "aliases": [
+      "YING GE"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9280873": {
     "name": "AVENTUS I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9280885": {
     "name": "APUS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4744,6 +5778,7 @@
   },
   "9281011": {
     "name": "MOTI",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4751,6 +5786,7 @@
   },
   "9281152": {
     "name": "AQUILA II",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4758,24 +5794,30 @@
   },
   "9281554": {
     "name": "EURO FORTUNE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9281683": {
     "name": "SIRI",
+    "aliases": [
+      "ANTHEA"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9281695": {
     "name": "MONTROSE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9281891": {
     "name": "MEROPE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902",
       "RUSSIA-EO14024",
@@ -4784,24 +5826,33 @@
   },
   "9282041": {
     "name": "ABHRA",
+    "aliases": [
+      "PINTUS"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9282106": {
     "name": "KANTI",
+    "aliases": [
+      "LUNA",
+      "ARTEMIS GAS"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9282443": {
     "name": "BUENO",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9282479": {
     "name": "MINERVA M",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4809,24 +5860,28 @@
   },
   "9282481": {
     "name": "TAGOR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9282522": {
     "name": "BAXTER",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9282792": {
     "name": "AQUA LIVE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9283007": {
     "name": "ARTABAZ",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -4835,6 +5890,7 @@
   },
   "9283019": {
     "name": "AZARGOUN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -4843,6 +5899,7 @@
   },
   "9283021": {
     "name": "ARTENOS",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -4851,6 +5908,7 @@
   },
   "9283033": {
     "name": "GOLBON",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -4859,6 +5917,7 @@
   },
   "9283241": {
     "name": "DIGNITY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4866,30 +5925,44 @@
   },
   "9283746": {
     "name": "FORTUNE",
+    "aliases": [
+      "IRAN FAZEL"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9283758": {
     "name": "FAXON",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "9283760": {
     "name": "FOREST",
+    "aliases": [
+      "FAEZ",
+      "SATEEN",
+      "MAESTRO",
+      "FIANGA"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9283801": {
     "name": "EGRET",
+    "aliases": [
+      "JADEAR"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9284142": {
     "name": "ARZIN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -4898,6 +5971,7 @@
   },
   "9284154": {
     "name": "ARTAM",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -4906,6 +5980,7 @@
   },
   "9284582": {
     "name": "PANDA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662",
@@ -4914,6 +5989,7 @@
   },
   "9284594": {
     "name": "LEOPARD",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4921,18 +5997,21 @@
   },
   "9285744": {
     "name": "LIONESS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9285756": {
     "name": "BLACK PANTHER",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9285847": {
     "name": "SIRIUS 1",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4940,12 +6019,14 @@
   },
   "9286229": {
     "name": "RIEVERIA I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9286463": {
     "name": "OLANGA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4953,30 +6034,37 @@
   },
   "9287699": {
     "name": "FESCO MAGADAN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9288019": {
     "name": "PEACE HILL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9288095": {
     "name": "WEN YAO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9288265": {
     "name": "OLIVE",
+    "aliases": [
+      "BLUE NIL"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9288851": {
     "name": "CARL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -4984,18 +6072,25 @@
   },
   "9288875": {
     "name": "YUG",
+    "aliases": [
+      "MUR"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9289166": {
     "name": "ESPERANZA",
+    "aliases": [
+      "NEDAS"
+    ],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9289477": {
     "name": "M SOPHIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5003,42 +6098,53 @@
   },
   "9289491": {
     "name": "BENDIGO",
+    "aliases": [
+      "LEONOR"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9289726": {
     "name": "MADESTAR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9289740": {
     "name": "WORLD COURAGE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9289776": {
     "name": "MAISAN",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9290775": {
     "name": "VICSCENE",
+    "aliases": [
+      "GLOBAL HARVEST"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9290919": {
     "name": "VICTORY ARI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9292034": {
     "name": "TOPAZ",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5046,6 +6152,7 @@
   },
   "9292058": {
     "name": "TANGO",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5053,6 +6160,7 @@
   },
   "9292060": {
     "name": "TALISMAN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5060,78 +6168,93 @@
   },
   "9292151": {
     "name": "MOANA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9292163": {
     "name": "BERTHA",
+    "aliases": [
+      "MONICA S"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9292228": {
     "name": "CRYSTAL ROSE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9292486": {
     "name": "ELINE",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9293143": {
     "name": "KASPER",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9293155": {
     "name": "BENEDICT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9293741": {
     "name": "TITAN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9294240": {
     "name": "GALE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9294795": {
     "name": "BS BRAVO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9295098": {
     "name": "PETION",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9295593": {
     "name": "BESTLA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9296585": {
     "name": "SENSUS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9296822": {
     "name": "SAGITTA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5139,18 +6262,23 @@
   },
   "9297101": {
     "name": "TIDAL RHYTHM",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9297319": {
     "name": "SALVIA",
+    "aliases": [
+      "YANNIS"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9297357": {
     "name": "ARJUN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5158,42 +6286,49 @@
   },
   "9297905": {
     "name": "LILIANA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9298272": {
     "name": "VALENTE",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9298492": {
     "name": "TOA PAYOH",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9299446": {
     "name": "BELLAGIO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9299458": {
     "name": "PAOLA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9299563": {
     "name": "NORTH STAR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9299680": {
     "name": "CANGJIE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5201,6 +6336,7 @@
   },
   "9299692": {
     "name": "CALLISTO",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5208,18 +6344,21 @@
   },
   "9299707": {
     "name": "GUANYIN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9299719": {
     "name": "NS CHAMPION",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9299721": {
     "name": "CEPHEUS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5227,12 +6366,14 @@
   },
   "9299745": {
     "name": "HS ARGE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9299769": {
     "name": "AQUATICA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5240,6 +6381,7 @@
   },
   "9299903": {
     "name": "DEYNA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5247,30 +6389,35 @@
   },
   "9300348": {
     "name": "AVRORA ALTAIR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9300350": {
     "name": "AVRORA REGUL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9300996": {
     "name": "WORLD PROGRESS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9301005": {
     "name": "WORLD PERFORMANCE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9301380": {
     "name": "PAVEL CHERNYSH",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5278,6 +6425,7 @@
   },
   "9301392": {
     "name": "CAPTAIN KOSTICHEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5285,6 +6433,7 @@
   },
   "9301407": {
     "name": "VIKTOR TITOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5292,6 +6441,7 @@
   },
   "9301419": {
     "name": "YURI SENKEVICH",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5299,6 +6449,7 @@
   },
   "9301421": {
     "name": "VICTOR KONETSKY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5306,48 +6457,62 @@
   },
   "9301615": {
     "name": "SARA II",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9302023": {
     "name": "MS MELENIA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9302566": {
     "name": "PUMBA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9303754": {
     "name": "ALE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9304356": {
     "name": "YODAN",
+    "aliases": [
+      "HERA 1"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9304655": {
     "name": "CARNATIC",
+    "aliases": [
+      "ANNICK",
+      "KIONI",
+      "TOBA"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9304667": {
     "name": "ADISA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9305192": {
     "name": "AMINA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -5356,6 +6521,7 @@
   },
   "9305207": {
     "name": "DELRUBA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -5364,6 +6530,7 @@
   },
   "9305219": {
     "name": "GANJ",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -5372,6 +6539,7 @@
   },
   "9305221": {
     "name": "ARTIN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -5380,54 +6548,63 @@
   },
   "9305609": {
     "name": "CELINE",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9306548": {
     "name": "FOTIS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9306665": {
     "name": "CHIRON 5",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9306782": {
     "name": "NS CENTURY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9307009": {
     "name": "YOGI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9307023": {
     "name": "RANTANPLAN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9307047": {
     "name": "BIGLI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9307633": {
     "name": "ETERNAL SUCCESS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9307724": {
     "name": "SCF SAKHALIN",
+    "aliases": [],
     "programs": [
       "UKRAINE-EO13662",
       "RUSSIA-EO14024"
@@ -5435,42 +6612,51 @@
   },
   "9307748": {
     "name": "GAS MARTA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9307932": {
     "name": "TONIL",
+    "aliases": [
+      "PARAGON DAWN"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9308065": {
     "name": "EVENTIN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9308778": {
     "name": "SATINA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9309227": {
     "name": "GLOBAL DIGNITY",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9309239": {
     "name": "EURO VIKING",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9309576": {
     "name": "NS SILVER",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5478,6 +6664,7 @@
   },
   "9309588": {
     "name": "SYMPHONY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5485,6 +6672,9 @@
   },
   "9310018": {
     "name": "ANTEY",
+    "aliases": [
+      "VLADISLAV STRIZHOV"
+    ],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -5492,30 +6682,35 @@
   },
   "9310147": {
     "name": "NATALINA 7",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9310159": {
     "name": "CATALINA 7",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9311270": {
     "name": "MONIQUE",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9311309": {
     "name": "GLOBAL ANGEL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9311622": {
     "name": "VANGUARD",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5523,24 +6718,28 @@
   },
   "9312353": {
     "name": "HAI LONG BRAVO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9312494": {
     "name": "BENLAI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9312509": {
     "name": "AL SIDDEEQ",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9312872": {
     "name": "HUI HAI ATLANTIC",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5548,36 +6747,42 @@
   },
   "9312884": {
     "name": "NS COLUMBUS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9312896": {
     "name": "NS CREATION",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9313149": {
     "name": "TASCA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9313242": {
     "name": "ZAGOR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9313589": {
     "name": "AVRORA SIRIUS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9314088": {
     "name": "LYRA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5585,6 +6790,7 @@
   },
   "9314105": {
     "name": "MAKALU",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5592,18 +6798,21 @@
   },
   "9314650": {
     "name": "RA NAM 3",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "9314818": {
     "name": "MONA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9315446": {
     "name": "MUM",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5611,30 +6820,35 @@
   },
   "9315642": {
     "name": "TAMIA",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9315654": {
     "name": "KAPOK",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9316701": {
     "name": "PROGRESS V",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9318022": {
     "name": "CHARMINAR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9318541": {
     "name": "SERENADE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5642,6 +6856,7 @@
   },
   "9318553": {
     "name": "SAGA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5649,36 +6864,44 @@
   },
   "9318618": {
     "name": "GAZ CRYSTAL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9320738": {
     "name": "SAPPHIRE GAS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9320843": {
     "name": "LAMD",
+    "aliases": [
+      "TAI HE"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9321421": {
     "name": "LARA II",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9321469": {
     "name": "KHADIGA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9321706": {
     "name": "MERCURY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5686,12 +6909,16 @@
   },
   "9321718": {
     "name": "ZALE",
+    "aliases": [
+      "IKARA"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9321847": {
     "name": "EMILY S",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5699,6 +6926,7 @@
   },
   "9321976": {
     "name": "HEIDI A",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5706,24 +6934,28 @@
   },
   "9322267": {
     "name": "NELLIS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9322827": {
     "name": "PERIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9322839": {
     "name": "HS ATLANTICA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9322956": {
     "name": "NS PRIDE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5731,6 +6963,7 @@
   },
   "9322968": {
     "name": "HYPERION",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5738,24 +6971,28 @@
   },
   "9323338": {
     "name": "UZE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9323429": {
     "name": "WHITE CRANE",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9323596": {
     "name": "NORD STAR",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9323833": {
     "name": "GOLAFRUZ",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -5764,42 +7001,49 @@
   },
   "9324277": {
     "name": "NEW ENERGY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9326055": {
     "name": "VERONICA III",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9326902": {
     "name": "PK PHOENIX",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9327413": {
     "name": "ARISTO",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9328170": {
     "name": "AETHER",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9328716": {
     "name": "BLUE GULF",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9328900": {
     "name": "TOUSKA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -5808,6 +7052,7 @@
   },
   "9329655": {
     "name": "PROXIMA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5815,24 +7060,28 @@
   },
   "9330020": {
     "name": "SKYLIGHT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9330501": {
     "name": "LIDIA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9332315": {
     "name": "MISHELL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9333436": {
     "name": "SUCCESS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5840,12 +7089,14 @@
   },
   "9333589": {
     "name": "ORION STAR",
+    "aliases": [],
     "programs": [
       "DPRK"
     ]
   },
   "9333670": {
     "name": "MIKHAIL ULYANOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5853,6 +7104,7 @@
   },
   "9333682": {
     "name": "KIRILL LAVROV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5860,6 +7112,7 @@
   },
   "9335678": {
     "name": "SCF ENDEAVOUR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5867,6 +7120,7 @@
   },
   "9335680": {
     "name": "SCF ENDURANCE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5874,6 +7128,7 @@
   },
   "9335692": {
     "name": "SCF ENTERPRISE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5881,12 +7136,14 @@
   },
   "9336490": {
     "name": "MYRA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9337133": {
     "name": "IVY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662",
@@ -5895,18 +7152,23 @@
   },
   "9337195": {
     "name": "SIREN II",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9337389": {
     "name": "GLAUCUS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9338230": {
     "name": "HERMES",
+    "aliases": [
+      "YURY TOPCHEV"
+    ],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -5914,18 +7176,21 @@
   },
   "9339301": {
     "name": "NS LEADER",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9339313": {
     "name": "NS LION",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9339325": {
     "name": "LIBERTY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5933,6 +7198,7 @@
   },
   "9339337": {
     "name": "LEGACY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5940,18 +7206,21 @@
   },
   "9340934": {
     "name": "PIONEER 92",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9341067": {
     "name": "NS CAPTAIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9341079": {
     "name": "CAPELLA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5959,6 +7228,7 @@
   },
   "9341081": {
     "name": "CASSIOPEIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5966,24 +7236,30 @@
   },
   "9341093": {
     "name": "NS CONSUL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9341512": {
     "name": "LADY LUCY",
+    "aliases": [
+      "DELPHI"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9342786": {
     "name": "AMIAS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9344033": {
     "name": "TRIUMPH",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -5991,6 +7267,7 @@
   },
   "9346524": {
     "name": "SHABGOUN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -5999,6 +7276,7 @@
   },
   "9346536": {
     "name": "BASHT",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6007,6 +7285,7 @@
   },
   "9346548": {
     "name": "BEHNAVAZ",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6015,6 +7294,7 @@
   },
   "9346732": {
     "name": "HUIHAI PACIFIC",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6022,36 +7302,46 @@
   },
   "9347059": {
     "name": "UTRENNIY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9347061": {
     "name": "SABETTA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9348493": {
     "name": "GAUJA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9349289": {
     "name": "LADY D",
+    "aliases": [
+      "MALIY B.S."
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9349291": {
     "name": "ANASTASIIA",
+    "aliases": [
+      "VIKTORIA SHAIN"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9349576": {
     "name": "SHAHRAZ",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6060,6 +7350,7 @@
   },
   "9349588": {
     "name": "SHABDIS",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6068,6 +7359,7 @@
   },
   "9349590": {
     "name": "BEHTA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6076,6 +7368,7 @@
   },
   "9349667": {
     "name": "ABYAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6084,6 +7377,7 @@
   },
   "9349679": {
     "name": "ZARDIS",
+    "aliases": [],
     "programs": [
       "NPWMD",
       "IRAN",
@@ -6092,12 +7386,14 @@
   },
   "9350422": {
     "name": "OUREA",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9350654": {
     "name": "SURREY QUAYS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6105,18 +7401,21 @@
   },
   "9353905": {
     "name": "EASTERN HERO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9354167": {
     "name": "HAKUNA MATATA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9354301": {
     "name": "ZALIV AMERIKA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6124,6 +7423,7 @@
   },
   "9354313": {
     "name": "ZALIV AMURSKIY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6131,96 +7431,152 @@
   },
   "9354521": {
     "name": "ANHONA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9356593": {
     "name": "DREAM II",
+    "aliases": [
+      "DANESH",
+      "LEADERSHIP",
+      "DECESIVE"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9357183": {
     "name": "HUGE",
+    "aliases": [
+      "HATEF",
+      "GLORY",
+      "MAJESTIC"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9357353": {
     "name": "SEVIN",
+    "aliases": [
+      "SIMA",
+      "BLOSSOM",
+      "BAIKAL",
+      "SUCCESS",
+      "SANA"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9357365": {
     "name": "SONIA I",
+    "aliases": [
+      "SINA",
+      "AZALEA",
+      "SUNEAST"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9357377": {
     "name": "SALINA",
+    "aliases": [
+      "SARV",
+      "BLACKSTONE",
+      "SPLENDOUR"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9357389": {
     "name": "HILDA I",
+    "aliases": [
+      "HOMA",
+      "COURAGE"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9357391": {
     "name": "HELM",
+    "aliases": [
+      "HIRMAND",
+      "HONESTY",
+      "MILLIONAIRE"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9357406": {
     "name": "AMBER",
+    "aliases": [
+      "HARAZ",
+      "FREEDOM"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9357717": {
     "name": "DORE",
+    "aliases": [
+      "DAVAR",
+      "COMPANION",
+      "DAL LAKE"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9357729": {
     "name": "DAN",
+    "aliases": [
+      "JUSTICE"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9358010": {
     "name": "MAIA-1",
+    "aliases": [
+      "NEPTUN"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9358034": {
     "name": "SASCO ALDAN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9358802": {
     "name": "INTAN PREMIER",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9360001": {
     "name": "APS 9",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9360128": {
     "name": "ZALIV BAIKAL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6228,6 +7584,7 @@
   },
   "9360130": {
     "name": "ZALIV VOSTOK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6235,66 +7592,92 @@
   },
   "9361407": {
     "name": "MI RIM 2",
+    "aliases": [],
     "programs": [
       "DPRK3"
     ]
   },
   "9362059": {
     "name": "HERBY",
+    "aliases": [
+      "HODA",
+      "PRECIOUS",
+      "EXPLORER",
+      "HYDRA"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9362061": {
     "name": "HAWK",
+    "aliases": [
+      "HONAR",
+      "VICTORY",
+      "JANUS",
+      "DOVE",
+      "HORSE"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9362073": {
     "name": "HERO II",
+    "aliases": [
+      "HADI",
+      "PIONEER",
+      "ZEUS"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9363182": {
     "name": "RAMYA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9364112": {
     "name": "TOUR 2",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9365752": {
     "name": "FIONA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9365764": {
     "name": "AYDEN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9365776": {
     "name": "LYDIA II",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9366110": {
     "name": "MYS ZHELANIYA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9367982": {
     "name": "GILDA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6303,6 +7686,7 @@
   },
   "9367994": {
     "name": "SANIA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6311,6 +7695,7 @@
   },
   "9368003": {
     "name": "SARIR",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6319,6 +7704,7 @@
   },
   "9368015": {
     "name": "SOMIA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6327,12 +7713,14 @@
   },
   "9368340": {
     "name": "MYS DEZHNEVA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9369710": {
     "name": "DARYABAR",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6341,6 +7729,7 @@
   },
   "9369722": {
     "name": "ARIES",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6349,18 +7738,23 @@
   },
   "9369760": {
     "name": "GAS RIVER",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9371608": {
     "name": "VANITY",
+    "aliases": [
+      "BLISSFUL SEA"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9372547": {
     "name": "VASILY DINKOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6368,6 +7762,7 @@
   },
   "9372559": {
     "name": "KAPITAN GOTSKY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6375,6 +7770,7 @@
   },
   "9372561": {
     "name": "TIMOFEY GUZHENKO",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6382,18 +7778,21 @@
   },
   "9372705": {
     "name": "LUANDA 1",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9376440": {
     "name": "SMP SEVERODVINSK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9378618": {
     "name": "SI HE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6401,6 +7800,7 @@
   },
   "9378632": {
     "name": "PING AN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6408,12 +7808,14 @@
   },
   "9379404": {
     "name": "GAS DIOR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9379636": {
     "name": "ABTIN 1",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6422,42 +7824,49 @@
   },
   "9379698": {
     "name": "LAFIT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9379703": {
     "name": "GOODWIN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9380570": {
     "name": "KURDOS III",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9381732": {
     "name": "HS BURAQ",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9381744": {
     "name": "HS LEGEND",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9382073": {
     "name": "ANTARES I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9382798": {
     "name": "TRUST",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6465,6 +7874,7 @@
   },
   "9383950": {
     "name": "ELEGANCE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6472,6 +7882,7 @@
   },
   "9384306": {
     "name": "UNIVERSAL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6479,6 +7890,7 @@
   },
   "9385142": {
     "name": "DIAMOND",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6486,6 +7898,7 @@
   },
   "9386500": {
     "name": "ARSHAM",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6494,12 +7907,14 @@
   },
   "9387279": {
     "name": "ETHERA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9387786": {
     "name": "PARSHAD",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6508,6 +7923,7 @@
   },
   "9387798": {
     "name": "BAVAND",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6516,6 +7932,7 @@
   },
   "9387803": {
     "name": "DELNAVAZ",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6524,6 +7941,7 @@
   },
   "9387815": {
     "name": "OURA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6532,12 +7950,14 @@
   },
   "9388027": {
     "name": "MANASLU",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9388754": {
     "name": "WEI FENG",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6545,6 +7965,7 @@
   },
   "9392822": {
     "name": "HIMALAYAN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6552,6 +7973,9 @@
   },
   "9396854": {
     "name": "LAMANTIN",
+    "aliases": [
+      "MARLIN"
+    ],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -6559,18 +7983,21 @@
   },
   "9397030": {
     "name": "HARMONY",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9397080": {
     "name": "OCEANUS GAS",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9397535": {
     "name": "JUPITER",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6578,6 +8005,7 @@
   },
   "9397547": {
     "name": "ARIADNE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6585,6 +8013,7 @@
   },
   "9397559": {
     "name": "ARIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6592,30 +8021,37 @@
   },
   "9398046": {
     "name": "SMP NOVODVINSK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9399167": {
     "name": "GLOBAL FALCON",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9400112": {
     "name": "PINOCCHIO",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9400980": {
     "name": "OMNI",
+    "aliases": [
+      "ABHA"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9402469": {
     "name": "FREDA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6623,18 +8059,23 @@
   },
   "9404546": {
     "name": "IMICO NEKA 455",
+    "aliases": [
+      "YARD NO. 455 IRAN MARINE"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9404572": {
     "name": "FOSHAN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9405930": {
     "name": "ARTMAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6643,6 +8084,7 @@
   },
   "9405942": {
     "name": "BASKAR",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6651,6 +8093,7 @@
   },
   "9405954": {
     "name": "BAHJAT",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6659,6 +8102,7 @@
   },
   "9405966": {
     "name": "ROSHAK",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6667,6 +8111,7 @@
   },
   "9405978": {
     "name": "BEHDOKHT",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6675,60 +8120,74 @@
   },
   "9408695": {
     "name": "TASSOS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9409247": {
     "name": "VALIANT",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9409467": {
     "name": "PRAVASI",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9409986": {
     "name": "KASSIA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9410387": {
     "name": "JAYA",
+    "aliases": [
+      "MONOCEROS"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9410870": {
     "name": "HS EVERETT",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9410894": {
     "name": "HS ESBERG",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9411020": {
     "name": "NS BURGAS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9411288": {
     "name": "NILE",
+    "aliases": [
+      "LIA"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9411331": {
     "name": "CANKIRI",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6736,6 +8195,7 @@
   },
   "9412335": {
     "name": "BOLERO",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6743,6 +8203,7 @@
   },
   "9412347": {
     "name": "LEO",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6750,24 +8211,28 @@
   },
   "9412359": {
     "name": "NS BRAVO",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9412995": {
     "name": "OSPEROUS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9413559": {
     "name": "NS ANTARCTIC",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9413573": {
     "name": "ATLAS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6775,30 +8240,35 @@
   },
   "9415844": {
     "name": "TIMON",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9417115": {
     "name": "KOTI",
+    "aliases": [],
     "programs": [
       "DPRK4"
     ]
   },
   "9417490": {
     "name": "ARABIAN ENERGY",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9418078": {
     "name": "ELIZA II",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9418494": {
     "name": "ZALIV ANIVA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6806,6 +8276,7 @@
   },
   "9418509": {
     "name": "OMSK",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6813,6 +8284,7 @@
   },
   "9419137": {
     "name": "SIVAS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6820,6 +8292,7 @@
   },
   "9419448": {
     "name": "HENG TAI",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6827,6 +8300,7 @@
   },
   "9420356": {
     "name": "SHAYAN 1",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6835,6 +8309,7 @@
   },
   "9420368": {
     "name": "TABAN 1",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6843,6 +8318,7 @@
   },
   "9420370": {
     "name": "YARAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6851,12 +8327,14 @@
   },
   "9421960": {
     "name": "SCF PRIMORYE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9422445": {
     "name": "SIRIUS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6864,6 +8342,7 @@
   },
   "9422653": {
     "name": "TYMEN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6871,54 +8350,65 @@
   },
   "9422847": {
     "name": "GLOBAL EAGLE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9422859": {
     "name": "GLOBAL HAWK",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9422988": {
     "name": "VOLANS",
+    "aliases": [
+      "NEW MILOS"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9430715": {
     "name": "MAJESTY",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9432658": {
     "name": "AMUAY",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9432660": {
     "name": "PDVSA CARDON",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9433016": {
     "name": "APATE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9433286": {
     "name": "MYS FLORA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9436006": {
     "name": "SAMSUN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6926,12 +8416,14 @@
   },
   "9436484": {
     "name": "STAR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9436941": {
     "name": "ATTICA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -6939,54 +8431,63 @@
   },
   "9439541": {
     "name": "NEMRUT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9441178": {
     "name": "SANDINO",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9445057": {
     "name": "GOLDEN LIGHT 09",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9450715": {
     "name": "BRILLIANCE",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9451501": {
     "name": "GLOBAL GENESIS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9453729": {
     "name": "KURDOS II",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9463528": {
     "name": "GLORY STAR I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9464156": {
     "name": "ARIHANT",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9465746": {
     "name": "AVANG",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -6995,6 +8496,7 @@
   },
   "9465758": {
     "name": "KIAZAND",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7003,6 +8505,7 @@
   },
   "9465760": {
     "name": "BATIS",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7011,6 +8514,7 @@
   },
   "9465849": {
     "name": "WARTA",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7019,6 +8523,7 @@
   },
   "9465851": {
     "name": "PARISAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7027,6 +8532,7 @@
   },
   "9465863": {
     "name": "ARDAVAN",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7035,54 +8541,66 @@
   },
   "9471123": {
     "name": "FORTUNE GAS",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9481881": {
     "name": "PORT OLYA-2",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9481910": {
     "name": "PORT OLYA-3",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9481922": {
     "name": "PORT OLYA-1",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9481934": {
     "name": "PORT OLYA-4",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9482926": {
     "name": "SV NIKOLAY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9486805": {
     "name": "ZEAL",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9486910": {
     "name": "IRIS MAKRAN",
+    "aliases": [
+      "MAKRAN",
+      "IRINS MAKRAN"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9497531": {
     "name": "SPASATEL KAREV",
+    "aliases": [],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -7090,12 +8608,14 @@
   },
   "9502453": {
     "name": "CARLOTA C",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9506320": {
     "name": "NOOR 1",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7104,6 +8624,7 @@
   },
   "9511521": {
     "name": "MOSKOVSKY PROSPECT",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7111,6 +8632,7 @@
   },
   "9511533": {
     "name": "RIGEL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7118,6 +8640,7 @@
   },
   "9513139": {
     "name": "FJORD SEAL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7125,48 +8648,56 @@
   },
   "9513268": {
     "name": "BICENTENARIO XV",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9513270": {
     "name": "BICENTENARIO XIV",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9513282": {
     "name": "BICENTENARIO XII",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9513294": {
     "name": "BICENTENARIO XIII",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9513309": {
     "name": "BICENTENARIO XVI",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9513311": {
     "name": "BICENTENARIO XI",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9513323": {
     "name": "BICENTENARIO II",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9524451": {
     "name": "SABLE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7174,6 +8705,7 @@
   },
   "9524463": {
     "name": "SAKARYA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7181,12 +8713,14 @@
   },
   "9526693": {
     "name": "LIANG SHENG",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9530917": {
     "name": "SALTY WOLF",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7194,18 +8728,21 @@
   },
   "9531375": {
     "name": "MOLLY",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9531387": {
     "name": "SOFIA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9537109": {
     "name": "GAZPROMNEFT ZUID EAST",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7213,6 +8750,7 @@
   },
   "9538115": {
     "name": "VYACHESLAV TIKHONOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7220,42 +8758,51 @@
   },
   "9538892": {
     "name": "SPARTA III",
+    "aliases": [
+      "URSA MAJOR"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9540883": {
     "name": "CUMANAGOTO",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9540895": {
     "name": "CARIBE",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9542518": {
     "name": "BICENTENARIO V",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9543500": {
     "name": "YARE",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13884"
     ]
   },
   "9543512": {
     "name": "PARAMACONI",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13884"
     ]
   },
   "9544281": {
     "name": "CORUM",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7263,174 +8810,238 @@
   },
   "9546708": {
     "name": "GLOBAL MAHARANI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9546710": {
     "name": "MARUTI",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9546722": {
     "name": "CONRAD",
+    "aliases": [],
     "programs": [
       "SDGT"
     ]
   },
   "9548990": {
     "name": "ATEELA 1",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9549009": {
     "name": "ATEELA 2",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9552496": {
     "name": "TEREPAIMA",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13884"
     ]
   },
   "9553957": {
     "name": "COURAGE 7",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9554822": {
     "name": "IANTHE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9554834": {
     "name": "XANTE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9555199": {
     "name": "GLOBAL PEACE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9556947": {
     "name": "BICENTENARIO IV",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9557549": {
     "name": "BICENTENARIO VI",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9557915": {
     "name": "BICENTENARIO IX",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9564126": {
     "name": "BICENTENARIO X",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9564695": {
     "name": "BICENTENARIO VIII",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9569205": {
     "name": "SEA STAR III",
+    "aliases": [
+      "YARD NO. 1220 SHANGHAI WAIGAOQIAO",
+      "SAFE",
+      "CARNATION",
+      "SUNSHINE",
+      "SEASTAR III"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9569619": {
     "name": "SNOW",
+    "aliases": [
+      "YARD NO. 1221 SHANGHAI WAIGAOQIAO",
+      "SOUVENIR",
+      "RAINBOW",
+      "DOJRAN"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9569621": {
     "name": "STARLA",
+    "aliases": [
+      "ATLANTIS"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9569633": {
     "name": "STREAM",
+    "aliases": [
+      "YARD NO. 1222 SHANGHAI WAIGAOQIAO",
+      "SONATA",
+      "FORTUN"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9569645": {
     "name": "SERENA",
+    "aliases": [
+      "YARD NO. 1224 SHANGHAI WAIGAOQIAO",
+      "SONGBIRD",
+      "SALALEH"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9569657": {
     "name": "SEA CLIFF",
+    "aliases": [
+      "YARD NO. 1225 SHANGHAI WAIGAOQIAO",
+      "SMOOTH"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9569669": {
     "name": "DORENA",
+    "aliases": [
+      "SKYLINE"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9569671": {
     "name": "DINO I",
+    "aliases": [
+      "INFINITY"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9569683": {
     "name": "DANIEL",
+    "aliases": [
+      "DEMOS"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9569695": {
     "name": "DIONA",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "9569700": {
     "name": "DERYA",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "9569712": {
     "name": "DUNE",
+    "aliases": [],
     "programs": [
       "IRAN"
     ]
   },
   "9571052": {
     "name": "MAHADEV",
+    "aliases": [
+      "KAILASH"
+    ],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9572020": {
     "name": "BALTIYSKIY ISSLEDOVATEL",
+    "aliases": [
+      "BALTIC EXPLORER",
+      "BALT. ISSLEDOVATEL"
+    ],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -7438,12 +9049,16 @@
   },
   "9572111": {
     "name": "YAMUNA",
+    "aliases": [
+      "ARGO"
+    ],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9577082": {
     "name": "PREMIER",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7451,6 +9066,7 @@
   },
   "9577094": {
     "name": "PATHFINDER",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7458,30 +9074,35 @@
   },
   "9584762": {
     "name": "BICENTENARIO I",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9585819": {
     "name": "BICENTENARIO III",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9588885": {
     "name": "HONG XUN",
+    "aliases": [],
     "programs": [
       "IRAN-EO13871"
     ]
   },
   "9588990": {
     "name": "BICENTENARIO VII",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9589750": {
     "name": "LI BAI",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7489,12 +9110,16 @@
   },
   "9590008": {
     "name": "MAKSIM GORKY",
+    "aliases": [
+      "MAXIMO GORKI"
+    ],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9590137": {
     "name": "GAZPROMNEFT NORDWEST",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7502,12 +9127,14 @@
   },
   "9594339": {
     "name": "LENA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9610781": {
     "name": "ZENITH",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7515,24 +9142,28 @@
   },
   "9610793": {
     "name": "GEORGY MASLOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9610808": {
     "name": "ANATOLY KOLODKIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9610810": {
     "name": "VIKTOR BAKAEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9613549": {
     "name": "VITUS BERING",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7540,6 +9171,7 @@
   },
   "9613551": {
     "name": "ALEKSEY CHIRIKOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7547,18 +9179,25 @@
   },
   "9615092": {
     "name": "MARIA III",
+    "aliases": [
+      "SUNRISE"
+    ],
     "programs": [
       "IRAN"
     ]
   },
   "9617923": {
     "name": "MARIA E",
+    "aliases": [
+      "MARIA"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9620633": {
     "name": "ORIENT HARMONY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7566,12 +9205,14 @@
   },
   "9621601": {
     "name": "VASILY LANOVOY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9624213": {
     "name": "IVAN SIDORENKO",
+    "aliases": [],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -7579,6 +9220,7 @@
   },
   "9624225": {
     "name": "OSTAP SHEREMETA",
+    "aliases": [],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -7586,6 +9228,7 @@
   },
   "9630004": {
     "name": "VELIKIY NOVGOROD",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7593,6 +9236,7 @@
   },
   "9630028": {
     "name": "PSKOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7600,6 +9244,7 @@
   },
   "9650016": {
     "name": "RN SAKHALIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7607,6 +9252,7 @@
   },
   "9653068": {
     "name": "RN AMUR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7614,6 +9260,7 @@
   },
   "9653070": {
     "name": "RN USSURI",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7621,48 +9268,56 @@
   },
   "9661792": {
     "name": "DILBAR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9662643": {
     "name": "JAZMIN",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9667813": {
     "name": "SABANETA",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9670987": {
     "name": "MANAURE",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9670999": {
     "name": "MARA",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9671668": {
     "name": "MARGARITA 1",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9672301": {
     "name": "GLOBAL DOMINANCE",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9673202": {
     "name": "ORIENT VISION",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7670,6 +9325,7 @@
   },
   "9678238": {
     "name": "SVYATOY KNYAZ VLADIMIR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7677,6 +9333,7 @@
   },
   "9682423": {
     "name": "MURMAN",
+    "aliases": [],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -7684,6 +9341,7 @@
   },
   "9683570": {
     "name": "AYNAZ",
+    "aliases": [],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7692,84 +9350,100 @@
   },
   "9683738": {
     "name": "LADY SEVDA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9683740": {
     "name": "LADY LEILA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9688790": {
     "name": "YORACO",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9688805": {
     "name": "CAYAURIMA",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9690212": {
     "name": "STALINGRAD",
+    "aliases": [],
     "programs": [
       "UKRAINE-EO13685"
     ]
   },
   "9690224": {
     "name": "MARSHAL ZHUKOV",
+    "aliases": [],
     "programs": [
       "UKRAINE-EO13685"
     ]
   },
   "9691785": {
     "name": "POLA SEVASTIANA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9693240": {
     "name": "TRIBILIN",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9717357": {
     "name": "AMAPOLA 1",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9719862": {
     "name": "SIMBA",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9720263": {
     "name": "AM THESEUS",
+    "aliases": [
+      "ZAFAR"
+    ],
     "programs": [
       "SDGT"
     ]
   },
   "9735323": {
     "name": "YAZ",
+    "aliases": [],
     "programs": [
       "UKRAINE-EO13685"
     ]
   },
   "9735335": {
     "name": "SIG",
+    "aliases": [],
     "programs": [
       "UKRAINE-EO13685"
     ]
   },
   "9737187": {
     "name": "CHRISTOPHE DE MARGERIE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7777,18 +9451,21 @@
   },
   "9739898": {
     "name": "GARDENIA",
+    "aliases": [],
     "programs": [
       "VENEZUELA-EO13850"
     ]
   },
   "9741724": {
     "name": "ALARA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9742120": {
     "name": "GENNADIY NEVELSKOY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7796,12 +9473,14 @@
   },
   "9743033": {
     "name": "SPARTA IV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9747194": {
     "name": "ARTEMIS OFFSHORE",
+    "aliases": [],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -7809,6 +9488,7 @@
   },
   "9752084": {
     "name": "SHTURMAN ALBANOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7816,6 +9496,7 @@
   },
   "9752096": {
     "name": "SHTURMAN MALYGIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7823,6 +9504,7 @@
   },
   "9752101": {
     "name": "SHTURMAN OVTSYN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7830,6 +9512,7 @@
   },
   "9753727": {
     "name": "STEPAN MAKAROV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7837,6 +9520,7 @@
   },
   "9753739": {
     "name": "FEDOR USHAKOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7844,6 +9528,7 @@
   },
   "9753741": {
     "name": "YEVGENY PRIMAKOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7851,18 +9536,21 @@
   },
   "9756573": {
     "name": "HONG FENG 1 HAO",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9759666": {
     "name": "IPSALA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9759915": {
     "name": "SHTURMAN SKURATOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7870,6 +9558,7 @@
   },
   "9759927": {
     "name": "SHTURMAN SHCHERBININ",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7877,6 +9566,7 @@
   },
   "9759939": {
     "name": "SHTURMAN KOSHELEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7884,24 +9574,28 @@
   },
   "9763837": {
     "name": "AUDAX",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9763849": {
     "name": "PUGNAX",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9773301": {
     "name": "FULL STAR",
+    "aliases": [],
     "programs": [
       "IRAN-EO13846"
     ]
   },
   "9776523": {
     "name": "GENAVA 12",
+    "aliases": [],
     "programs": [
       "SDGT",
       "IFSR"
@@ -7909,24 +9603,28 @@
   },
   "9777670": {
     "name": "SANAR 15",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9780940": {
     "name": "ULA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9784893": {
     "name": "LADY RANIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9797577": {
     "name": "BAKHTEMIR",
+    "aliases": [],
     "programs": [
       "PEESA-EO14039",
       "RUSSIA-EO14024"
@@ -7934,6 +9632,7 @@
   },
   "9804057": {
     "name": "VYAZ",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7941,6 +9640,9 @@
   },
   "9804617": {
     "name": "GENAVA 11",
+    "aliases": [
+      "GOSTARESH SW 8301"
+    ],
     "programs": [
       "SDGT",
       "IFSR"
@@ -7948,12 +9650,16 @@
   },
   "9809277": {
     "name": "MARIE DE LOURDES V",
+    "aliases": [
+      "MDL 5"
+    ],
     "programs": [
       "LIBYA3"
     ]
   },
   "9817779": {
     "name": "TIS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -7961,6 +9667,9 @@
   },
   "9820245": {
     "name": "TENREACH",
+    "aliases": [
+      "RAYEN"
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7969,6 +9678,9 @@
   },
   "9820257": {
     "name": "GOODREACH",
+    "aliases": [
+      "RADIN"
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7977,6 +9689,9 @@
   },
   "9820269": {
     "name": "FANREACH",
+    "aliases": [
+      "BARZIN"
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7985,6 +9700,9 @@
   },
   "9820271": {
     "name": "CANREACH",
+    "aliases": [
+      "HAMOUN"
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -7993,6 +9711,9 @@
   },
   "9820312": {
     "name": "HYUNDAI MIPO 2655",
+    "aliases": [
+      "YARD NO.2655 HYUNDAI M.D."
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -8001,6 +9722,9 @@
   },
   "9820324": {
     "name": "HYUNDAI MIPO 2656",
+    "aliases": [
+      "YARD NO.2656 HYUNDAI M.D."
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -8009,6 +9733,9 @@
   },
   "9820336": {
     "name": "HYUNDAI MIPO 2657",
+    "aliases": [
+      "YARD NO.2657 HYUNDAI M.D."
+    ],
     "programs": [
       "IRAN",
       "NPWMD",
@@ -8017,6 +9744,7 @@
   },
   "9826902": {
     "name": "GALAXY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8024,66 +9752,77 @@
   },
   "9828663": {
     "name": "FU YUAN YU 7861",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9828675": {
     "name": "FU YUAN YU 7862",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9828687": {
     "name": "FU YUAN YU 7864",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9828699": {
     "name": "FU YUAN YU 7863",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9828704": {
     "name": "FU YUAN YU 7865",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9828716": {
     "name": "FU YUAN YU 7866",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9828754": {
     "name": "FU YUAN YU 7882",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9828766": {
     "name": "FU YUAN YU 7883",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9829629": {
     "name": "DIJILAH",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
   },
   "9830769": {
     "name": "HUNTER STAR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9832547": {
     "name": "VENTURE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8091,6 +9830,7 @@
   },
   "9832559": {
     "name": "VALOUR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8098,6 +9838,7 @@
   },
   "9837547": {
     "name": "MIKHAIL LAZAREV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8105,6 +9846,7 @@
   },
   "9842176": {
     "name": "VLADIMIR MONOMAKH",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8112,6 +9854,7 @@
   },
   "9842188": {
     "name": "VLADIMIR VINOGRADOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8119,6 +9862,9 @@
   },
   "9842190": {
     "name": "AKADEMIK GUBKIN",
+    "aliases": [
+      "ACADEMIC GUBKIN"
+    ],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8126,6 +9872,7 @@
   },
   "9842205": {
     "name": "YARD NO.131040 ZVEZDA-DSME",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8133,6 +9880,7 @@
   },
   "9842217": {
     "name": "NURSULTAN NAZARBAYEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8140,30 +9888,35 @@
   },
   "9842279": {
     "name": "FU YUAN YU 7884",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9842281": {
     "name": "FU YUAN YU 7885",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9842293": {
     "name": "FU YUAN YU 7886",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9842308": {
     "name": "FU YUAN YU 7887",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9843560": {
     "name": "VOYAGER",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8171,60 +9924,70 @@
   },
   "9849423": {
     "name": "POLA MAKARIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9849435": {
     "name": "POLA FILOFEIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9849459": {
     "name": "POLA SOFIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9849461": {
     "name": "POLA FEODOSIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9849473": {
     "name": "POLA FIVA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9851103": {
     "name": "POLA ANATOLIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9851115": {
     "name": "POLA ANFISA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9851127": {
     "name": "POLA GALI",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9864837": {
     "name": "MULAN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9866380": {
     "name": "OKEANSKY PROSPECT",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8232,6 +9995,7 @@
   },
   "9866392": {
     "name": "VOSTOCHNY PROSPECT",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8239,156 +10003,182 @@
   },
   "9868807": {
     "name": "NAVIS 6",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9869291": {
     "name": "FU YUAN YU 8672",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9869473": {
     "name": "FU YUAN YU 8673",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9869485": {
     "name": "FU YUAN YU 8674",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9869497": {
     "name": "FU YUAN YU 8675",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9870111": {
     "name": "FU YUAN YU 8660",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9870123": {
     "name": "FU YUAN YU 8676",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9870238": {
     "name": "FU YUAN YU 8677",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9870240": {
     "name": "FU YUAN YU 8678",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9870587": {
     "name": "FU YUAN YU 8661",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9870599": {
     "name": "FU YUAN YU 8662",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9871232": {
     "name": "FU YUAN YU 7894",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9871244": {
     "name": "FU YUAN YU 7895",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9872224": {
     "name": "FU YUAN YU 7896",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9872262": {
     "name": "FU YUAN YU 7897",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9872274": {
     "name": "FU YUAN YU 7898",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9872286": {
     "name": "FU YUAN YU 7899",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9872561": {
     "name": "FU YUAN YU 7888",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9872573": {
     "name": "FU YUAN YU 7889",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9872585": {
     "name": "FU YUAN YU 7868",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9872602": {
     "name": "FU YUAN YU 7869",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9874064": {
     "name": "FU YUAN YU 7872",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9874131": {
     "name": "FU YUAN YU 7870",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9874155": {
     "name": "FU YUAN YU 7871",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9874167": {
     "name": "FU YUAN YU 7873",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9876359": {
     "name": "IVAN AIVAZOVSKY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8396,6 +10186,7 @@
   },
   "9876361": {
     "name": "ALEXEY BOGOLYUBOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8403,6 +10194,7 @@
   },
   "9876373": {
     "name": "ALEXANDER BEGGROV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8410,42 +10202,49 @@
   },
   "9878761": {
     "name": "FU YUAN YU 7890",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9878773": {
     "name": "FU YUAN YU 7891",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9878785": {
     "name": "FU YUAN YU 7893",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9879686": {
     "name": "FU YUAN YU 7892",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9879715": {
     "name": "FU YUAN YU 7874",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9879727": {
     "name": "FU YUAN YU 7875",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9885879": {
     "name": "VALENTIN PIKUL",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8453,18 +10252,21 @@
   },
   "9887152": {
     "name": "FU YUAN YU YUN 995",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9887853": {
     "name": "FU YUAN YU YUN 997",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9888182": {
     "name": "DMITRY MENDELEEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8472,198 +10274,231 @@
   },
   "9888273": {
     "name": "FU YUAN YU 7900",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9888285": {
     "name": "FU YUAN YU 7901",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9888297": {
     "name": "FU YUAN YU 7902",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9888792": {
     "name": "POLA HARITA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9888807": {
     "name": "POLA PELAGIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9889198": {
     "name": "ALEKSANDR SOKOLOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9891476": {
     "name": "FU YUAN YU 7601",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9891488": {
     "name": "FU YUAN YU 7602",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9891490": {
     "name": "FU YUAN YU 7603",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9891505": {
     "name": "FU YUAN YU 7604",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9891608": {
     "name": "FU YUAN YU 7605",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9891610": {
     "name": "FU YUAN YU 7606",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9892365": {
     "name": "FU YUAN YU 8679",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9892377": {
     "name": "FU YUAN YU 8680",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9893137": {
     "name": "FU YUAN YU 8681",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9893149": {
     "name": "FU YUAN YU 8682",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9894399": {
     "name": "FU YUAN YU 8686",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9894492": {
     "name": "FU YUAN YU 8684",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9894507": {
     "name": "FU YUAN YU 8685",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9894519": {
     "name": "FU YUAN YU 8687",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9896294": {
     "name": "FU YUAN YU 7611",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9896309": {
     "name": "FU YUAN YU 7612",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9896323": {
     "name": "FU YUAN YU 7613",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9896335": {
     "name": "FU YUAN YU 7614",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9896347": {
     "name": "FU YUAN YU 7615",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9896361": {
     "name": "FU YUAN YU 7616",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9896373": {
     "name": "FU YUAN YU 7617",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9896397": {
     "name": "FU YUAN YU 7618",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9896402": {
     "name": "FU YUAN YU 7619",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9897066": {
     "name": "FU YUAN YU YUN 993",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9897690": {
     "name": "POLA ANASTASIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9897705": {
     "name": "POLA MARIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9898254": {
     "name": "OKEANSKY PROSPECT",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8671,48 +10506,56 @@
   },
   "9899052": {
     "name": "FU YUAN YU 8688",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9899064": {
     "name": "FU YUAN YU 8689",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9899076": {
     "name": "FU YUAN YU 8690",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9899088": {
     "name": "FU YUAN YU 8691",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9899105": {
     "name": "FU YUAN YU 8692",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9899117": {
     "name": "FU YUAN YU 8693",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9900514": {
     "name": "PETROTRANS 5902",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9901025": {
     "name": "VLADIMIR ARSENYEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8720,6 +10563,7 @@
   },
   "9901037": {
     "name": "NIKOLAY ZADORNOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8727,78 +10571,91 @@
   },
   "9903827": {
     "name": "POLA YAROSLAVA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9903839": {
     "name": "POLA VARVARA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9903841": {
     "name": "POLA AGATA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9903853": {
     "name": "POLA ALEXIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9903865": {
     "name": "POLA MARINA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9903877": {
     "name": "POLA MIROPIA",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9904546": {
     "name": "ALEXEY KOSYGIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9904675": {
     "name": "PYOTR STOLYPIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9904687": {
     "name": "SERGEI WITTE",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9904699": {
     "name": "ZVEZDA 044",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9904704": {
     "name": "ZVEZDA 045",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9906544": {
     "name": "ASTROL-1",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9908994": {
     "name": "YARD NO.131080 ZVEZDA-DSME",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024",
       "UKRAINE-EO13662"
@@ -8806,342 +10663,403 @@
   },
   "9910909": {
     "name": "FU YUAN YU YUN 992",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9912696": {
     "name": "YURI BABAEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9914577": {
     "name": "FU YUAN YU 7620",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9914589": {
     "name": "FU YUAN YU 7621",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9914591": {
     "name": "FU YUAN YU 7622",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9914606": {
     "name": "FU YUAN YU 7624",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9914723": {
     "name": "FU YUAN YU 7625",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9914735": {
     "name": "FU YUAN YU 7626",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9914747": {
     "name": "FU YUAN YU 7627",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9914759": {
     "name": "FU YUAN YU 7628",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9914761": {
     "name": "FU YUAN YU 7629",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9914785": {
     "name": "FU YUAN YU 7630",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9915090": {
     "name": "SAAM FSU",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9915105": {
     "name": "KORYAK FSU",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9916654": {
     "name": "FU YUAN YU 8696",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9916692": {
     "name": "FU YUAN YU 8695",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9916707": {
     "name": "FU YUAN YU 8697",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9916721": {
     "name": "FU YUAN YU 8698",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9918779": {
     "name": "ZVEZDA 046",
+    "aliases": [
+      "YARD NO. 9918779 ZVEZDA-DSME"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9918781": {
     "name": "ZVEZDA 047",
+    "aliases": [
+      "YARD NO. 9918781 ZVEZDA-DSME"
+    ],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9920954": {
     "name": "FU YUAN YU YUN 991",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9921996": {
     "name": "VLADIMIR LATYSHEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9922110": {
     "name": "VICTOR ANDRYUKHIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9922122": {
     "name": "LEONID PESTRIKOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9922134": {
     "name": "NIKOLAI LEONOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9924340": {
     "name": "ALPHA HELIOS",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9924352": {
     "name": "ALPHA HERMES",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9933717": {
     "name": "FU YUAN YU 8636",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9933729": {
     "name": "FU YUAN YU 8637",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9933731": {
     "name": "FU YUAN YU 8638",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9934498": {
     "name": "NAN FENG ZHI XING",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9934503": {
     "name": "FU YUAN YU 8635",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9934515": {
     "name": "FU YUAN YU 8639",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9934527": {
     "name": "FU YUAN YU 8640",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9934539": {
     "name": "FU YUAN YU 8641",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9934541": {
     "name": "FU YUAN YU 8642",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9934553": {
     "name": "FU YUAN YU 8643",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9934565": {
     "name": "FU YUAN YU 8644",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9934577": {
     "name": "FU YUAN YU 8645",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9934589": {
     "name": "FU YUAN YU 8646",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9940186": {
     "name": "ALEXANDR DEEV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9940497": {
     "name": "FU YUAN YU 8647",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9940538": {
     "name": "FU YUAN YU 8648",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9940540": {
     "name": "FU YUAN YU 8649",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9940552": {
     "name": "FU YUAN YU 8650",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9940576": {
     "name": "FU YUAN YU 8651",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9940590": {
     "name": "FU YUAN YU 8652",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9940617": {
     "name": "FU YUAN YU 8653",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9940629": {
     "name": "FU YUAN YU 8654",
+    "aliases": [],
     "programs": [
       "GLOMAG"
     ]
   },
   "9942392": {
     "name": "NIKOLAY ANISHCHENKOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9945124": {
     "name": "GENNADY EGOROV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9945136": {
     "name": "VYACHESLAV ARSHINOV",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9953509": {
     "name": "NORTH AIR",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9953511": {
     "name": "NORTH MOUNTAIN",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9953523": {
     "name": "NORTH SKY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9953535": {
     "name": "NORTH WAY",
+    "aliases": [],
     "programs": [
       "RUSSIA-EO14024"
     ]
   },
   "9969821": {
     "name": "TINOS I",
+    "aliases": [],
     "programs": [
       "IRAN-EO13902"
     ]
