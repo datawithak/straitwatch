@@ -1,4 +1,5 @@
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 import WS from "ws";
 import { getCountryFromMMSI } from "@/constants/countries";
