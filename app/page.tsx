@@ -112,9 +112,10 @@ export default function Home() {
 
     const enriched = all.map((v) => {
       const goingDark = isVesselGoingDark(v);
-      // Shadow fleet: flagged by DB match OR flying a known shadow registry as a tanker
+      // Shadow fleet: flagged by DB match OR flying a known shadow registry
+      // (include unknown ship type — static AIS with type arrives later than position reports)
       const isShadowFleet = v.isShadowFleet ||
-        (v.country === "shadow-flag" && v.shipType >= 80 && v.shipType <= 89);
+        (v.country === "shadow-flag" && (v.shipType === 0 || (v.shipType >= 70 && v.shipType <= 89)));
       return {
         ...v,
         isPossibleSTS: stsMMSIs.has(v.mmsi),
