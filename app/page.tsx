@@ -65,7 +65,7 @@ export default function Home() {
   const [flyToTarget, setFlyToTarget] = useState<{ lat: number; lng: number } | null>(null);
 
   // Mobile state
-  const [mobileOpen, setMobileOpen] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSidebarTab, setMobileSidebarTab] = useState<SidebarTab>("stories");
 
   const intelIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -354,7 +354,7 @@ export default function Home() {
       </header>
 
       {/* Main layout */}
-      <div className="flex flex-1 overflow-hidden pb-14 md:pb-0">
+      <div className="flex flex-1 overflow-hidden pb-24 md:pb-0">
 
         {/* Desktop Left Sidebar */}
         <aside className="hidden md:flex flex-col w-72 bg-slate-950 border-r border-white/10 shrink-0 overflow-hidden">
@@ -450,6 +450,18 @@ export default function Home() {
             isLoading={vesselLoading}
           />
         </aside>
+      </div>
+
+      {/* Mobile persistent info strip */}
+      <div
+        className="md:hidden fixed bottom-14 left-0 right-0 z-39 bg-slate-900/95 border-t border-white/10 px-4 py-2 cursor-pointer"
+        onClick={() => { setMobileSidebarTab("stories"); setMobileOpen(true); }}
+      >
+        <p className="text-xs text-slate-400 leading-snug">
+          <span className="text-white font-semibold">What is StraitWatch?</span>
+          {" "}Ships use fake flags, turn off GPS &amp; swap cargo at sea to smuggle sanctioned oil.{" "}
+          <span className="text-sky-400 underline">Tap to learn more →</span>
+        </p>
       </div>
 
       {/* Mobile bottom nav */}
