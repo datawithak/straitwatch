@@ -112,17 +112,18 @@ export default function Home() {
 
     const enriched = all.map((v) => {
       const goingDark = isVesselGoingDark(v);
+      // Shadow fleet: flagged by DB match OR flying a known shadow registry as a tanker
+      const isShadowFleet = v.isShadowFleet ||
+        (v.country === "shadow-flag" && v.shipType >= 80 && v.shipType <= 89);
       return {
         ...v,
         isPossibleSTS: stsMMSIs.has(v.mmsi),
         stsPartnerMMSI: stsPartners.get(v.mmsi)?.mmsi ?? v.stsPartnerMMSI,
         stsPartnerName: stsPartners.get(v.mmsi)?.name ?? v.stsPartnerName,
-        // Going dark: use live detection; fall back to cached value for vessels
-        // that were already dark when the page loaded
         isGoingDark: goingDark || v.isGoingDark,
         darkSinceMs: goingDark ? getDarkDurationMs(v) : (v.isGoingDark ? v.darkSinceMs : 0),
-        // Departed terminal: check current position + trail; keep cached/server value as fallback
         departedTerminal: getDepartedTerminal(v.trail, v.lat, v.lng) || v.departedTerminal,
+        isShadowFleet,
       };
     });
 
