@@ -157,7 +157,15 @@ export default function Home() {
           const v = JSON.parse(e.data) as Vessel;
           if (!v.mmsi) return;
           const existing = vesselMapRef.current.get(v.mmsi);
-          vesselMapRef.current.set(v.mmsi, { ...existing, ...v } as Vessel);
+          vesselMapRef.current.set(v.mmsi, {
+            ...existing,
+            ...v,
+            // Sticky flags: once sanctioned/shadow fleet, always sanctioned/shadow fleet
+            isSanctioned: existing?.isSanctioned || v.isSanctioned,
+            isShadowFleet: existing?.isShadowFleet || v.isShadowFleet,
+            sanctionPrograms: existing?.isSanctioned ? (existing.sanctionPrograms ?? []) : (v.sanctionPrograms ?? []),
+            shadowFleetFormerNames: existing?.isShadowFleet ? (existing.shadowFleetFormerNames ?? []) : (v.shadowFleetFormerNames ?? []),
+          } as Vessel);
         } catch {}
       };
 
