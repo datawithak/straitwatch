@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getSanctionedVessels } from "@/lib/sanctions";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     const sanctioned = await getSanctionedVessels();

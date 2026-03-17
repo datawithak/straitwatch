@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { NextResponse } from "next/server";
 import { fetchVesselsViaAIS } from "@/lib/aisstream";
 import { getSanctionedVessels, enrichWithSanctions } from "@/lib/sanctions";
