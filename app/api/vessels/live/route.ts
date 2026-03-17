@@ -4,7 +4,11 @@ export const dynamic = "force-dynamic";
 import WS from "ws";
 import { getCountryFromMMSI } from "@/constants/countries";
 import { isShadowFleetVessel, getShadowFleetEntry } from "@/lib/shadow-fleet";
-import { getSanctionedVessels } from "@/lib/sanctions";
+import sanctionedJson from "@/data/sanctioned-vessels.json";
+
+const SANCTIONED_MAP = new Map<string, { programs: string[]; name: string }>(
+  Object.entries(sanctionedJson as Record<string, { programs: string[]; name: string }>)
+);
 import { getTerminalFromPosition } from "@/lib/departure-terminal";
 import { AIS_BOUNDING_BOX } from "@/constants/regions";
 
@@ -12,10 +16,6 @@ const AISSTREAM_URL = "wss://stream.aisstream.io/v0/stream";
 const MAX_TRAIL = 20;
 const STALE_MS = 15 * 60 * 1000;
 
-// Pre-warm sanctions in the background so it's ready before anyone connects
-// (avoids blocking the SSE stream open on a ~50MB download)
-let sanctionedCache: Map<string, { programs: string[]; name: string }> = new Map();
-getSanctionedVessels().then((s) => { sanctionedCache = s; }).catch(() => {});
 
 // ─── Module-level persistent store (shared across SSE connections) ────────────
 
@@ -114,8 +114,6 @@ export async function GET() {
   const encoder = new TextEncoder();
   pruneStale();
 
-  // Use whatever sanctions data is already in cache — don't block SSE on OFAC download
-  const sanctioned = sanctionedCache;
 
   let ws: InstanceType<typeof WS> | null = null;
 
@@ -132,7 +130,7 @@ export async function GET() {
         if (v.lat == null || v.lng == null) continue;
         const mmsi = v.mmsi ?? "";
         const imo = v.imo ?? "";
-        const sanctionEntry = sanctioned.get(imo);
+        const sanctionEntry = SANCTIONED_MAP.get(imo);
         const shadowEntry = getShadowFleetEntry(imo);
         send({
           ...v,
@@ -165,7 +163,7 @@ export async function GET() {
 
           const mmsi = vessel.mmsi ?? "";
           const imo = vessel.imo ?? "";
-          const sanctionEntry = sanctioned.get(imo);
+          const sanctionEntry = SANCTIONED_MAP.get(imo);
           const shadowEntry = getShadowFleetEntry(imo);
 
           send({
