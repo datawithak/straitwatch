@@ -217,7 +217,7 @@ export async function GET() {
       myController = controller;
       sseClients.add(controller);
 
-      // Heartbeat every 30s to prevent Render from closing idle SSE connections
+      // Heartbeat every 15s to prevent Render's 30s streaming timeout
       heartbeatInterval = setInterval(() => {
         try {
           controller.enqueue(encoder.encode(": heartbeat\n\n"));
@@ -225,7 +225,7 @@ export async function GET() {
           if (heartbeatInterval) clearInterval(heartbeatInterval);
           sseClients.delete(controller);
         }
-      }, 30000);
+      }, 15000);
 
       // Flush current store immediately so the client sees ships right away
       for (const [, v] of Array.from(store.entries())) {
