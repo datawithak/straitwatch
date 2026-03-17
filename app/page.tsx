@@ -65,8 +65,8 @@ export default function Home() {
   const [flyToTarget, setFlyToTarget] = useState<{ lat: number; lng: number } | null>(null);
 
   // Mobile state
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSidebarTab, setMobileSidebarTab] = useState<SidebarTab>("briefing");
+  const [mobileOpen, setMobileOpen] = useState(true);
+  const [mobileSidebarTab, setMobileSidebarTab] = useState<SidebarTab>("stories");
 
   const intelIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const stsIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);

@@ -14,7 +14,34 @@ export default function StoryCards({ activeStory, onSelect, onClear, showContext
   return (
     <div className="flex flex-col gap-3">
 
-      {/* Stories first — primary interactive content */}
+      {/* Context card — top on mobile so it's the first thing seen */}
+      {showContext && <div className="rounded-lg bg-slate-800/40 border border-white/8 p-3">
+        <p className="text-xs font-bold text-slate-300 mb-1.5">What is StraitWatch?</p>
+        <p className="text-xs text-slate-400 leading-relaxed">
+          Russia and Iran are under international sanctions. Western countries banned buying their oil.
+          But China and India still buy it anyway, at a big discount.
+          To avoid getting caught, ships use three tricks:
+        </p>
+        <ul className="mt-2 flex flex-col gap-1">
+          <li className="text-xs text-slate-400 flex gap-1.5">
+            <span className="text-slate-500 shrink-0">1.</span>
+            <span><span className="text-white font-medium">Fake flags</span>: register under Gabon or Palau so the ship looks neutral</span>
+          </li>
+          <li className="text-xs text-slate-400 flex gap-1.5">
+            <span className="text-slate-500 shrink-0">2.</span>
+            <span><span className="text-white font-medium">Turn off GPS</span>: disappear from tracking while doing the deal</span>
+          </li>
+          <li className="text-xs text-slate-400 flex gap-1.5">
+            <span className="text-slate-500 shrink-0">3.</span>
+            <span><span className="text-white font-medium">Swap cargo at sea</span>: transfer oil between ships so it loses its Russian or Iranian origin on paper</span>
+          </li>
+        </ul>
+        <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+          This map watches the Strait of Hormuz and Bab al-Mandab and flags suspicious ships in real time.
+        </p>
+      </div>}
+
+      {/* Stories */}
       <div className="flex items-center justify-between">
         <p className="text-xs font-bold text-slate-300 uppercase tracking-wider">
           The 5 key stories
@@ -68,32 +95,6 @@ export default function StoryCards({ activeStory, onSelect, onClear, showContext
         );
       })}
 
-      {/* Context card — only shown on mobile (desktop shows it in the left sidebar) */}
-      {showContext && <div className="rounded-lg bg-slate-800/40 border border-white/8 p-3 mt-1">
-        <p className="text-xs font-bold text-slate-300 mb-1.5">What is StraitWatch?</p>
-        <p className="text-xs text-slate-400 leading-relaxed">
-          Russia and Iran are under international sanctions. Western countries banned buying their oil.
-          But China and India still buy it anyway, at a big discount.
-          To avoid getting caught, ships use three tricks:
-        </p>
-        <ul className="mt-2 flex flex-col gap-1">
-          <li className="text-xs text-slate-400 flex gap-1.5">
-            <span className="text-slate-500 shrink-0">1.</span>
-            <span><span className="text-white font-medium">Fake flags</span>: register under Gabon or Palau so the ship looks neutral</span>
-          </li>
-          <li className="text-xs text-slate-400 flex gap-1.5">
-            <span className="text-slate-500 shrink-0">2.</span>
-            <span><span className="text-white font-medium">Turn off GPS</span>: disappear from tracking while doing the deal</span>
-          </li>
-          <li className="text-xs text-slate-400 flex gap-1.5">
-            <span className="text-slate-500 shrink-0">3.</span>
-            <span><span className="text-white font-medium">Swap cargo at sea</span>: transfer oil between ships so it loses its Russian or Iranian origin on paper</span>
-          </li>
-        </ul>
-        <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-          This map watches the Strait of Hormuz and Bab al-Mandab, the two narrow straits where most of this oil has to pass, and flags the suspicious ships in real time.
-        </p>
-      </div>}
     </div>
   );
 }
