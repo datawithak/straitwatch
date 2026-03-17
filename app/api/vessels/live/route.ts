@@ -8,7 +8,6 @@ import sanctionedJson from "@/data/sanctioned-vessels.json";
 const SANCTIONED_MAP = new Map<string, { programs: string[]; name: string; aliases?: string[] }>(
   Object.entries(sanctionedJson as Record<string, { programs: string[]; name: string; aliases?: string[] }>)
 );
-// Name-based fallback: primary name + all aliases for broader AIS matching
 const SANCTIONED_BY_NAME = new Map<string, { programs: string[] }>();
 for (const data of SANCTIONED_MAP.values()) {
   if (data.name) SANCTIONED_BY_NAME.set(data.name.toUpperCase().trim(), { programs: data.programs });
@@ -35,8 +34,7 @@ const AISSTREAM_URL = "wss://stream.aisstream.io/v0/stream";
 const MAX_TRAIL = 20;
 const STALE_MS = 15 * 60 * 1000;
 
-
-// ─── Module-level persistent store (shared across SSE connections) ────────────
+// ─── Module-level persistent store ───────────────────────────────────────────
 
 interface StoredVessel {
   mmsi: string;
@@ -54,10 +52,18 @@ interface StoredVessel {
   draught: number;
   lastUpdated: number;
   trail: Array<{ lat: number; lng: number; t: number }>;
-  departedTerminal: string; // sticky — set once, kept until vessel goes stale
+  departedTerminal: string;
 }
 
 const store = new Map<string, Partial<StoredVessel>>();
+const encoder = new TextEncoder();
+
+// Active SSE controllers — shared WS broadcasts to all of them
+const sseClients = new Set<ReadableStreamDefaultController>();
+
+// Single persistent WS connection shared across all SSE clients
+let globalWs: InstanceType<typeof WS> | null = null;
+let globalApiKey = "";
 
 function pruneStale() {
   const cutoff = Date.now() - STALE_MS;
@@ -93,7 +99,6 @@ function processMsg(msg: Record<string, any>): Partial<StoredVessel> | null {
   const currentLat = lat ?? existing.lat ?? 0;
   const currentLng = lng ?? existing.lng ?? 0;
 
-  // departedTerminal is sticky: once detected, keep it for the vessel's lifetime in the store
   const terminalHit = (lat != null && lng != null) ? getTerminalFromPosition(lat, lng) : "";
   const departedTerminal = terminalHit || existing.departedTerminal || "";
 
@@ -121,6 +126,77 @@ function processMsg(msg: Record<string, any>): Partial<StoredVessel> | null {
   return updated;
 }
 
+function enrichVessel(v: Partial<StoredVessel>) {
+  const mmsi = v.mmsi ?? "";
+  const imo = v.imo ?? "";
+  const nameKey = (v.name ?? "").toUpperCase().trim();
+  const sanctionEntry = SANCTIONED_MAP.get(imo) ?? SANCTIONED_BY_NAME.get(nameKey);
+  const shadowEntry = getShadowFleetEntry(imo) ?? SHADOW_BY_NAME.get(nameKey) ?? null;
+  return {
+    ...v,
+    country: getCountryFromMMSI(mmsi),
+    isSanctioned: !!sanctionEntry,
+    sanctionPrograms: sanctionEntry?.programs ?? [],
+    sanctionSource: sanctionEntry ? "OFAC" : null,
+    isShadowFleet: !!shadowEntry || isShadowFleetVessel(imo),
+    shadowFleetSource: shadowEntry?.source ?? "",
+    shadowFleetFormerNames: shadowEntry?.formerNames ?? [],
+    departedTerminal: v.departedTerminal ?? "",
+  };
+}
+
+function broadcastToClients(data: unknown) {
+  const encoded = encoder.encode(`data: ${JSON.stringify(data)}\n\n`);
+  for (const ctrl of Array.from(sseClients)) {
+    try {
+      ctrl.enqueue(encoded);
+    } catch {
+      sseClients.delete(ctrl);
+    }
+  }
+}
+
+// ─── Persistent module-level WebSocket ───────────────────────────────────────
+
+function ensureWsConnected() {
+  if (globalWs && (globalWs.readyState === WS.OPEN || globalWs.readyState === WS.CONNECTING)) {
+    return;
+  }
+
+  globalWs = new WS(AISSTREAM_URL);
+
+  globalWs.on("open", () => {
+    globalWs!.send(JSON.stringify({
+      APIKey: globalApiKey,
+      BoundingBoxes: [AIS_BOUNDING_BOX],
+    }));
+  });
+
+  globalWs.on("message", (data: WS.RawData) => {
+    try {
+      const raw = typeof data === "string" ? data : data.toString("utf8");
+      const msg = JSON.parse(raw);
+      const vessel = processMsg(msg);
+      if (!vessel || vessel.lat == null) return;
+      broadcastToClients(enrichVessel(vessel));
+    } catch {}
+  });
+
+  globalWs.on("error", () => {
+    globalWs = null;
+    // Reconnect after 5s
+    setTimeout(ensureWsConnected, 5000);
+  });
+
+  globalWs.on("close", () => {
+    globalWs = null;
+    // Auto-reconnect as long as there are clients watching
+    if (sseClients.size > 0) {
+      setTimeout(ensureWsConnected, 5000);
+    }
+  });
+}
+
 // ─── SSE route ────────────────────────────────────────────────────────────────
 
 export async function GET() {
@@ -130,89 +206,43 @@ export async function GET() {
     return new Response("No API key configured", { status: 503 });
   }
 
-  const encoder = new TextEncoder();
+  globalApiKey = apiKey;
   pruneStale();
 
-
-  let ws: InstanceType<typeof WS> | null = null;
+  let heartbeatInterval: ReturnType<typeof setInterval> | null = null;
+  let myController: ReadableStreamDefaultController | null = null;
 
   const stream = new ReadableStream({
     start(controller) {
-      const send = (obj: unknown) => {
-        try {
-          controller.enqueue(encoder.encode(`data: ${JSON.stringify(obj)}\n\n`));
-        } catch {}
-      };
+      myController = controller;
+      sseClients.add(controller);
 
-      // Send all currently stored vessels immediately so client gets instant state
+      // Heartbeat every 30s to prevent Render from closing idle SSE connections
+      heartbeatInterval = setInterval(() => {
+        try {
+          controller.enqueue(encoder.encode(": heartbeat\n\n"));
+        } catch {
+          if (heartbeatInterval) clearInterval(heartbeatInterval);
+          sseClients.delete(controller);
+        }
+      }, 30000);
+
+      // Flush current store immediately so the client sees ships right away
       for (const [, v] of Array.from(store.entries())) {
         if (v.lat == null || v.lng == null) continue;
-        const mmsi = v.mmsi ?? "";
-        const imo = v.imo ?? "";
-        const nameKey = (v.name ?? "").toUpperCase().trim();
-        const sanctionEntry = SANCTIONED_MAP.get(imo) ?? SANCTIONED_BY_NAME.get(nameKey);
-        const shadowEntry = getShadowFleetEntry(imo) ?? SHADOW_BY_NAME.get(nameKey) ?? null;
-        send({
-          ...v,
-          country: getCountryFromMMSI(mmsi),
-          isSanctioned: !!sanctionEntry,
-          sanctionPrograms: sanctionEntry?.programs ?? [],
-          sanctionSource: sanctionEntry ? "OFAC" : null,
-          isShadowFleet: !!shadowEntry || isShadowFleetVessel(imo),
-          shadowFleetSource: shadowEntry?.source ?? "",
-          shadowFleetFormerNames: shadowEntry?.formerNames ?? [],
-          departedTerminal: v.departedTerminal ?? "",
-        });
+        try {
+          controller.enqueue(encoder.encode(`data: ${JSON.stringify(enrichVessel(v))}\n\n`));
+        } catch {}
       }
 
-      ws = new WS(AISSTREAM_URL);
-
-      ws.on("open", () => {
-        ws!.send(JSON.stringify({
-          APIKey: apiKey,
-          BoundingBoxes: [AIS_BOUNDING_BOX],
-        }));
-      });
-
-      ws.on("message", (data: WS.RawData) => {
-        try {
-          const raw = typeof data === "string" ? data : data.toString("utf8");
-          const msg = JSON.parse(raw);
-          const vessel = processMsg(msg);
-          if (!vessel || vessel.lat == null) return;
-
-          const mmsi = vessel.mmsi ?? "";
-          const imo = vessel.imo ?? "";
-          const nameKey = (vessel.name ?? "").toUpperCase().trim();
-          const sanctionEntry = SANCTIONED_MAP.get(imo) ?? SANCTIONED_BY_NAME.get(nameKey);
-          const shadowEntry = getShadowFleetEntry(imo) ?? SHADOW_BY_NAME.get(nameKey) ?? null;
-
-          send({
-            ...vessel,
-            country: getCountryFromMMSI(mmsi),
-            isSanctioned: !!sanctionEntry,
-            sanctionPrograms: sanctionEntry?.programs ?? [],
-            sanctionSource: sanctionEntry ? "OFAC" : null,
-            isShadowFleet: !!shadowEntry || isShadowFleetVessel(imo),
-            shadowFleetSource: shadowEntry?.source ?? "",
-            shadowFleetFormerNames: shadowEntry?.formerNames ?? [],
-            departedTerminal: vessel.departedTerminal ?? "",
-          });
-        } catch {}
-      });
-
-      ws.on("error", () => {
-        try { controller.close(); } catch {}
-      });
-
-      ws.on("close", () => {
-        try { controller.close(); } catch {}
-      });
+      // Start/reuse the shared WS connection
+      ensureWsConnected();
     },
 
     cancel() {
-      // Client disconnected — close the upstream WebSocket
-      try { ws?.close(); } catch {}
+      if (heartbeatInterval) clearInterval(heartbeatInterval);
+      if (myController) sseClients.delete(myController);
+      // If no clients left, let the WS idle (it will reconnect when next client arrives)
     },
   });
 
