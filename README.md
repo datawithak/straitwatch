@@ -1,12 +1,18 @@
 # StraitWatch
 
-Real-time maritime intelligence dashboard tracking sanctioned oil tankers, shadow fleet vessels, and geopolitical chokepoints at the Strait of Hormuz and Bab al-Mandab.
+Real-time maritime intelligence dashboard tracking sanctioned oil tankers and shadow fleet vessels at the Strait of Hormuz and Bab al-Mandab.
 
 **Live:** https://straitwatch.onrender.com
 
+![StraitWatch Dashboard](screenshot.png)
+
 ---
 
-## What it does
+## Why I built this
+
+The Strait of Hormuz is effectively closed. 21% of the world's oil supply is in geopolitical limbo.
+
+I wanted to see which sanctioned tankers were still moving — and whether the sanctions meant anything in practice. So I built StraitWatch.
 
 Russia and Iran are under international sanctions. Western countries banned buying their oil. But China and India still buy it anyway at steep discounts. To avoid getting caught, ships use three tricks:
 
@@ -14,7 +20,36 @@ Russia and Iran are under international sanctions. Western countries banned buyi
 2. **Turn off GPS** — disappear from AIS tracking during cargo transfers
 3. **Swap cargo at sea** — transfer oil between ships so it loses its origin on paper
 
-StraitWatch watches the two narrow straits where most of this oil must pass and flags suspicious vessels in real time using public AIS data and the OFAC sanctions list.
+All of it leaves traces in public data. StraitWatch watches for it in real time.
+
+---
+
+## What you're looking at
+
+Ships are being rerouted through the narrow Qeshm Channel and around Larak Island under Iranian Navy control. The economics, the sanctions evasion, the geopolitics — it's all visible in AIS data (the transponder signal every commercial ship is legally required to broadcast).
+
+StraitWatch cross-references live vessel positions against the OFAC sanctions list (the US Treasury's list of sanctioned vessels and entities) and flags:
+
+- **Sanctioned vessels** — ships on the OFAC SDN list (1,447 vessels matched by IMO number and name)
+- **Shadow fleet** — vessels using flag-of-convenience registries to disguise origin
+- **Going dark** — ships that stop broadcasting near known transfer zones. The silence is usually the signal.
+- **Ship-to-ship transfers** — two vessels stationary in close proximity at sea
+- **Departure terminals** — vessels that recently left a sanctioned Iranian or Russian export terminal
+
+---
+
+## What the markers mean
+
+| Marker | Meaning |
+|---|---|
+| Pulsing red ring | OFAC sanctioned vessel |
+| Pulsing purple ring | Known shadow fleet vessel |
+| Pulsing yellow ring | Possible ship-to-ship transfer in progress |
+| Faded / dashed outline | Vessel went dark (stopped broadcasting) |
+| Orange dot top-right | Recently departed a sanctioned export terminal |
+| Red dot bottom-left | Heading to a Chinese port |
+| Orange dot bottom-left | Heading to an Indian port |
+| Color | Flag state — Russia=red, Iran=orange, China=red, India=amber, shadow fleet=purple |
 
 ---
 
@@ -103,19 +138,6 @@ Then commit and push the updated JSON.
 | Shadow fleet vessels | KSE Shadow Fleet Tracker, UN Panel of Experts, OFAC | Public |
 | Maritime advisories | UKMTO | Free / public |
 | Map tiles | ESRI Ocean Basemap | Free |
-
----
-
-## What the markers mean
-
-- **Color** — flag state (Russia=red, China=red, Iran=orange, shadow fleet=purple)
-- **Pulsing red ring** — OFAC sanctioned vessel
-- **Pulsing purple ring** — known shadow fleet vessel
-- **Pulsing yellow ring** — possible ship-to-ship transfer in progress
-- **Faded/dashed** — vessel went dark (stopped broadcasting AIS)
-- **Orange dot (top right)** — recently departed a sanctioned export terminal
-- **Red dot (bottom left)** — heading to a Chinese port
-- **Orange dot (bottom left)** — heading to an Indian port
 
 ---
 
