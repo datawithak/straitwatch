@@ -354,7 +354,7 @@ export default function Home() {
       </header>
 
       {/* Main layout */}
-      <div className="flex flex-1 overflow-hidden pb-24 md:pb-0">
+      <div className="flex flex-1 overflow-hidden">
 
         {/* Desktop Left Sidebar */}
         <aside className="hidden md:flex flex-col w-72 bg-slate-950 border-r border-white/10 shrink-0 overflow-hidden">
@@ -452,20 +452,20 @@ export default function Home() {
         </aside>
       </div>
 
-      {/* Mobile persistent info strip */}
+      {/* Mobile info strip — normal flow, always visible */}
       <div
-        className="md:hidden fixed bottom-14 left-0 right-0 z-39 bg-slate-900/95 border-t border-white/10 px-4 py-2 cursor-pointer"
+        className="md:hidden bg-slate-900 border-t border-white/10 px-4 py-2 cursor-pointer shrink-0"
         onClick={() => { setMobileSidebarTab("stories"); setMobileOpen(true); }}
       >
         <p className="text-xs text-slate-400 leading-snug">
           <span className="text-white font-semibold">What is StraitWatch?</span>
-          {" "}Ships use fake flags, turn off GPS &amp; swap cargo at sea to smuggle sanctioned oil.{" "}
-          <span className="text-sky-400 underline">Tap to learn more →</span>
+          {" "}Ships use fake flags &amp; go dark to smuggle sanctioned oil.{" "}
+          <span className="text-sky-400">Tap to learn more →</span>
         </p>
       </div>
 
-      {/* Mobile bottom nav */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900 border-t border-white/10 flex">
+      {/* Mobile bottom nav — normal flow, always visible */}
+      <nav className="md:hidden bg-slate-900 border-t border-white/10 flex shrink-0">
         {([ ["stories", "📡", "Stories"], ["briefing", "📊", "Briefing"], ["filters", "🔍", "Filter"], ["legend", "❓", "Guide"] ] as [SidebarTab, string, string][]).map(([tab, emoji, label]) => (
           <button
             key={tab}
