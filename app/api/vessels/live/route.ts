@@ -3,12 +3,28 @@ export const dynamic = "force-dynamic";
 
 import WS from "ws";
 import { getCountryFromMMSI } from "@/constants/countries";
-import { isShadowFleetVessel, getShadowFleetEntry } from "@/lib/shadow-fleet";
 import sanctionedJson from "@/data/sanctioned-vessels.json";
 
 const SANCTIONED_MAP = new Map<string, { programs: string[]; name: string }>(
   Object.entries(sanctionedJson as Record<string, { programs: string[]; name: string }>)
 );
+// Name-based fallback: matches even before static AIS data (IMO) arrives
+const SANCTIONED_BY_NAME = new Map<string, { programs: string[] }>();
+for (const data of SANCTIONED_MAP.values()) {
+  if (data.name) SANCTIONED_BY_NAME.set(data.name.toUpperCase().trim(), { programs: data.programs });
+}
+
+import shadowJson from "@/data/shadow-fleet.json";
+import { ShadowFleetEntry } from "@/types/index";
+const SHADOW_BY_NAME = new Map<string, ShadowFleetEntry>();
+for (const entry of (shadowJson as ShadowFleetEntry[])) {
+  if (entry.name) SHADOW_BY_NAME.set(entry.name.toUpperCase().trim(), entry);
+  for (const fn of (entry.formerNames ?? [])) {
+    SHADOW_BY_NAME.set(fn.toUpperCase().trim(), entry);
+  }
+}
+
+import { isShadowFleetVessel, getShadowFleetEntry } from "@/lib/shadow-fleet";
 import { getTerminalFromPosition } from "@/lib/departure-terminal";
 import { AIS_BOUNDING_BOX } from "@/constants/regions";
 
@@ -130,15 +146,16 @@ export async function GET() {
         if (v.lat == null || v.lng == null) continue;
         const mmsi = v.mmsi ?? "";
         const imo = v.imo ?? "";
-        const sanctionEntry = SANCTIONED_MAP.get(imo);
-        const shadowEntry = getShadowFleetEntry(imo);
+        const nameKey = (v.name ?? "").toUpperCase().trim();
+        const sanctionEntry = SANCTIONED_MAP.get(imo) ?? SANCTIONED_BY_NAME.get(nameKey);
+        const shadowEntry = getShadowFleetEntry(imo) ?? SHADOW_BY_NAME.get(nameKey) ?? null;
         send({
           ...v,
           country: getCountryFromMMSI(mmsi),
           isSanctioned: !!sanctionEntry,
           sanctionPrograms: sanctionEntry?.programs ?? [],
           sanctionSource: sanctionEntry ? "OFAC" : null,
-          isShadowFleet: isShadowFleetVessel(imo),
+          isShadowFleet: !!shadowEntry || isShadowFleetVessel(imo),
           shadowFleetSource: shadowEntry?.source ?? "",
           shadowFleetFormerNames: shadowEntry?.formerNames ?? [],
           departedTerminal: v.departedTerminal ?? "",
@@ -163,8 +180,9 @@ export async function GET() {
 
           const mmsi = vessel.mmsi ?? "";
           const imo = vessel.imo ?? "";
-          const sanctionEntry = SANCTIONED_MAP.get(imo);
-          const shadowEntry = getShadowFleetEntry(imo);
+          const nameKey = (vessel.name ?? "").toUpperCase().trim();
+          const sanctionEntry = SANCTIONED_MAP.get(imo) ?? SANCTIONED_BY_NAME.get(nameKey);
+          const shadowEntry = getShadowFleetEntry(imo) ?? SHADOW_BY_NAME.get(nameKey) ?? null;
 
           send({
             ...vessel,
@@ -172,7 +190,7 @@ export async function GET() {
             isSanctioned: !!sanctionEntry,
             sanctionPrograms: sanctionEntry?.programs ?? [],
             sanctionSource: sanctionEntry ? "OFAC" : null,
-            isShadowFleet: isShadowFleetVessel(imo),
+            isShadowFleet: !!shadowEntry || isShadowFleetVessel(imo),
             shadowFleetSource: shadowEntry?.source ?? "",
             shadowFleetFormerNames: shadowEntry?.formerNames ?? [],
             departedTerminal: vessel.departedTerminal ?? "",
