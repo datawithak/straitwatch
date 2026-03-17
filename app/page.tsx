@@ -290,7 +290,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col h-screen bg-slate-950 text-white overflow-hidden">
+    <div className="flex flex-col bg-slate-950 text-white overflow-hidden" style={{ height: '100svh' }}>
 
       {/* Header */}
       <header className="bg-slate-950 border-b border-white/10 shrink-0 z-10">
