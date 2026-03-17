@@ -16,75 +16,75 @@ function timeAgo(ms: number): string {
   return `${mins}m ago`;
 }
 
-export default function SituationReportBar({ report, isDemo, isLoading }: Props) {
+function StatPill({ value, label, color }: { value: number; label: string; color: string }) {
+  if (value === 0) return null;
   return (
-    <div className="bg-slate-900 border-b border-white/10 px-4 py-2.5">
-      <div className="flex items-start gap-3 max-w-full">
-        {/* Live / Demo badge */}
-        <div className="flex items-center gap-1.5 shrink-0 mt-0.5">
-          <span className={`w-2 h-2 rounded-full ${isLoading ? "bg-yellow-400 animate-pulse" : isDemo ? "bg-amber-400" : "bg-green-400 animate-pulse"}`} />
-          <span className={`text-xs font-bold uppercase tracking-wide ${isDemo ? "text-amber-400" : "text-green-400"}`}>
-            {isDemo ? "Demo" : "Live"}
-          </span>
-        </div>
-
-        {/* Situation text */}
-        <div className="flex-1 min-w-0">
-          {report ? (
-            <>
-              <p className="text-xs font-semibold text-white leading-snug truncate">
-                {report.headline}
-              </p>
-              {report.details.length > 0 && (
-                <p className="text-xs text-slate-400 mt-0.5 truncate">
-                  {report.details[0]}
-                </p>
-              )}
-            </>
-          ) : (
-            <p className="text-xs text-slate-500">Loading situation report...</p>
-          )}
-        </div>
-
-        {/* Stats chips */}
-        {report && (
-          <div className="hidden md:flex items-center gap-2 shrink-0 text-xs">
-            <Chip value={report.stats.total} label="vessels" color="text-slate-300" />
-            {report.stats.tankers > 0
-              ? <Chip value={report.stats.tankers} label="tankers" color="text-blue-300" />
-              : report.stats.unknownType > 0
-              ? <span className="text-slate-500">{report.stats.unknownType} type&nbsp;pending</span>
-              : null
-            }
-            {report.stats.sanctioned > 0 && (
-              <Chip value={report.stats.sanctioned} label="sanctioned" color="text-red-400" />
-            )}
-            {report.stats.shadowFleet > 0 && (
-              <Chip value={report.stats.shadowFleet} label="shadow fleet" color="text-purple-400" />
-            )}
-            {report.stats.possibleSTS > 0 && (
-              <Chip value={report.stats.possibleSTS} label="STS" color="text-yellow-400" />
-            )}
-            {report.stats.goingDark > 0 && (
-              <Chip value={report.stats.goingDark} label="dark" color="text-slate-400" />
-            )}
-            <span className="text-slate-600">
-              {report ? timeAgo(report.generatedAt) : ""}
-            </span>
-          </div>
-        )}
-      </div>
-      <p className="text-xs text-slate-600 mt-1">
-        AIS coverage via aisstream.io — partial coverage vs commercial feeds. Sanctioned &amp; shadow fleet data: OFAC / KSE-3 list.
-      </p>
+    <div className="flex flex-col items-center px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 min-w-[56px]">
+      <span className={`text-base font-bold leading-none ${color}`}>{value}</span>
+      <span className="text-xs text-slate-500 mt-0.5 whitespace-nowrap">{label}</span>
     </div>
   );
 }
 
-function Chip({ value, label, color }: { value: number; label: string; color: string }) {
+export default function SituationReportBar({ report, isDemo, isLoading }: Props) {
   return (
-    <span className={`${color} font-semibold`}>
-      {value} <span className="font-normal text-slate-500">{label}</span>
-    </span>
+    <div className="bg-slate-900 border-b border-white/10 px-4 pt-3 pb-3 shrink-0">
+
+      {/* Top row: badge + timestamp */}
+      <div className="flex items-center gap-2 mb-2">
+        <span className={`flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider ${isDemo ? "text-amber-400" : "text-emerald-400"}`}>
+          <span className={`w-1.5 h-1.5 rounded-full ${isLoading ? "bg-yellow-400 animate-pulse" : isDemo ? "bg-amber-400" : "bg-emerald-400 animate-pulse"}`} />
+          {isDemo ? "Demo data" : "Live intelligence briefing"}
+        </span>
+        {report && (
+          <span className="text-xs text-slate-600 ml-auto">{timeAgo(report.generatedAt)}</span>
+        )}
+      </div>
+
+      {/* Headline */}
+      {report ? (
+        <>
+          <p className="text-sm font-bold text-white leading-snug mb-2.5">
+            {report.headline}
+          </p>
+
+          {/* Stat pills */}
+          <div className="flex flex-wrap gap-2 mb-2.5">
+            <StatPill value={report.stats.total} label="vessels" color="text-slate-200" />
+            {report.stats.tankers > 0
+              ? <StatPill value={report.stats.tankers} label="tankers" color="text-blue-300" />
+              : report.stats.unknownType > 0
+              ? <div className="flex flex-col items-center px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">
+                  <span className="text-base font-bold text-slate-400 leading-none">{report.stats.unknownType}</span>
+                  <span className="text-xs text-slate-500 mt-0.5">type pending</span>
+                </div>
+              : null
+            }
+            <StatPill value={report.stats.sanctioned} label="sanctioned" color="text-red-400" />
+            <StatPill value={report.stats.shadowFleet} label="shadow fleet" color="text-purple-400" />
+            <StatPill value={report.stats.possibleSTS} label="transfers" color="text-yellow-400" />
+            <StatPill value={report.stats.goingDark} label="gone dark" color="text-slate-400" />
+          </div>
+
+          {/* Detail bullets */}
+          {report.details.length > 0 && (
+            <ul className="flex flex-col gap-0.5">
+              {report.details.map((d, i) => (
+                <li key={i} className="text-xs text-slate-400 leading-relaxed flex gap-1.5">
+                  <span className="text-slate-600 shrink-0">•</span>
+                  {d}
+                </li>
+              ))}
+            </ul>
+          )}
+        </>
+      ) : (
+        <p className="text-xs text-slate-500">Loading situation report...</p>
+      )}
+
+      <p className="text-xs text-slate-700 mt-2">
+        AIS: aisstream.io · Sanctions: OFAC / KSE-3 · Partial coverage vs commercial feeds
+      </p>
+    </div>
   );
 }
