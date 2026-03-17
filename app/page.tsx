@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { createPortal } from "react-dom";
 import dynamic from "next/dynamic";
 import { Vessel, RegionKey, StoryCard, StoryHighlight } from "@/types/index";
 import { IntelFeedResult } from "@/types/intel";
@@ -67,6 +68,8 @@ export default function Home() {
   // Mobile state
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSidebarTab, setMobileSidebarTab] = useState<SidebarTab>("stories");
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
 
   const intelIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const stsIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -484,9 +487,9 @@ export default function Home() {
         ))}
       </nav>
 
-      {/* Mobile bottom sheet */}
-      {mobileOpen && (
-        <div className="md:hidden fixed inset-0 z-50 flex flex-col justify-end">
+      {/* Mobile bottom sheet — rendered via portal so it's always above the Leaflet map on iOS */}
+      {mounted && mobileOpen && createPortal(
+        <div className="fixed inset-0 z-[9999] flex flex-col justify-end">
           <div className="absolute inset-0 bg-black/50" onClick={() => setMobileOpen(false)} />
           <div className="relative bg-slate-950 rounded-t-2xl h-[80vh] flex flex-col border-t border-white/10">
             <div className="w-10 h-1 bg-slate-700 rounded-full mx-auto mt-3 mb-1 shrink-0" />
@@ -521,7 +524,8 @@ export default function Home() {
               )}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
