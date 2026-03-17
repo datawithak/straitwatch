@@ -2,6 +2,19 @@ import { StoryCard } from "@/types/index";
 
 export const STORY_CARDS: StoryCard[] = [
   {
+    id: "hormuz-reroute",
+    emoji: "🚨",
+    title: "Hormuz Rerouted",
+    subtitle: "Iran forcing vessels through Qeshm and Larak",
+    body:
+      "Following missile activity in the main Strait of Hormuz, Iran is now routing tankers and commercial vessels through the narrow Qeshm Channel (between Qeshm Island and the Iranian mainland) and around Larak Island. Both corridors are under direct Iranian Navy control. Any vessel transiting Hormuz is effectively passing through Iranian-controlled waters.",
+    note:
+      "Watch for vessels hugging the Iranian coastline rather than taking the center of the strait. Slower speeds and tight clustering near Qeshm or Larak are signs of this forced routing.",
+    answersQuestion: 2,
+    highlight: { countries: ["iran"] },
+    snapToRegion: "hormuz",
+  },
+  {
     id: "shadow-fleet",
     emoji: "🟣",
     title: "Russia's Shadow Fleet",

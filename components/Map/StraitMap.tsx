@@ -115,6 +115,14 @@ const MAP_ANNOTATIONS = [
     lat: 25.1, lng: 56.4,
     lines: ["FUJAIRAH", "World's largest bunkering hub"],
   },
+  {
+    lat: 26.72, lng: 55.88,
+    lines: ["QESHM CHANNEL", "Iran-controlled corridor, active routing"],
+  },
+  {
+    lat: 26.87, lng: 56.37,
+    lines: ["LARAK ISLAND", "Secondary Iran passage (main strait restricted)"],
+  },
 ];
 
 // Country labels — orient the non-expert user
