@@ -54,19 +54,19 @@ export default function VesselDetail({ vessel, onClose }: Props) {
 
   // Plain English speed/status description
   const motionDesc = vessel.sog < 0.5
-    ? "Nearly stopped — anchored or drifting"
+    ? "Nearly stopped. Anchored or drifting."
     : vessel.sog < 3
-    ? "Moving very slowly — possibly transferring cargo"
+    ? "Moving very slowly, possibly transferring cargo"
     : vessel.sog < 8
     ? `Moving slowly at ${vessel.sog.toFixed(1)} knots`
     : `Underway at ${vessel.sog.toFixed(1)} knots`;
 
   const draughtDesc = vessel.draught > 0
     ? vessel.draught > 12
-      ? `${vessel.draught}m — fully loaded`
+      ? `${vessel.draught}m, fully loaded`
       : vessel.draught > 6
-      ? `${vessel.draught}m — partially loaded`
-      : `${vessel.draught}m — likely in ballast (empty)`
+      ? `${vessel.draught}m, partially loaded`
+      : `${vessel.draught}m, likely in ballast (empty)`
     : "";
 
   return (
@@ -102,12 +102,12 @@ export default function VesselDetail({ vessel, onClose }: Props) {
             <p className="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">What this means</p>
             {vessel.isPossibleSTS && (
               <p className="text-xs text-slate-200 leading-relaxed mb-2">
-                This tanker has been stopped alongside another vessel offshore. Ship-to-ship transfers are how sanctioned oil changes hands without creating a port record — the cargo effectively disappears from the paper trail.
+                This tanker has been stopped alongside another vessel offshore. Ship-to-ship transfers are how sanctioned oil changes hands without creating a port record. The cargo effectively disappears from the paper trail.
               </p>
             )}
             {vessel.isGoingDark && (
               <p className="text-xs text-slate-200 leading-relaxed mb-2">
-                This vessel stopped broadcasting its AIS location {formatDarkDuration(vessel.darkSinceMs)} ago. Ships go dark to hide their position — usually during sanctioned cargo transfers or to avoid enforcement.
+                This vessel stopped broadcasting its AIS location {formatDarkDuration(vessel.darkSinceMs)} ago. Ships go dark to hide their position, usually during sanctioned cargo transfers or to avoid enforcement.
               </p>
             )}
             {vessel.isShadowFleet && !vessel.isPossibleSTS && (
@@ -119,12 +119,12 @@ export default function VesselDetail({ vessel, onClose }: Props) {
             )}
             {vessel.isSanctioned && !vessel.isShadowFleet && (
               <p className="text-xs text-slate-200 leading-relaxed">
-                This vessel is on the OFAC sanctions list. Western companies are legally prohibited from providing any services to it — including insurance, port access, fuel, and repairs.
+                This vessel is on the OFAC sanctions list. Western companies are legally prohibited from providing any services to it: insurance, port access, fuel, and repairs.
               </p>
             )}
             {vessel.departedTerminal && terminalInfo && (
               <p className="text-xs text-slate-200 leading-relaxed mt-1">
-                Recently departed {terminalInfo.name} — {terminalInfo.description}
+                Recently departed {terminalInfo.name}. {terminalInfo.description}
               </p>
             )}
           </div>
@@ -178,7 +178,7 @@ export default function VesselDetail({ vessel, onClose }: Props) {
             <Row
               label="Reported destination"
               value={vessel.destination}
-              sub="Self-reported — vessels often leave this blank or inaccurate."
+              sub="Self-reported. Vessels often leave this blank or inaccurate."
             />
           )}
           {vessel.shadowFleetFormerNames.length > 0 && (
@@ -198,7 +198,7 @@ export default function VesselDetail({ vessel, onClose }: Props) {
             <Row
               label="IMO"
               value={vessel.imo}
-              sub="International Maritime Organization — permanent vessel ID."
+              sub="International Maritime Organization, permanent vessel ID."
             />
           )}
           {vessel.callsign && <Row label="Call sign" value={vessel.callsign} />}

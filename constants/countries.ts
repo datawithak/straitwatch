@@ -122,7 +122,7 @@ export const COUNTRY_DESCRIPTIONS: Record<CountryKey, string> = {
   russia:
     "Russia operates a ~600-ship shadow fleet to move sanctioned Urals crude to India and China, bypassing Western sanctions.",
   china:
-    "China is the world's largest buyer of Persian Gulf oil — including sanctioned Iranian and Russian crude.",
+    "China is the world's largest buyer of Persian Gulf oil, including sanctioned Iranian and Russian crude.",
   iran:
     "Iran has been under US sanctions since 1979. Its ghost fleet moves crude through ship-to-ship transfers to hide origin.",
   india:
@@ -138,9 +138,9 @@ export const COUNTRY_DESCRIPTIONS: Record<CountryKey, string> = {
   uk: "UK-flagged vessels. UKMTO (United Kingdom Maritime Trade Operations) issues advisories for the region.",
   "south-korea": "South Korea is a major shipbuilder and tanker operator. Compliant with Western sanctions.",
   singapore: "Singapore is Asia's largest bunkering hub and a major maritime registry. Key transshipment point.",
-  "flag-convenience": "Registered in Panama, Marshall Islands, Liberia, Bahamas, or similar open registries. Flag tells you little about the real owner — look at the destination dot for clues.",
+  "flag-convenience": "Registered in Panama, Marshall Islands, Liberia, Bahamas, or similar open registries. Flag tells you little about the real owner. Look at the destination dot for clues.",
   "shadow-flag":
-    "Countries like Gabon, Palau, and Cook Islands are used as flags of convenience to hide the real vessel owner — usually Russian or Iranian interests.",
+    "Countries like Gabon, Palau, and Cook Islands are used as flags of convenience to hide the real vessel owner, usually Russian or Iranian interests.",
   other: "Flag state not identified.",
 };
 

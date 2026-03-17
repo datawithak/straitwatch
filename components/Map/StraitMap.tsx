@@ -105,7 +105,7 @@ const MAP_ANNOTATIONS = [
   },
   {
     lat: 12.5, lng: 43.5,
-    lines: ["BAB AL-MANDAB", "Houthi attack zone — Red Sea entry"],
+    lines: ["BAB AL-MANDAB", "Houthi attack zone, Red Sea entry"],
   },
   {
     lat: 23.5, lng: 59.5,

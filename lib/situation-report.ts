@@ -60,7 +60,7 @@ export function generateSituationReport(
 
   if (stats.goingDark > 0) {
     details.push(
-      `${stats.goingDark} vessel${stats.goingDark !== 1 ? "s" : ""} went dark — stopped broadcasting AIS`
+      `${stats.goingDark} vessel${stats.goingDark !== 1 ? "s" : ""} went dark, stopped broadcasting AIS`
     );
   }
 
@@ -94,26 +94,26 @@ function buildHeadline(
   // Lead with the most dramatic active signal
   if (stats.possibleSTS > 0) {
     const stsVessels = vessels.filter((v) => v.isPossibleSTS).slice(0, 2).map((v) => v.name).join(" & ");
-    return `⚡ Ship-to-ship transfer in progress — ${stsVessels} stopped offshore. Sanctioned cargo likely changing hands.`;
+    return `⚡ Ship-to-ship transfer in progress: ${stsVessels} stopped offshore. Sanctioned cargo likely changing hands.`;
   }
 
   if (stats.goingDark > 0 && stats.sanctioned > 0) {
     const dark = vessels.find((v) => v.isGoingDark && v.isSanctioned);
-    return `◯ Sanctioned vessel ${dark?.name ?? "unknown"} has gone dark — stopped broadcasting location. Possible evasion manoeuvre.`;
+    return `◯ Sanctioned vessel ${dark?.name ?? "unknown"} has gone dark. Stopped broadcasting location. Possible evasion manoeuvre.`;
   }
 
   if (stats.sanctioned > 0) {
     const s = vessels.find((v) => v.isSanctioned);
-    return `⚠ ${s?.name ?? "Sanctioned vessel"} is in the corridor — OFAC listed, operating without Western insurance.`;
+    return `⚠ ${s?.name ?? "Sanctioned vessel"} is in the corridor. OFAC listed, operating without Western insurance.`;
   }
 
   if (stats.shadowFleet > 0) {
-    return `🟣 ${stats.shadowFleet} shadow fleet vessel${stats.shadowFleet !== 1 ? "s" : ""} active in the corridor — Russia's covert oil network moving sanctioned crude.`;
+    return `🟣 ${stats.shadowFleet} shadow fleet vessel${stats.shadowFleet !== 1 ? "s" : ""} active in the corridor. Russia's covert oil network moving sanctioned crude.`;
   }
 
   if (stats.departedTerminal > 0) {
     const v = vessels.find((v) => v.departedTerminal);
-    return `📍 ${v?.name ?? "A vessel"} recently departed ${v?.departedTerminal ?? "a sanctioned terminal"} — likely carrying sanctioned crude.`;
+    return `📍 ${v?.name ?? "A vessel"} recently departed ${v?.departedTerminal ?? "a sanctioned terminal"}, likely carrying sanctioned crude.`;
   }
 
   const recentAlert = intelItems.find(
@@ -126,7 +126,7 @@ function buildHeadline(
   // Fallback — still informative, not "no alerts"
   const shadowCount = vessels.filter((v) => v.country === "shadow-flag").length;
   if (shadowCount > 0) {
-    return `${stats.total} vessels tracked. ${shadowCount} flying shadow fleet flags — click "Russia's Shadow Fleet" to see them.`;
+    return `${stats.total} vessels tracked. ${shadowCount} flying shadow fleet flags. Click "Russia's Shadow Fleet" to see them.`;
   }
 
   return `${stats.total} vessels tracked across the corridor. Click a story on the left to explore what's happening.`;
