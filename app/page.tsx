@@ -120,8 +120,8 @@ export default function Home() {
         // that were already dark when the page loaded
         isGoingDark: goingDark || v.isGoingDark,
         darkSinceMs: goingDark ? getDarkDurationMs(v) : (v.isGoingDark ? v.darkSinceMs : 0),
-        // Departed terminal: re-check live trail; keep cached value if trail is empty
-        departedTerminal: getDepartedTerminal(v.trail) || v.departedTerminal,
+        // Departed terminal: check current position + trail; keep cached/server value as fallback
+        departedTerminal: getDepartedTerminal(v.trail, v.lat, v.lng) || v.departedTerminal,
       };
     });
 

@@ -4,6 +4,7 @@ import WS from "ws";
 import { getCountryFromMMSI } from "@/constants/countries";
 import { isShadowFleetVessel, getShadowFleetEntry } from "@/lib/shadow-fleet";
 import { getSanctionedVessels } from "@/lib/sanctions";
+import { getTerminalFromPosition } from "@/lib/departure-terminal";
 import { AIS_BOUNDING_BOX } from "@/constants/regions";
 
 const AISSTREAM_URL = "wss://stream.aisstream.io/v0/stream";
@@ -33,6 +34,7 @@ interface StoredVessel {
   draught: number;
   lastUpdated: number;
   trail: Array<{ lat: number; lng: number; t: number }>;
+  departedTerminal: string; // sticky — set once, kept until vessel goes stale
 }
 
 const store = new Map<string, Partial<StoredVessel>>();
@@ -68,12 +70,19 @@ function processMsg(msg: Record<string, any>): Partial<StoredVessel> | null {
     if (trail.length > MAX_TRAIL) trail.splice(0, trail.length - MAX_TRAIL);
   }
 
+  const currentLat = lat ?? existing.lat ?? 0;
+  const currentLng = lng ?? existing.lng ?? 0;
+
+  // departedTerminal is sticky: once detected, keep it for the vessel's lifetime in the store
+  const terminalHit = (lat != null && lng != null) ? getTerminalFromPosition(lat, lng) : "";
+  const departedTerminal = terminalHit || existing.departedTerminal || "";
+
   const updated: Partial<StoredVessel> = {
     ...existing,
     mmsi,
     name: s?.Name?.trim() || msg.MetaData?.ShipName?.trim() || existing.name || mmsi,
-    lat: lat ?? existing.lat ?? 0,
-    lng: lng ?? existing.lng ?? 0,
+    lat: currentLat,
+    lng: currentLng,
     sog: pos?.Sog ?? existing.sog ?? 0,
     cog: pos?.Cog ?? existing.cog ?? 0,
     heading: pos?.TrueHeading !== 511 ? (pos?.TrueHeading ?? existing.heading ?? 0) : (existing.heading ?? 0),
@@ -85,6 +94,7 @@ function processMsg(msg: Record<string, any>): Partial<StoredVessel> | null {
     shipType: (s?.Type && s.Type !== 0) ? s.Type : (existing.shipType ?? 0),
     lastUpdated: now,
     trail,
+    departedTerminal,
   };
 
   store.set(mmsi, updated);
@@ -132,6 +142,7 @@ export async function GET() {
           isShadowFleet: isShadowFleetVessel(imo),
           shadowFleetSource: shadowEntry?.source ?? "",
           shadowFleetFormerNames: shadowEntry?.formerNames ?? [],
+          departedTerminal: v.departedTerminal ?? "",
         });
       }
 
@@ -165,6 +176,7 @@ export async function GET() {
             isShadowFleet: isShadowFleetVessel(imo),
             shadowFleetSource: shadowEntry?.source ?? "",
             shadowFleetFormerNames: shadowEntry?.formerNames ?? [],
+            departedTerminal: vessel.departedTerminal ?? "",
           });
         } catch {}
       });

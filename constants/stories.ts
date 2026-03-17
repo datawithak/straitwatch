@@ -65,9 +65,11 @@ export const STORY_CARDS: StoryCard[] = [
     title: "Fresh from Sanctioned Ports",
     subtitle: "Vessels that just left Iranian or Russian terminals",
     body:
-      "Vessels recently departed from Kharg Island (Iran's main oil terminal) or Novorossiysk (Russia's main Black Sea port) are highlighted with an orange dot. These ships are almost certainly carrying sanctioned crude oil, regardless of what flag they fly.",
+      "Vessels currently in or recently departed from Iranian export terminals — Kharg Island, Bandar Abbas, and Assaluyeh — are flagged with an orange dot. These ships are almost certainly loading or carrying Iranian crude oil, regardless of what flag they fly.",
+    note:
+      "Russian terminals (Novorossiysk, Ust-Luga) are in the Black Sea and Baltic — outside this map's AIS coverage. To track Russian-origin vessels here, use the Shadow Fleet story instead.",
     answersQuestion: 1,
     highlight: { departedTerminal: true },
-    snapToRegion: "global",
+    snapToRegion: "hormuz",
   },
 ];
