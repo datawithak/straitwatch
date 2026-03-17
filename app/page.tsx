@@ -14,7 +14,6 @@ import { generateSituationReport, SituationReport } from "@/lib/situation-report
 import SituationReportBar from "@/components/SituationReport";
 import StoryCards from "@/components/Sidebar/StoryCards";
 import VesselDetail from "@/components/Sidebar/VesselDetail";
-import IntelFeed from "@/components/Sidebar/IntelFeed";
 import Legend from "@/components/Sidebar/Legend";
 import FiltersPanel, { FilterState, DEFAULT_FILTERS } from "@/components/Sidebar/FiltersPanel";
 
@@ -30,7 +29,7 @@ const StraitMap = dynamic(() => import("@/components/Map/StraitMap"), {
 const INTEL_REFRESH_MS = 300_000;
 
 type DesktopTab = "stories" | "filters" | "legend";
-type SidebarTab = "stories" | "intel" | "filters" | "legend";
+type SidebarTab = "stories" | "briefing" | "filters" | "legend";
 
 function applyFilters(vessels: Vessel[], filters: FilterState): Vessel[] {
   return vessels.filter((v) => {
@@ -67,7 +66,7 @@ export default function Home() {
 
   // Mobile state
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSidebarTab, setMobileSidebarTab] = useState<SidebarTab>("stories");
+  const [mobileSidebarTab, setMobileSidebarTab] = useState<SidebarTab>("briefing");
 
   const intelIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const stsIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -294,14 +293,50 @@ export default function Home() {
     <div className="flex flex-col h-screen bg-slate-950 text-white overflow-hidden">
 
       {/* Header */}
-      <header className="bg-slate-950 border-b border-white/10 px-4 py-2 flex items-center gap-3 shrink-0 z-10">
-        <div>
-          <span className="font-bold tracking-widest text-sm text-white">⚓ STRAITWATCH</span>
-          <span className="text-slate-500 text-xs ml-2 hidden sm:inline">/ maritime intelligence</span>
+      <header className="bg-slate-950 border-b border-white/10 shrink-0 z-10">
+        {/* Main row */}
+        <div className="px-4 py-2 flex items-center gap-3">
+          <div>
+            <span className="font-bold tracking-widest text-sm text-white">⚓ STRAITWATCH</span>
+            <span className="text-slate-500 text-xs ml-2 hidden sm:inline">/ maritime intelligence</span>
+          </div>
+
+          {/* Region toggles — desktop only inline */}
+          <div className="hidden md:flex items-center gap-1 ml-4 overflow-x-auto scrollbar-none">
+            {regionKeys.map((key) => (
+              <button
+                key={key}
+                onClick={() => setRegion(key)}
+                className={`text-xs px-2.5 py-1 rounded whitespace-nowrap transition-colors ${
+                  region === key
+                    ? "bg-white/15 text-white font-semibold"
+                    : "text-slate-400 hover:text-white hover:bg-white/5"
+                }`}
+              >
+                {REGIONS[key].label}
+              </button>
+            ))}
+          </div>
+
+          {/* Live status + refresh */}
+          <div className="ml-auto flex items-center gap-2 shrink-0">
+            <span className={`text-xs flex items-center gap-1 ${liveConnected ? "text-emerald-400" : "text-slate-500"}`}>
+              <span className={`inline-block w-1.5 h-1.5 rounded-full ${liveConnected ? "bg-emerald-400 animate-pulse" : "bg-slate-600"}`} />
+              <span className="hidden sm:inline">{liveConnected ? "LIVE" : "CONNECTING..."}</span>
+              <span className="sm:hidden">{liveConnected ? "LIVE" : "..."}</span>
+            </span>
+            <button
+              onClick={fetchVessels}
+              disabled={vesselLoading}
+              className="text-xs bg-white/10 hover:bg-white/15 disabled:opacity-40 px-3 py-1 rounded transition-colors"
+            >
+              {vesselLoading ? "..." : "↺"}
+            </button>
+          </div>
         </div>
 
-        {/* Region toggles */}
-        <div className="flex items-center gap-1 ml-4 overflow-x-auto scrollbar-none">
+        {/* Region toggles — mobile second row */}
+        <div className="md:hidden flex items-center gap-1 px-3 pb-2 overflow-x-auto scrollbar-none">
           {regionKeys.map((key) => (
             <button
               key={key}
@@ -316,25 +351,10 @@ export default function Home() {
             </button>
           ))}
         </div>
-
-        {/* Live status + refresh */}
-        <div className="ml-auto flex items-center gap-2 shrink-0">
-          <span className={`text-xs flex items-center gap-1 ${liveConnected ? "text-emerald-400" : "text-slate-500"}`}>
-            <span className={`inline-block w-1.5 h-1.5 rounded-full ${liveConnected ? "bg-emerald-400 animate-pulse" : "bg-slate-600"}`} />
-            {liveConnected ? "LIVE" : "CONNECTING..."}
-          </span>
-          <button
-            onClick={fetchVessels}
-            disabled={vesselLoading}
-            className="text-xs bg-white/10 hover:bg-white/15 disabled:opacity-40 px-3 py-1 rounded transition-colors"
-          >
-            {vesselLoading ? "Updating..." : "↺ Refresh"}
-          </button>
-        </div>
       </header>
 
       {/* Main layout */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden pb-14 md:pb-0">
 
         {/* Desktop Left Sidebar */}
         <aside className="hidden md:flex flex-col w-72 bg-slate-950 border-r border-white/10 shrink-0 overflow-hidden">
@@ -434,7 +454,7 @@ export default function Home() {
 
       {/* Mobile bottom nav */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900 border-t border-white/10 flex">
-        {([ ["stories", "📡", "Stories"], ["intel", "⚠️", "Alerts"], ["filters", "🔍", "Filter"], ["legend", "❓", "Guide"] ] as [SidebarTab, string, string][]).map(([tab, emoji, label]) => (
+        {([ ["stories", "📡", "Stories"], ["briefing", "📊", "Briefing"], ["filters", "🔍", "Filter"], ["legend", "❓", "Guide"] ] as [SidebarTab, string, string][]).map(([tab, emoji, label]) => (
           <button
             key={tab}
             onClick={() => {
@@ -456,24 +476,36 @@ export default function Home() {
       {mobileOpen && (
         <div className="md:hidden fixed inset-0 z-50 flex flex-col justify-end">
           <div className="absolute inset-0 bg-black/50" onClick={() => setMobileOpen(false)} />
-          <div className="relative bg-slate-950 rounded-t-2xl h-[70vh] flex flex-col border-t border-white/10">
+          <div className="relative bg-slate-950 rounded-t-2xl h-[80vh] flex flex-col border-t border-white/10">
             <div className="w-10 h-1 bg-slate-700 rounded-full mx-auto mt-3 mb-1 shrink-0" />
-            <div className="flex-1 overflow-y-auto p-4">
+            <div className="flex-1 overflow-y-auto">
               {selectedVessel ? (
-                <VesselDetail vessel={selectedVessel} onClose={() => { setSelectedVessel(null); setMobileOpen(false); }} />
+                <div className="p-4">
+                  <VesselDetail vessel={selectedVessel} onClose={() => { setSelectedVessel(null); setMobileOpen(false); }} />
+                </div>
               ) : mobileSidebarTab === "stories" ? (
-                <StoryCards activeStory={activeStory} onSelect={(c) => { handleStorySelect(c); setMobileOpen(false); }} onClear={handleStoryClear} showContext={true} />
-              ) : mobileSidebarTab === "intel" ? (
-                <IntelFeed result={intelResult} loading={intelLoading} onViewOnMap={handleViewOnMap} />
-              ) : mobileSidebarTab === "filters" ? (
-                <FiltersPanel
-                  filters={filters}
-                  onChange={setFilters}
-                  totalCount={vessels.length}
-                  filteredCount={displayedVessels.length}
+                <div className="p-4">
+                  <StoryCards activeStory={activeStory} onSelect={(c) => { handleStorySelect(c); setMobileOpen(false); }} onClear={handleStoryClear} showContext={true} />
+                </div>
+              ) : mobileSidebarTab === "briefing" ? (
+                <SituationReportBar
+                  report={situationReport}
+                  isDemo={isDemo}
+                  isLoading={vesselLoading}
                 />
+              ) : mobileSidebarTab === "filters" ? (
+                <div className="p-4">
+                  <FiltersPanel
+                    filters={filters}
+                    onChange={setFilters}
+                    totalCount={vessels.length}
+                    filteredCount={displayedVessels.length}
+                  />
+                </div>
               ) : (
-                <Legend />
+                <div className="p-4">
+                  <Legend />
+                </div>
               )}
             </div>
           </div>
