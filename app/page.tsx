@@ -29,6 +29,7 @@ const StraitMap = dynamic(() => import("@/components/Map/StraitMap"), {
 
 const INTEL_REFRESH_MS = 300_000;
 
+type DesktopTab = "stories" | "filters" | "legend";
 type SidebarTab = "stories" | "intel" | "filters" | "legend";
 
 function applyFilters(vessels: Vessel[], filters: FilterState): Vessel[] {
@@ -59,7 +60,7 @@ export default function Home() {
   const [selectedVessel, setSelectedVessel] = useState<Vessel | null>(null);
   const [activeStory, setActiveStory] = useState<string | null>(null);
   const [highlight, setHighlight] = useState<StoryHighlight | null>(null);
-  const [sidebarTab, setSidebarTab] = useState<SidebarTab>("stories");
+  const [desktopTab, setDesktopTab] = useState<DesktopTab>("stories");
   const [situationReport, setSituationReport] = useState<SituationReport | null>(null);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
   const [flyToTarget, setFlyToTarget] = useState<{ lat: number; lng: number } | null>(null);
@@ -273,9 +274,8 @@ export default function Home() {
   // ── Region labels ─────────────────────────────────────────────────────────
   const regionKeys: RegionKey[] = ["global", "hormuz", "gulf-oman", "bab", "red-sea"];
 
-  const TABS: { id: SidebarTab; label: string }[] = [
+  const DESKTOP_TABS: { id: DesktopTab; label: string }[] = [
     { id: "stories", label: "Stories" },
-    { id: "intel", label: "Alerts" },
     { id: "filters", label: "Filter" },
     { id: "legend", label: "Guide" },
   ];
@@ -323,26 +323,49 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Situation Report */}
-      <SituationReportBar
-        report={situationReport}
-        isDemo={isDemo}
-        isLoading={vesselLoading}
-      />
-
       {/* Main layout */}
       <div className="flex flex-1 overflow-hidden">
 
-        {/* Desktop Sidebar */}
-        <aside className="hidden md:flex flex-col w-80 bg-slate-950 border-r border-white/10 shrink-0 overflow-hidden">
-          {/* Sidebar tabs */}
+        {/* Desktop Left Sidebar */}
+        <aside className="hidden md:flex flex-col w-72 bg-slate-950 border-r border-white/10 shrink-0 overflow-hidden">
+
+          {/* "What is StraitWatch?" — always visible at top */}
+          {!selectedVessel && (
+            <div className="shrink-0 p-4 border-b border-white/10">
+              <p className="text-xs font-bold text-white mb-1.5">What is StraitWatch?</p>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Russia and Iran are under international sanctions. Western countries banned buying their oil.
+                But China and India still buy it anyway, at a big discount.
+                To avoid getting caught, ships use three tricks:
+              </p>
+              <ul className="mt-2 flex flex-col gap-1">
+                <li className="text-xs text-slate-400 flex gap-1.5">
+                  <span className="text-slate-500 shrink-0">1.</span>
+                  <span><span className="text-white font-medium">Fake flags</span>: register under Gabon or Palau so the ship looks neutral</span>
+                </li>
+                <li className="text-xs text-slate-400 flex gap-1.5">
+                  <span className="text-slate-500 shrink-0">2.</span>
+                  <span><span className="text-white font-medium">Turn off GPS</span>: disappear from tracking while doing the deal</span>
+                </li>
+                <li className="text-xs text-slate-400 flex gap-1.5">
+                  <span className="text-slate-500 shrink-0">3.</span>
+                  <span><span className="text-white font-medium">Swap cargo at sea</span>: transfer oil between ships so it loses its origin on paper</span>
+                </li>
+              </ul>
+              <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+                This map watches the Strait of Hormuz and Bab al-Mandab and flags suspicious ships in real time.
+              </p>
+            </div>
+          )}
+
+          {/* Tabs: Alerts / Filter / Guide */}
           <div className="flex border-b border-white/10 shrink-0">
-            {TABS.map(({ id, label }) => (
+            {DESKTOP_TABS.map(({ id, label }) => (
               <button
                 key={id}
-                onClick={() => setSidebarTab(id)}
+                onClick={() => setDesktopTab(id)}
                 className={`flex-1 text-xs py-2 transition-colors ${
-                  sidebarTab === id
+                  desktopTab === id
                     ? "text-white border-b-2 border-white font-semibold"
                     : "text-slate-500 hover:text-white"
                 }`}
@@ -352,23 +375,18 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Sidebar content */}
+          {/* Tab content */}
           <div className="flex-1 overflow-y-auto p-4">
             {selectedVessel ? (
               <VesselDetail vessel={selectedVessel} onClose={handleCloseVessel} />
-            ) : sidebarTab === "stories" ? (
+            ) : desktopTab === "stories" ? (
               <StoryCards
                 activeStory={activeStory}
                 onSelect={handleStorySelect}
                 onClear={handleStoryClear}
+                showContext={false}
               />
-            ) : sidebarTab === "intel" ? (
-              <IntelFeed
-                result={intelResult}
-                loading={intelLoading}
-                onViewOnMap={handleViewOnMap}
-              />
-            ) : sidebarTab === "filters" ? (
+            ) : desktopTab === "filters" ? (
               <FiltersPanel
                 filters={filters}
                 onChange={setFilters}
@@ -393,6 +411,15 @@ export default function Home() {
             onSelectVessel={handleSelectVessel}
           />
         </main>
+
+        {/* Desktop Right Panel — Situation Report */}
+        <aside className="hidden md:flex flex-col w-72 bg-slate-950 border-l border-white/10 shrink-0 overflow-hidden">
+          <SituationReportBar
+            report={situationReport}
+            isDemo={isDemo}
+            isLoading={vesselLoading}
+          />
+        </aside>
       </div>
 
       {/* Mobile bottom nav */}
@@ -425,7 +452,7 @@ export default function Home() {
               {selectedVessel ? (
                 <VesselDetail vessel={selectedVessel} onClose={() => { setSelectedVessel(null); setMobileOpen(false); }} />
               ) : mobileSidebarTab === "stories" ? (
-                <StoryCards activeStory={activeStory} onSelect={(c) => { handleStorySelect(c); setMobileOpen(false); }} onClear={handleStoryClear} />
+                <StoryCards activeStory={activeStory} onSelect={(c) => { handleStorySelect(c); setMobileOpen(false); }} onClear={handleStoryClear} showContext={true} />
               ) : mobileSidebarTab === "intel" ? (
                 <IntelFeed result={intelResult} loading={intelLoading} onViewOnMap={handleViewOnMap} />
               ) : mobileSidebarTab === "filters" ? (

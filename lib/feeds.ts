@@ -14,13 +14,6 @@ interface FeedSource {
 
 const FEED_SOURCES: FeedSource[] = [
   {
-    id: "marad",
-    name: "MARAD",
-    short: "MARAD",
-    scrapeUrl: "https://www.maritime.dot.gov/msci",
-    type: "html",
-  },
-  {
     id: "ukmto",
     name: "UKMTO",
     short: "UKMTO",

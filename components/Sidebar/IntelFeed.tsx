@@ -40,10 +40,6 @@ export default function IntelFeed({ result, loading, onViewOnMap }: Props) {
 
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">
-        Maritime advisories
-      </p>
-
       {result.items.map((item) => {
         const sev = item.severity ?? "low";
         const colors = SEVERITY_COLORS[sev];

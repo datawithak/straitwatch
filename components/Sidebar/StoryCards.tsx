@@ -7,9 +7,10 @@ interface Props {
   activeStory: string | null;
   onSelect: (card: StoryCard) => void;
   onClear: () => void;
+  showContext?: boolean;
 }
 
-export default function StoryCards({ activeStory, onSelect, onClear }: Props) {
+export default function StoryCards({ activeStory, onSelect, onClear, showContext = false }: Props) {
   return (
     <div className="flex flex-col gap-3">
 
@@ -67,8 +68,8 @@ export default function StoryCards({ activeStory, onSelect, onClear }: Props) {
         );
       })}
 
-      {/* Context card at bottom — supporting info, not the entry point */}
-      <div className="rounded-lg bg-slate-800/40 border border-white/8 p-3 mt-1">
+      {/* Context card — only shown on mobile (desktop shows it in the left sidebar) */}
+      {showContext && <div className="rounded-lg bg-slate-800/40 border border-white/8 p-3 mt-1">
         <p className="text-xs font-bold text-slate-300 mb-1.5">What is StraitWatch?</p>
         <p className="text-xs text-slate-400 leading-relaxed">
           Russia and Iran are under international sanctions. Western countries banned buying their oil.
@@ -92,7 +93,7 @@ export default function StoryCards({ activeStory, onSelect, onClear }: Props) {
         <p className="text-xs text-slate-500 mt-2 leading-relaxed">
           This map watches the Strait of Hormuz and Bab al-Mandab, the two narrow straits where most of this oil has to pass, and flags the suspicious ships in real time.
         </p>
-      </div>
+      </div>}
     </div>
   );
 }
